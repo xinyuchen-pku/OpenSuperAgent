@@ -1,0 +1,243 @@
+{
+  "source_trace_sha256": "0fed2442411fc1759d721010f066eb50c0282c3b3e5be32fefd3f47bd365956b",
+  "source_manifest_sha256": "73709ec8da3927bcf1396ecad35ec9236d91444504887310878ab865314419a4",
+  "scope": "deterministic mechanism demo",
+  "actual_api_calls": 0,
+  "distinct_processes": 2,
+  "phases": [
+    {
+      "actual_api_calls": 0,
+      "actual_api_tokens": 0,
+      "architecture": "superagent",
+      "benchmark_success_rate": null,
+      "completed_tasks": 2,
+      "count": 2,
+      "delivered_events": 2,
+      "followups_per_task": 0,
+      "max_parallel_fixed_work": 2,
+      "route_latency_ms_p50": 58.59184265136719,
+      "route_latency_ms_p95": 99.66421127319336,
+      "router_context_characters": 2890,
+      "router_fixture_calls": 2,
+      "slots": 2,
+      "subscriptions": true,
+      "task_throughput_per_s": 4.73933649290603,
+      "unread_inputs": 0,
+      "wall_s": 0.4219999999986612,
+      "work_units": 2
+    },
+    {
+      "actual_api_calls": 0,
+      "actual_api_tokens": 0,
+      "architecture": "superagent",
+      "benchmark_success_rate": null,
+      "completed_tasks": 2,
+      "count": 2,
+      "delivered_events": 4,
+      "followups_per_task": 0,
+      "max_parallel_fixed_work": 2,
+      "route_latency_ms_p50": 41.771888732910156,
+      "route_latency_ms_p95": 99.66421127319336,
+      "router_context_characters": 2890,
+      "router_fixture_calls": 2,
+      "slots": 2,
+      "subscriptions": true,
+      "task_throughput_per_s": 5.333333333333333,
+      "unread_inputs": 0,
+      "wall_s": 0.375,
+      "work_units": 4
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "seconds": 0.0,
+      "kind": "run_started"
+    },
+    {
+      "seq": 2,
+      "seconds": 0.005276,
+      "kind": "event_received",
+      "task_id": "0",
+      "id": "request:0"
+    },
+    {
+      "seq": 6,
+      "seconds": 0.026601,
+      "kind": "model_request",
+      "call_id": "3c403751b5c44952a9fce7e8c420ac12"
+    },
+    {
+      "seq": 8,
+      "seconds": 0.033761,
+      "kind": "event_received",
+      "task_id": "1",
+      "id": "request:1"
+    },
+    {
+      "seq": 11,
+      "seconds": 0.056614,
+      "kind": "model_response",
+      "call_id": "3c403751b5c44952a9fce7e8c420ac12"
+    },
+    {
+      "seq": 12,
+      "seconds": 0.063868,
+      "kind": "task_assigned",
+      "task_id": "0",
+      "event_id": "request:0"
+    },
+    {
+      "seq": 15,
+      "seconds": 0.080177,
+      "kind": "model_request",
+      "call_id": "32130aebd97b405cad5168e28371bd5e"
+    },
+    {
+      "seq": 18,
+      "seconds": 0.09041,
+      "kind": "worker_started",
+      "task_id": "0"
+    },
+    {
+      "seq": 25,
+      "seconds": 0.126158,
+      "kind": "model_response",
+      "call_id": "32130aebd97b405cad5168e28371bd5e"
+    },
+    {
+      "seq": 26,
+      "seconds": 0.133425,
+      "kind": "task_assigned",
+      "task_id": "1",
+      "event_id": "request:1"
+    },
+    {
+      "seq": 28,
+      "seconds": 0.139936,
+      "kind": "worker_started",
+      "task_id": "1"
+    },
+    {
+      "seq": 59,
+      "seconds": 0.387174,
+      "kind": "completion_notification",
+      "task_id": "0"
+    },
+    {
+      "seq": 60,
+      "seconds": 0.391263,
+      "kind": "worker_slot_released",
+      "task_id": "0"
+    },
+    {
+      "seq": 66,
+      "seconds": 0.420425,
+      "kind": "completion_notification",
+      "task_id": "1"
+    },
+    {
+      "seq": 67,
+      "seconds": 0.424105,
+      "kind": "worker_slot_released",
+      "task_id": "1"
+    },
+    {
+      "seq": 68,
+      "seconds": 0.428108,
+      "kind": "run_finished"
+    },
+    {
+      "seq": 69,
+      "seconds": 0.600238,
+      "kind": "run_started"
+    },
+    {
+      "seq": 70,
+      "seconds": 0.608263,
+      "kind": "event_received",
+      "task_id": "0",
+      "id": "update:0"
+    },
+    {
+      "seq": 72,
+      "seconds": 0.616465,
+      "kind": "task_assigned",
+      "task_id": "0",
+      "event_id": "update:0"
+    },
+    {
+      "seq": 73,
+      "seconds": 0.620007,
+      "kind": "subscription_fanout",
+      "event_id": "update:0",
+      "tasks": [
+        "0"
+      ]
+    },
+    {
+      "seq": 74,
+      "seconds": 0.625915,
+      "kind": "event_received",
+      "task_id": "1",
+      "id": "update:1"
+    },
+    {
+      "seq": 77,
+      "seconds": 0.636266,
+      "kind": "worker_started",
+      "task_id": "0"
+    },
+    {
+      "seq": 83,
+      "seconds": 0.667687,
+      "kind": "task_assigned",
+      "task_id": "1",
+      "event_id": "update:1"
+    },
+    {
+      "seq": 84,
+      "seconds": 0.671666,
+      "kind": "subscription_fanout",
+      "event_id": "update:1",
+      "tasks": [
+        "1"
+      ]
+    },
+    {
+      "seq": 86,
+      "seconds": 0.679182,
+      "kind": "worker_started",
+      "task_id": "1"
+    },
+    {
+      "seq": 117,
+      "seconds": 0.926952,
+      "kind": "completion_notification",
+      "task_id": "0"
+    },
+    {
+      "seq": 118,
+      "seconds": 0.929351,
+      "kind": "worker_slot_released",
+      "task_id": "0"
+    },
+    {
+      "seq": 124,
+      "seconds": 0.958461,
+      "kind": "completion_notification",
+      "task_id": "1"
+    },
+    {
+      "seq": 125,
+      "seconds": 0.961461,
+      "kind": "worker_slot_released",
+      "task_id": "1"
+    },
+    {
+      "seq": 126,
+      "seconds": 0.964974,
+      "kind": "run_finished"
+    }
+  ]
+}

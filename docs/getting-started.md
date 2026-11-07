@@ -1,5 +1,41 @@
 # Getting started
 
+## Research Framework
+
+Use Python 3.11 or newer. Clone the repository and run from its root. This demo
+uses the standard library, two child processes and one local SQLite journal.
+
+```bash
+git clone https://github.com/xinyuchen-pku/OpenSuperAgent.git
+cd OpenSuperAgent
+python docs/architecture/run_demo.py --output osa-demo
+```
+
+The terminal reports overlapping Workers, two delivered follow-ups and zero
+model API calls. Open `osa-demo/receipt.json` for the process receipts and
+`osa-demo/trace.jsonl` for the events. [View the recorded demo](architecture/README.md#recorded-demo)
+
+## Evaluation Suite
+
+Install both packages in a virtual environment. Inspect a plan with the published
+model and task manifest before provisioning a live benchmark environment.
+
+```bash
+python -m venv .venv
+# Activate .venv using your shell's activation script.
+python -m pip install ./research ./suite
+osa-suite plan --benchmark asyncodebench_native --model qwen3-coder-next --manifest suite/configs/stage2.json --output native-plan.json
+```
+
+Native execution uses Linux, Docker, the official pinned harness and the site
+admission checks. [Stage 2 run commands](../suite/README.md) ·
+[Replay a real captured patch](../research/public-example/README.md)
+
+## Web Workspace
+
+The Web Workspace is the browser UI with a separate local executor. Its
+instructions below apply to the web application.
+
 ## Install
 
 Use Node.js 22 or newer, pnpm 11, Python 3.9 or newer, and Git. macOS and Linux are supported. Install pnpm using its [official installation instructions](https://pnpm.io/installation).

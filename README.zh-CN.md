@@ -1,50 +1,77 @@
 <p align="center">
-  <img src="docs/images/opensuperagent-logo-tile.png" alt="OpenSuperAgent 标志" width="96" height="96">
+  <img src="docs/images/opensuperagent-logo-tile.png" alt="OpenSuperAgent 标志" width="88" height="88">
 </p>
 <h1 align="center">OpenSuperAgent</h1>
-<p align="center"><strong>AI 编码 Agent 协作系统的可复现实验。</strong></p>
+<p align="center"><strong>面向持续在线、事件驱动多 Agent 系统的开源框架与评测套件</strong></p>
 <p align="center">
   <a href="README.md">English</a> · 简体中文 ·
-  <a href="research/reproduction/INSTALL.txt">复现结果</a> ·
-  <a href="research/START-HERE.md">研究总览</a>
+  <a href="docs/getting-started.md">快速开始</a> ·
+  <a href="docs/results.md">评测结果</a>
 </p>
 
-OpenSuperAgent 研究持续在线、能够处理后续事件的编码 Agent 能否带来额外收益。我们使用共同的编码内核比较五种调度方案，公开 Benchmark 评分、执行轨迹与 tokens 账本。
+OpenSuperAgent 受 DeepSeek 公开 Super-agent 原型启发，实现任务级 Router–Worker 架构。持久 Router 将请求分派给拥有独立会话和工作区的 Worker，线程订阅让相关后续事件到达正在处理任务的 Worker。**框架**运行这一设计，**评测套件**在同模型、同预算下比较它与常规委派方案。
 
-## Benchmark 结果
+[![Super-agent 总架构。持久 Router、任务日志、独立 Worker 和订阅事件的交付路径](docs/architecture/overview.png)](docs/architecture/overview.svg)
 
-点击图表可查看完整矢量图。
+## 为什么需要持续协调？
 
-[![五架构 Benchmark Pilot：成功率、平均批次耗时和实际 API tokens](docs/results/benchmark-pilot.png)](docs/results/benchmark-pilot.svg)
+并行委派适合同时到达的任务。持久 Router 可以保留多次请求的协调上下文，已订阅的 Worker 可以直接收到相关更新。我们用同一个编码 Worker 比较五种任务级调度，测量这些机制何时影响任务完成率、延迟和 token 消耗。
 
-**本轮 Pilot 尚未建立 Super-agent 的优势。** Eager Delegation、Single + Subagent 各成功 3/12，Super-agent 成功 2/12。实验使用 Qwen3-Coder-30B-A3B-Instruct 和冻结 source022，包含 **4 道独立题目 × 3 个配对种子**。成功案例全部来自 OpenLibrary，结果为描述性小样本比较。
+[![Single、Single + Subagent、Eager Delegation、Router–Worker 和 Super-agent 的调度差异](docs/architecture/comparison.png)](docs/architecture/comparison.svg)
 
-[完整报告与评分证据](research/M2-REPORT-003.md) · [图表数据与统计口径](docs/results/README.md)
+[架构说明及与公开原型的对应关系](docs/architecture/README.md)
 
-## 模型能力
+## 看一次运行
 
-[![Qwen30B、Next 与共同 Worker，以及 Next 与 mini-swe-agent 的必需测试通过情况](docs/results/model-capability.png)](docs/results/model-capability.svg)
+[![真实运行日志生成的机制演示。两个 Worker 并行，第二个进程恢复日志，订阅收到两条后续事件。](docs/architecture/event-demo.gif)](docs/architecture/event-timeline.svg)
 
-同一共同 Worker 下，Qwen3-Coder-Next 成功 **1/3 题**，Qwen30B 为 **0/3**。Next + mini-swe-agent 同样为 0/3，但在 qutebrowser 上通过了更多测试。这组 **3 题、1 个种子**的结果支持下一步模型选择，模型与框架的更广泛比较仍需扩大任务覆盖。
+**32 秒确定性运行回放。** 两个 Worker 并行执行并保存状态，第二个进程恢复后收到后续事件。动画基于日志时间戳，模型 API 调用为零。[轨迹、静态时间线和重现命令](docs/architecture/README.md#recorded-demo)
 
-[M3-A3 结果、轨迹与预算](research/studies/m3-a3/README.md)
+**真实编码案例。** 在 Eager Delegation 的一次实测中，Qwen Worker 修改了 OpenLibrary 的目录处理。原始补丁通过 13/13 项必需测试，Harbor 官方评分为 1。[任务指令、实际动作、补丁和复现](docs/case-studies/openlibrary.md)
 
-## 系统测量
+## 仓库提供什么？
 
-[![确定性系统测量：16 任务批次耗时，以及后续事件下的 Router 预设回复次数](docs/results/system-mechanisms.png)](docs/results/system-mechanisms.svg)
+| 目录 | 用途 |
+| --- | --- |
+| [`research/`](research/START-HERE.md) | **研究框架**。任务级 Router–Worker、共同 Worker 和历史实验证据 |
+| [`suite/`](suite/README.md) | **评测套件**。冻结清单、五种受控架构、原生评测适配和报告 |
+| [`src/`、`server/`、`public/`](docs/getting-started.md#web-workspace) | **网页工作区**。浏览器界面，使用独立的本地执行器 |
+| [`docs/`](docs/architecture/README.md) | 架构图、可运行演示及使用说明 |
 
-16 任务、4 槽位下，Eager Delegation 耗时 **0.540 秒**，Super-agent 为 **0.542 秒**。36 个事件的工作负载中，订阅将 Router 预设回复次数从 **36 降为 4**。这组测量使用确定性 Worker、三次重复，**真实模型 API 调用为零**；真实编码结果见上方实验。
+## 快速开始
 
-[System Track 报告](research/studies/m3-a3/SYSTEM-REPORT.md) · [原始数据与绘图脚本](docs/results/README.md)
+使用 Python 3.11 或更新版本，在仓库根目录运行。演示只依赖标准库，每次使用新的输出目录。
 
-## 复现与文档
+```bash
+python docs/architecture/run_demo.py --output osa-demo
+```
 
-- **开始使用：**[安装与无密钥系统检查](research/reproduction/INSTALL.txt)。
-- **复现实验：**[历史五架构 Benchmark](research/reproduction/INSTALL-M2-source022.txt) · [当前 Worker 与补丁重放](research/reproduction/RUN-CAPABILITY.md) · [原生 Benchmark 指南](research/NATIVE-RUNBOOK.md)。
-- **阅读方法：**[研究范围](research/START-HERE.md) · [架构比较协议](research/PROTOCOL.md) · [图表数据与重新生成](docs/results/README.md)。
+输出包含两个独立进程的回执、Worker 活动和订阅交付记录。[安装评测命令并查看实验计划](docs/getting-started.md)
 
-**当前进度：**Worker 校准已结束，后续扩大比较采用 Next + source025。首轮 M3-B1 因模型请求超时触发用量未确认的停止条件，完整的新五架构对照尚未发布。[后续实验方案](research/studies/m3-b1/README.md)。
+## 评测结果
 
-当前为研究预览版，提供受 [DeepSeek 公开原型](https://github.com/deepseek-ai/dsh-superagent-prototype)启发的独立任务级实现，与 DeepSeek 没有隶属关系。完整 DSH 宿主、完整 Watchdog 行为和任务内递归委派仍需集成，范围详见研究文档。此前的[网页工作台](docs/getting-started.md)使用独立执行器。
+[![历史 SWE-bench Pro 试点的成功率、平均批次耗时与 API tokens](docs/results/benchmark-pilot.png)](docs/results/benchmark-pilot.svg)
 
-[MIT 许可](LICENSE) · [第三方声明](research/reproduction/THIRD-PARTY-NOTICES.md) · [参与贡献](CONTRIBUTING.md) · [Logo](docs/BRANDING.md)
+受控试点使用 Qwen3-Coder-30B-A3B-Instruct 与 source022，覆盖 **4 题 × 3 个配对种子**。Eager Delegation 和 Single + Subagent 各成功 3/12，Super-agent 成功 2/12。成功案例都来自 OpenLibrary。[结果表、成对矩阵及其他实测](docs/results.md)
+
+Stage 2 已准备 Pro V2 的 120 题独立候选子集与 AsynCodeBench 19 题原生计划。正式成绩等待运行环境准入。[评测设计、基线与协议边界](docs/benchmarks.md)
+
+## 复现实验
+
+- [用官方评分器重放已捕获的 OpenLibrary 补丁](research/public-example/README.md)
+- [从冻结数据重新生成公开结果图](docs/results/README.md)
+- [用统一评测命令准备并运行 Stage 2](suite/README.md)
+
+## 实现状态
+
+| 能力 | 证据 |
+| --- | --- |
+| 任务分派与并行 Worker | 已实现任务级调度，已通过实测和系统测试 |
+| 持久 Router 与订阅 | 已实现，已有确定性测试和有限的真实模型证据 |
+| 原生角色的工作区约束 | Docker 样例已检查文件范围和角色读取隔离，待 Stage 2 原生运行验收 |
+| 进程恢复 | 已演示从安全持久化检查点恢复 |
+| 完整 Watchdog、任务内递归委派、DSH 宿主集成 | 计划中 |
+
+[详细状态和验收证据](docs/implementation-status.md)
+
+[历史研究](research/START-HERE.md) · [引用与上游资料](docs/architecture/README.md#citation) · [MIT 许可](LICENSE) · [第三方声明](research/reproduction/THIRD-PARTY-NOTICES.md) · [参与贡献](CONTRIBUTING.md)
