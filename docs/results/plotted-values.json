@@ -1,0 +1,286 @@
+{
+  "matplotlib": "3.9.2",
+  "sources": {
+    "m2_batches": {
+      "path": "research/tables/batches.csv",
+      "sha256": "f59cbec1c799396a98b95b85ce57fe21ff933e090db076e1d5bbe6f8586ca31c"
+    },
+    "m2_cases": {
+      "path": "research/tables/cases.csv",
+      "sha256": "f6efee49aa0990c1824adfecbe940b0c6f894abc40c0b2e44941c0e23c4e40fe"
+    },
+    "capability": {
+      "path": "research/studies/m3-a3/CAPABILITY-RESULTS.csv",
+      "sha256": "9a751bf97e7ea7347e990e4bdda5a4ae89af4e0fe800bac1d7cef1317b8b070e"
+    },
+    "capacity": {
+      "path": "research/studies/m3-a3/system-capacity.csv",
+      "sha256": "6f0f98041831fa1123cbf1447d5d77b173c36e78ab6d8d6d180b26182d8bb2e0"
+    },
+    "events": {
+      "path": "research/studies/m3-a3/system-events.csv",
+      "sha256": "dd926d3692ccb3c850ceff8ba008fb801655e9ff81dc807957034a5fe3efbc01"
+    }
+  },
+  "m2_primary": [
+    {
+      "architecture": "single",
+      "label": "Single",
+      "runs": 12,
+      "unique_tasks": 4,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ],
+      "successes": 3,
+      "success_rate_pct": 25.0,
+      "mean_batch_minutes": 38.58956127880762,
+      "total_API_tokens": 20203080
+    },
+    {
+      "architecture": "single_subagent",
+      "label": "Single + Subagent",
+      "runs": 12,
+      "unique_tasks": 4,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ],
+      "successes": 3,
+      "success_rate_pct": 25.0,
+      "mean_batch_minutes": 16.72492238080336,
+      "total_API_tokens": 14466477
+    },
+    {
+      "architecture": "eager_delegation",
+      "label": "Eager Delegation",
+      "runs": 12,
+      "unique_tasks": 4,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ],
+      "successes": 3,
+      "success_rate_pct": 25.0,
+      "mean_batch_minutes": 21.86038755258131,
+      "total_API_tokens": 17160734
+    },
+    {
+      "architecture": "router_worker",
+      "label": "Router\u2013Worker",
+      "runs": 12,
+      "unique_tasks": 4,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ],
+      "successes": 2,
+      "success_rate_pct": 16.666666666666664,
+      "mean_batch_minutes": 21.323855107298325,
+      "total_API_tokens": 12945570
+    },
+    {
+      "architecture": "superagent",
+      "label": "Super-agent",
+      "runs": 12,
+      "unique_tasks": 4,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ],
+      "successes": 2,
+      "success_rate_pct": 16.666666666666664,
+      "mean_batch_minutes": 19.509978039510962,
+      "total_API_tokens": 18626321
+    }
+  ],
+  "m2_successful_task_ids": [
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818"
+  ],
+  "model_capability": [
+    {
+      "cohort": "qwen-source025",
+      "label": "Qwen30B + shared Worker",
+      "full_task_successes": 0,
+      "tasks": [
+        {
+          "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+          "passed": 0,
+          "required": 11,
+          "success": false
+        },
+        {
+          "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+          "passed": 46,
+          "required": 49,
+          "success": false
+        },
+        {
+          "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+          "passed": 12,
+          "required": 13,
+          "success": false
+        }
+      ]
+    },
+    {
+      "cohort": "next-source025",
+      "label": "Next + shared Worker",
+      "full_task_successes": 1,
+      "tasks": [
+        {
+          "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+          "passed": 8,
+          "required": 11,
+          "success": false
+        },
+        {
+          "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+          "passed": 46,
+          "required": 49,
+          "success": false
+        },
+        {
+          "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+          "passed": 13,
+          "required": 13,
+          "success": true
+        }
+      ]
+    },
+    {
+      "cohort": "next-mini",
+      "label": "Next + mini-swe-agent",
+      "full_task_successes": 0,
+      "tasks": [
+        {
+          "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+          "passed": 0,
+          "required": 11,
+          "success": false
+        },
+        {
+          "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+          "passed": 48,
+          "required": 49,
+          "success": false
+        },
+        {
+          "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+          "passed": 12,
+          "required": 13,
+          "success": false
+        }
+      ]
+    }
+  ],
+  "system_capacity": [
+    {
+      "architecture": "single",
+      "label": "Single",
+      "wall_seconds": [
+        1.8848110400140285,
+        1.8853153511881828,
+        1.8849916122853756
+      ],
+      "mean_wall_seconds": 1.8850393344958623
+    },
+    {
+      "architecture": "single_subagent",
+      "label": "Single + Subagent",
+      "wall_seconds": [
+        0.5402626115828753,
+        0.54009123519063,
+        0.5400715433061123
+      ],
+      "mean_wall_seconds": 0.5401417966932058
+    },
+    {
+      "architecture": "eager_delegation",
+      "label": "Eager Delegation",
+      "wall_seconds": [
+        0.5387732163071632,
+        0.5410013496875763,
+        0.5409629829227924
+      ],
+      "mean_wall_seconds": 0.5402458496391773
+    },
+    {
+      "architecture": "router_worker",
+      "label": "Router\u2013Worker",
+      "wall_seconds": [
+        0.5228917878121138,
+        0.5219813212752342,
+        0.5220714416354895
+      ],
+      "mean_wall_seconds": 0.5223148502409458
+    },
+    {
+      "architecture": "superagent",
+      "label": "Super-agent",
+      "wall_seconds": [
+        0.5408097300678492,
+        0.5413312874734402,
+        0.5428743567317724
+      ],
+      "mean_wall_seconds": 0.541671791424354
+    }
+  ],
+  "system_events": [
+    {
+      "variant": "fresh",
+      "followups_per_task": 0,
+      "mean_router_fixture_turns": 4
+    },
+    {
+      "variant": "fresh",
+      "followups_per_task": 1,
+      "mean_router_fixture_turns": 8
+    },
+    {
+      "variant": "fresh",
+      "followups_per_task": 8,
+      "mean_router_fixture_turns": 36
+    },
+    {
+      "variant": "persistent",
+      "followups_per_task": 0,
+      "mean_router_fixture_turns": 4
+    },
+    {
+      "variant": "persistent",
+      "followups_per_task": 1,
+      "mean_router_fixture_turns": 8
+    },
+    {
+      "variant": "persistent",
+      "followups_per_task": 8,
+      "mean_router_fixture_turns": 36
+    },
+    {
+      "variant": "persistent_subscription",
+      "followups_per_task": 0,
+      "mean_router_fixture_turns": 4
+    },
+    {
+      "variant": "persistent_subscription",
+      "followups_per_task": 1,
+      "mean_router_fixture_turns": 4
+    },
+    {
+      "variant": "persistent_subscription",
+      "followups_per_task": 8,
+      "mean_router_fixture_turns": 4
+    }
+  ],
+  "notes": [
+    "M2, capability and system tracks retain separate models, code versions and evidence scopes.",
+    "No inference, new benchmark runs, confidence intervals or causal architecture rankings are produced by this script.",
+    "System fixture turns are not actual model calls. All plotted quantitative axes include zero."
+  ]
+}
