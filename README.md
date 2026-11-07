@@ -1,112 +1,128 @@
-# OpenSuperAgent
+<p align="center">
+  <img src="docs/images/opensuperagent-logo-tile.png" alt="OpenSuperAgent logo" width="144" height="144">
+</p>
+<h1 align="center">OpenSuperAgent</h1>
+<p align="center"><strong>Reproduce and compare how AI coding agents coordinate work.</strong><br>AI 编码 Agent 架构的开源复现与公平评测</p>
+<p align="center">
+  English · <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#results-and-research-status">Results</a> ·
+  <a href="https://github.com/xinyuchen-pku/OpenSuperAgent/releases/tag/v0.1.4-research">Research preview v0.1.4</a>
+</p>
 
-Stage 1 research release: [开始复现 / Start here](research/START-HERE.md). Current core: source025 (0.1.4); historical M2 comparisons retain source022.
-The independent **Stage 1 reproduction and evaluation toolkit** is in
-[research/](research/README.md), with its [evaluation protocol](research/PROTOCOL.md).
-It includes five task-level controlled schedulers, a common execution kernel,
-and an adapter to the pinned original DeepSeek domain core. Public benchmark
-pilot results and limitations are in [M2 results](research/M2-REPORT-003.md).
-The fixed four-task, three-seed comparison and native task acceptance use
-frozen source-022. Start with the [reproduction instructions](research/reproduction/INSTALL.txt).
-Full DSH host integration and within-task recursive delegation remain declared gaps.
-The local workspace application described below is a separate implementation.
+## What is this?
 
-**A local-first coding agent workspace: explicit permissions, isolated execution, and reviewable results.**
+OpenSuperAgent is a **research framework for evaluating multi-agent coding systems**. It runs five scheduling architectures through a shared coding Worker and tool interface, then measures task success, completion time, model tokens, and coordination overhead.
 
-[Interactive demo](https://xinyuchen-pku.github.io/OpenSuperAgent/) · [Quick start](docs/getting-started.md) · [Architecture](docs/architecture.md) · [中文说明](README.zh-CN.md)
+The research question is straightforward: **when does a persistent, event-driven Super-agent provide value beyond ordinary parallel delegation?** A persistent router retains coordination history; subscriptions can deliver follow-up events directly to the assigned Worker. The framework lets us test the benefits and costs of those mechanisms.
 
-OpenSuperAgent turns repository requests into durable tasks. A bounded model worker reads and edits files in a separate Git worktree; the console brings together the request, authorization, changes, and execution history. You decide when the result is ready and publish it yourself.
-
-This is an independent implementation inspired by [DeepSeek’s SuperAgent research prototype](https://github.com/deepseek-ai/dsh-superagent-prototype). It is not affiliated with DeepSeek. See the [research notes and deliberate differences](docs/research.md).
-
-![OpenSuperAgent workspace](docs/images/workspace.jpg)
-
-## What works
-
-- **A real coding loop.** An OpenAI-compatible chat-completions provider drives bounded file tools in an isolated Git worktree. DeepSeek is the default provider.
-- **Durable task orchestration.** SQLite stores requests, mandates, state transitions, attempt counts, source cursors, and an ordered event history.
-- **A review console.** Create and search tasks, inspect local diffs, provide follow-up context, retry blocked work, stop a task, and pause new dispatch.
-- **GitHub intake.** Signed webhooks accept explicitly addressed requests from configured actors. Optional read-only polling also observes labeled issue candidates.
-- **Explicit authorization.** Observed candidates wait for a human decision. Incoming text cannot change configured permissions.
-- **Recoverable execution.** Interrupted tasks become blocked on restart. Existing workspaces survive stops, retries, and normal shutdown. No automatic cleanup.
-- **A self-contained demo.** GitHub Pages runs the same console with browser-local sample data and clearly labeled simulated execution. No credentials, model calls, or GitHub writes.
+Use it to compare schedulers on controlled workloads, inspect why a coding task failed, replay published patches through benchmark graders, or study event delivery and recovery. Current real-model evidence is a small pilot; it has not established a consistent Super-agent advantage.
 
 ## Quick start
 
-Requirements: **Node.js 22+**, **pnpm 11**, **Python 3.9+**, and **Git** on macOS or Linux.
+Start with the system checks. **Python 3.12 is recommended; no model key, GPU, Docker, or Node.js is needed for these commands.** The research package uses the Python standard library at runtime.
+
+From a Linux or macOS terminal:
 
 ```bash
 git clone https://github.com/xinyuchen-pku/OpenSuperAgent.git
 cd OpenSuperAgent
-pnpm install --frozen-lockfile
-pnpm build
-python3 -m server.app
+python3.12 -m venv .venv-research
+source .venv-research/bin/activate
+python -m pip install --no-deps ./research
+
+# Check that all five architectures can process requests and follow-ups.
+python -m osa_eval.cli smoke --output research/results/smoke-001
+
+# Measure concurrency, event subscriptions, and checkpoint recovery.
+python research/reproduction/system_track.py research/results/system-001
 ```
 
-Open **http://127.0.0.1:8765**. The runtime starts without a model key so you can inspect an empty local workspace. To execute real tasks, configure the environment before starting:
+The smoke summary is written to `research/results/smoke-001/summary.json`. System measurements are written to `research/results/system-001/RESULTS.json`. Both runs use scripted responses and make **zero real model API calls**. They establish system behavior; coding success is measured separately with real models and benchmark tests. The full System Track includes 147 measurement cells and may take several minutes. Choose a new output directory for each run.
 
-```bash
-export OSA_REPO=/absolute/path/to/your/repository
-export OSA_BASE_URL=https://api.deepseek.com
-export OSA_MODEL=deepseek-flash
-# Set OSA_API_KEY securely in the environment; do not commit it.
-python3 -m server.app
+<details>
+<summary>Windows PowerShell</summary>
+
+After cloning the repository, use the virtual environment's Python directly:
+
+```powershell
+py -3.12 -m venv .venv-research
+.\.venv-research\Scripts\python.exe -m pip install --no-deps ./research
+.\.venv-research\Scripts\python.exe -m osa_eval.cli smoke --output research/results/smoke-001
+.\.venv-research\Scripts\python.exe research/reproduction/system_track.py research/results/system-001
 ```
 
-The Python runtime uses the standard library only. The public demo is separate from your local runtime and never asks for keys. Read the [setup guide](docs/getting-started.md) for GitHub sources, development, and compatible providers.
+The live benchmark workflow requires Linux and a container environment with verified resource limits.
 
-## How work moves
+</details>
+
+For real coding tasks, follow the [benchmark setup and reproduction guide](research/reproduction/INSTALL.txt). Those runs additionally require a model endpoint, pinned benchmark inputs, container images, and the benchmark's original scoring environment. The [capability guide](research/reproduction/RUN-CAPABILITY.md) describes the current Worker setup and captured-patch replay; the [M2 guide](research/reproduction/INSTALL-M2-source022.txt) reproduces the historical five-architecture comparison with its original version.
+
+## Five architectures, one shared coding kernel
+
+A **Worker** reads the repository, edits code, and runs tools. A **Router** decides where a request goes. Model, tools, tasks, and resource budgets are controlled across comparisons; scheduling, session history, and event paths are the experimental variables.
+
+| Architecture | What changes |
+| --- | --- |
+| **Single** | A shared main session executes requests sequentially. |
+| **Single + Subagent** | The main session chooses whether to do the work itself or delegate. |
+| **Eager Delegation** | The main session delegates every request to a task-specific Worker. |
+| **Router–Worker** | Each event uses a fresh Router context and is delegated to a Worker. |
+| **Super-agent** | A persistent Router receives Worker reports; subscriptions can send later events directly to existing Workers. |
+
+These are **task-level** comparisons. Each coding task retains its own repository workspace.
 
 ```mermaid
-flowchart LR
-    A[Console or GitHub request] --> B{Admission}
-    B -->|Explicit request| Q[Queued task + mandate]
-    B -->|Labeled candidate| O[Observed]
-    O -->|Operator approval| Q
-    Q --> W[Isolated Git worktree]
-    W --> M[Model + bounded file tools]
-    M --> R[Summary + local diff]
-    R --> H[Human review]
-    H -->|Revision + context| Q
-    H --> D[Marked complete]
+flowchart TD
+    A[Requests and follow-up events] --> B[One selected scheduling architecture]
+    B --> C[Shared coding Workers and tools]
+    C --> D[Isolated repository workspaces]
+    D --> E[Captured patches and independent benchmark grading]
+    B -.-> F[Persistent events and session history]
+    C -.-> G[Model-call ledger and execution traces]
 ```
 
-Marking a task reviewed changes its local status. It does not commit, push, open a pull request, or merge. The current built-in executor has **no shell or test runner**; its final result must explain that tests were not run. Execute your repository’s checks before publication.
+## Results and research status
 
-## Scope and trust
+**Research preview, not a completed architecture study.** Published results include failures, token use, execution traces, and original scoring evidence.
 
-| Capability | Current implementation |
+| Evidence | What we have learned | Read more |
+| --- | --- | --- |
+| **Five-architecture pilot** — 4 tasks × 3 seeds | Super-agent resolved 2/12 runs; Eager Delegation and Single + Subagent each resolved 3/12. There are only four independent tasks. | [M2 report](research/M2-REPORT-003.md) |
+| **Shared Worker calibration** — 3 tasks, 1 seed | Qwen3-Coder-Next + the shared kernel resolved 1/3; Qwen30B + the same kernel resolved 0/3. The Next configuration is the candidate for broader evaluation. | [M3-A3 report](research/studies/m3-a3/README.md) |
+| **System mechanisms** — 147 controlled cells, plus restart checks | Parallel execution and subscription bypass work on deterministic workloads. The measurements establish mechanism behavior, not real coding success. | [System Track](research/studies/m3-a3/SYSTEM-REPORT.md) |
+
+Worker calibration is closed. The next architecture pilot uses four previously unrun tasks from the original frozen 24-task list, the same Next model and Worker, five architectures, and one seed. Its [preregistered setup](research/studies/m3-b1/README.md) is published. The first B1 attempt stopped at its accounting gate after a model-request timeout; no completed B1 architecture comparison is included in this release. The full 24-task, three-seed, 1/4-slot comparison remains the next expansion.
+
+Historical results keep their original code identity: **M2 uses source022; the current shared kernel is source025 / package 0.1.4.** Repeated seeds are repeated measurements of the same task, not additional independent tasks.
+
+## Reproduction and documentation
+
+| I want to… | Start here |
 | --- | --- |
-| Task workspaces | One Git worktree and branch per task, starting from the configured checkout’s committed `HEAD` |
-| File tools | List, read UTF-8 text, create/replace UTF-8 text, inspect diffs |
-| Limits | 2 workers; 20 model steps per attempt; 8 tools per step; 64 KiB per file operation |
-| Source policy | Allowed GitHub actors + exact repository + agent mention; labeled candidates remain observed |
-| Retention | SQLite history and worktrees retained; no task or workspace deletion endpoint |
-| Delivery | Local review and manual publication |
+| Understand the research scope and versions | [Research overview](research/START-HERE.md) |
+| Install and choose a reproduction route | [Installation](research/reproduction/INSTALL.txt) |
+| Inspect fairness rules, budgets, and metrics | [Evaluation protocol](research/PROTOCOL.md) |
+| Regrade a captured patch without calling a model | [Public example](research/public-example/README.md) · [current Worker replay](research/reproduction/RUN-CAPABILITY.md#仅重放本轮source025成功补丁) |
+| Reproduce the historical five-architecture model runs | [Frozen M2 instructions](research/reproduction/INSTALL-M2-source022.txt) |
+| Run native AsynCodeBench assignments | [Native runbook](research/NATIVE-RUNBOOK.md) · [local setup](research/reproduction/NATIVE-LOCAL.md) |
+| Find the implementation | [Schedulers](research/osa_eval/runtime.py) · [Worker kernel](research/osa_eval/kernel.py) · [benchmark campaign](research/osa_eval/campaign.py) |
 
-Use a repository you trust. Git worktrees share the repository’s Git metadata and are **not an operating-system sandbox**. The worker cannot request arbitrary shell execution through its tools, but Git operations use the operator’s account and repository configuration. File-path checks protect the tool boundary; they do not isolate hostile processes running as the same OS user. Files read by the worker are sent to the configured model provider. Secret-path filters are defense in depth; keep secrets out of the selected repository.
+Live SWE-bench Pro runs validate task/image identities, network boundaries, and actual per-task **1 CPU / 4 GB** limits before scoring. API credentials stay on the host. Original grader output, patches, SQLite journals, model/tool traces, and actual versus reserved tokens are kept as evidence. Models and benchmark images are obtained separately.
 
-This is a focused **v0.1 engineering preview**, not a production multi-tenant service. Automatic pull-request delivery, Feishu, conversational thread subscriptions, arbitrary shell workers, autonomous rule generation, and distributed execution are outside this release. See [security boundaries](SECURITY.md).
+## Scope and current limits
 
-## Development and validation
+This is an independent research implementation inspired by [DeepSeek's public SuperAgent prototype](https://github.com/deepseek-ai/dsh-superagent-prototype). The pinned upstream domain core is available through a separate adapter. The project is independently maintained and has no affiliation with DeepSeek.
 
-```bash
-python3 -m unittest discover -s tests -v
-pnpm build
-pnpm dev
-```
+- The complete DSH host, full Watchdog behavior, and recursive delegation inside one coding task remain integration work.
+- Recovery covers acknowledged checkpoints. Interrupted operations with uncertain external effects require reconciliation before replay.
+- Native AsynCodeBench preserves its own task decomposition, permissions, coordination, and scoring. The current assignment adapter replaces the Worker; a cross-architecture native coordinator comparison still needs a compatible integration.
+- Small model pilots, human counterfactual repairs, and deterministic system measurements have separate evidence scopes.
 
-The suite exercises admission, concurrency, restart recovery, stop races, file boundaries, signed HTTP intake, a real Git worktree, and a scripted model tool loop. Scripted provider tests establish protocol and runtime behavior; model quality and commercial-provider availability depend on your selected provider. See [validation evidence](docs/validation.md).
+### What about the web workspace?
 
-## Documentation
+The repository also contains an earlier local coding workspace in `server/` and `src/`. Its [setup guide](docs/getting-started.md) and [browser demo](https://xinyuchen-pku.github.io/OpenSuperAgent/) remain available. It has a separate executor and is a UI demonstration, not the benchmark evaluation interface. You do not need it to run the research framework.
 
-- [Getting started and configuration](docs/getting-started.md)
-- [Architecture and state transitions](docs/architecture.md)
-- [Research notes and upstream comparison](docs/research.md)
-- [Validation scope](docs/validation.md)
-- [Contributing](CONTRIBUTING.md)
-- [Security](SECURITY.md)
+## License and contributions
 
-## License and credits
-
-MIT © 2026 Xinyu Chen. Independently written application code; upstream research is credited in the design notes. The bundled DM Sans and Manrope fonts retain their respective SIL Open Font License files. Icons are provided by Lucide under the ISC license.
+MIT © 2026 Xinyu Chen. Retained third-party code, task artifacts, fonts, and icons keep their original notices; see [third-party notices](research/reproduction/THIRD-PARTY-NOTICES.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md). The [logo and generation prompts](docs/BRANDING.md) are included in the repository.
