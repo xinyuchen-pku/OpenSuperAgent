@@ -1,7 +1,9 @@
 # Research notes
 
 **Current evaluation work:** [Stage 2 Evaluation Suite](../suite/README.md) and
-[its preregistration protocol](../suite/PROTOCOL.md). The notes below describe
+[its preregistration protocol](../suite/PROTOCOL.md). For the research runtime,
+see [architecture and demo](architecture/README.md) and [benchmark results](results.md).
+The notes below describe
 the original workspace application reviewed on 2026-11-02. Its executor and
 claims are separate from the frozen common Worker used in the research suite.
 

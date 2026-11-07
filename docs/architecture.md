@@ -1,4 +1,7 @@
-# Architecture
+# Web Workspace architecture
+
+The research Framework and Evaluation Suite use a separate task runtime.
+[Research architecture](architecture/README.md)
 
 OpenSuperAgent separates authorization, durable state, model execution, and presentation. The backend uses Python’s standard library; the console uses React, TypeScript, Vite, and Lucide.
 
