@@ -1,0 +1,110 @@
+{
+  "revision": "portable074",
+  "updated": "2026-11-04T20:19:59.473738+00:00",
+  "research_source": "022unchanged",
+  "frozen_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+  "validated": {
+    "clean_installed_env": "public-clean-env058 Python3.12.15, wheel0.1.1; installed22modulebytes match frozenmanifest; 35job prepare-only passed",
+    "relocation": "public-portability067b/receipt.json: current022positive1 and historical021syntax0; originalcontainer IDs rejected; rawtestoutputequal both",
+    "timeout": "timeout-acceptance068/receipt.json: exactRoutercapturedpatch; independent124 after3000s, originalHarbor VerifierTimeoutError after3000s, missingrewardNone and jobMean0 preserved; no output comparison claimed; precomputedarchive allSHAequal",
+    "model_generation": "Provider007 same modelargv/weights/bootstrap/profile055 as006; live2call contract1400tokens passed before studycontinuation",
+    "four_branch_suite": "public-portability074/receipt.json: freshinstalledenv relocation current022positive1, historical021syntax0, current022runtimeimport0; originalcontainer IDs forbidden, rawtestoutputequal allthree. Full original3000s timeout0 replayed from immutable originalHarbor archive; comparison unavailable remainsnull",
+    "import_failure_scope": "Actual TypeError after captured patch deleted ModuleInfo constructor; sameimage baselinemodule import0, capturedpatch import1 with exactrawexception; actual1CPU4GiB; unsupported/unexplained outcomes remaininvalid",
+    "source_install079": "Fresh venv offline source install0.1.1, all22Python+1MJSinstalledbytes exact, CLIhelp passed. Setuptools build/egg-info archived separately, all40frozenauthorfiles unchanged. No Docker/model calls.",
+    "transport080": "81 raw final-cohort task attempts / 4082 tool outcomes audited: one predeclared backend connection fault only, no primary or replacement backend errors. Original raw output and all costs retained.",
+    "fixed_reference081": "Same-config Eager OpenLibrary single-task replacement completed after original80; outcome-independent exclusion amendment frozen before original final result existed; eligible final summary081 has60primary+20secondary.",
+    "final_figure_qa": "All three final PNGs individually inspected: success vs concurrency, throughput vs token cost, actual lock session timeline; descriptive seed/session-boundary limitations visible.",
+    "uniform_final_scoring075": "All25 pre074 artifacts replayed with final074 scorer after final timed gate. Same scores and patch/source hashes; normal rawoutputs equal. Full original3000s timeout archive hashverified reused, missing output equality remainsnull. 0 newmodelcalls.",
+    "small_public_example084": "Six-file captured example, exact original metadata bytes and626bytepositiveOpenLibrary patch; fresh clean-wheel074 original-Harbor verifier score1/rawoutputequal in26.15s,0modelcalls; no precomputedscore, freshcontainer. Whole-fourtaskmetadata costs clearlylabelled, single-taskscore selected explicitly.",
+    "native_final022": {
+      "status": "completed valid original bundle",
+      "protocol": "async_private",
+      "task": "asyncodebench:cachetools",
+      "FSR": "0/1",
+      "final_integrated_ADPR": "0/5",
+      "strict_DRS_observed": 0,
+      "strict_DRS_unresolved": 5,
+      "actual_model_calls": 115,
+      "actual_api_tokens": 3030909,
+      "protocol_seconds": 931.166004,
+      "native_run_wall_seconds": 975.8447868824005,
+      "scope_violating_roles": "2/2",
+      "failure_reason": "Original protocol rejected both captured artifacts for out-of-scope files. key_agent also changed func.py; both roles created disallowed backup files. Model-generated artifacts retained; no outcome-selected rerun.",
+      "official_profile": "asyncodebench-v0.3-standard-100 matched, deviations[]",
+      "resource_scope": "SDK defaults unchanged; local4vCPU16GiB total pool",
+      "archive": "m2/native-local-actual-078",
+      "controller_and_validate_exit": 0
+    },
+    "public_real_model_final022": {
+      "installed_package": "0.1.1 public-clean-env058, exact source022 module bytes",
+      "task": "OpenLibrary",
+      "architecture": "single",
+      "seed": 20261102,
+      "success": true,
+      "official_score": 1,
+      "raw_output_equal": true,
+      "model_calls": 27,
+      "actual_api_tokens": 338106,
+      "agent_wall_s": 544.0747876968235,
+      "regeneration_attempts": 1,
+      "excluded_from_architecture_statistics": true,
+      "actual_resources": "1 CPU /4294967296bytes, original Harbor fresh verifier"
+    },
+    "final_evidence_export": {
+      "files": 4350,
+      "archive_sha256": "a74572846bfcfdb28eacb33719e5baabd8d1b32c0757df2623b247d393998228",
+      "bytes": 383522090,
+      "all_raw_member_SHA256_verified_on_download": true,
+      "known_credential_values_absent": true,
+      "no_container_images_or_modelweights_or_private_DockerTLS": true
+    },
+    "analysis_relocation": {
+      "passed": true,
+      "created": 1793822947.1526237,
+      "scope": "Actual relocated analysis/ sibling to reproduction/ layout; complete80 accepted cases, no model or benchmark calls",
+      "plot_values_equal": true,
+      "all_three_PNG_pixels_equal": {
+        "success-vs-concurrency.png": true,
+        "throughput-vs-tokens.png": true,
+        "active-session-timeline.png": true
+      },
+      "all_three_tables_bytes_equal": true,
+      "summary_sha256": "7d937cf7c22b4d70dca68e5be6288a7e8ec4a9af710f0f78a69556d6b624fbe5",
+      "source_sha256": {
+        "plot_results.py": "bddfb73bedb65cbb73d79d1309bb576c5f26db7af0be0951f8035dcb56c8033c",
+        "write_analysis_tables.py": "5b8fe94564f4fd49951d5f7ffebad1f45355704060dd7d155f6b9fd46714dd1a"
+      }
+    },
+    "native_cross_host_recalculation": {
+      "passed": true,
+      "parsed_JSON_exactly_equal": true,
+      "LF_normalized_bytes_equal": true,
+      "local_generated_newlines": "CRLF",
+      "remote_generated_newlines": "LF",
+      "normalization_note": "Derived summary text differs only in operating-system line endings; original exported evidence unchanged",
+      "canonical_JSON_sha256": "10fcc6807d63cdb51197a24e99bcb109723f629ca50627d131a3be0cb6164e8e",
+      "remote_LF_sha256": "44f6053fdecf57eba1e4e8def2c9b2f564bf69e32a159f75dae71baee445c290",
+      "local_sha256": "ced70dd02f1dd3a6e4ff29cf1af42db36b1fbda5f240d944ca638282160ce936"
+    }
+  },
+  "remaining": [],
+  "files": {
+    "coding_failure_adjudication.py": "d96a05b369feaa19aa03cc6849abed5fd8624e9005e873358c11699f6fdb83c1",
+    "docker_cpu_prefix.py": "139e15227d75c21875c404289953aeb6b6cd03d6688acb5e8aa38815bdca55d6",
+    "m2_patch_replay001.py": "34cd7370b2c055017a443d1f4eb0ac9a360a3fa2f598cb145c793b4987063f5f",
+    "m2_syntax_adjudication042.py": "d6114ddae2b8449fd8ddf6f9456cf965ef1fb423d64dab5ffb8fdab969480722",
+    "official_regrade.py": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c",
+    "official_timeout_adjudication.py": "b8ee9a62858e223f58e1c828f51b95826795888298e9009f1205670866ac4f11",
+    "prepare_inputs.py": "8f68134bd4fc5e3fa5686ac827111164bb400794b3c0810b30de8e6985ca6c40",
+    "run_five_architectures.py": "4369fde0c13bab8e59a9d5f5cec5d3217d3c62340585bd77995442f4e295e389",
+    "run_public_task.py": "32867060ecdb615450c1b2496fd748d3b221f63e40a5831234747652a2814aed"
+  },
+  "unvalidated_extensions": [
+    "Complete fresh-host reconstruction of the prepared offline native SDK runtime",
+    "Full DSH host execution and within-task recursive delegation",
+    "Five research architectures substituted inside the same native dependency protocol",
+    "Larger24task and1/4/8/16load study deferred by current M2 scope"
+  ],
+  "publication_state": "Local review ready; no GitHub commit/push/PR/release. Exact branch and scope confirmation required by user-provided AGENTS.md6.3.",
+  "packaging_authority": "Completion of immutable packaging is recorded by the delivery MANIFEST and detached ZIP receipt, produced after this validation metadata is frozen."
+}

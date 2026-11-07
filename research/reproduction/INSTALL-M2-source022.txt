@@ -1,0 +1,169 @@
+Stage 1 M2 复现说明（与 source-022 研究内核配套）
+
+研究内核保持 source-022。五组比较的是任务级调度机制：Single、Single +
+Subagent、Eager Delegation、Router–Worker、Super-agent。完整 DSH 宿主调度、
+任务内部递归分解和集成仍是已披露的实现缺口。原生 AsynCodeBench 的协议轴
+单独报告，其原始任务划分、权限、100-response profile 和评分保持原样。
+
+1. 安装与原始输入
+
+需要 Linux x86_64、Git、uv、Docker 和 Docker Compose。必须实际支持每任务
+1 CPU / 4096 MiB 限制及官方禁网检查。四任务使用四个 CPU 执行位置；本次
+实际环境为 4 vCPU / 16 GiB、Linux 6.1.0-54、Docker 26.1.4、cgroup v2。
+镜像归档合计约 13.8 GB，完整运行另需容器写入层与原始轨迹空间；100 GB
+可用磁盘是保守估算。脚本保留停止的容器，清理时只能使用本次结果中经
+核对的确切 ID，先保存补丁、评分与容器信息。
+
+以下命令在本说明所在的 reproduction 目录运行。从本研究版本源码运行时，先进入 research/reproduction。原 M2 内核从随附的冻结源码包解压，使用独立环境安装对应 wheel。
+先选择研究源码位置：
+
+  python -c "import zipfile; zipfile.ZipFile('../frozen/source022/source022.zip').extractall('source022-runtime')"
+  export OSA_RESEARCH_DIR="$(cd source022-runtime/research && pwd)"
+
+  git -c core.autocrlf=false clone https://github.com/scaleapi/SWE-bench_Pro-os.git upstream/SWE-bench_Pro-os
+  git -C upstream/SWE-bench_Pro-os checkout --detach 66f92766bba642462d4bbe5479e83f91f9211862
+  git -c core.autocrlf=false clone https://github.com/laude-institute/harbor.git upstream/Harbor
+  git -C upstream/Harbor checkout --detach f6cf2e2e86a102a9d2980ce8888f4bda251aa998
+  export UV_PROJECT_ENVIRONMENT="$PWD/.venv-harbor"
+  uv sync --frozen --no-dev --python 3.12.15 --project upstream/Harbor
+  uv pip install --python .venv-harbor/bin/python --no-deps ../frozen/source022/opensuperagent_eval-0.1.1-py3-none-any.whl
+  export PATH="$PWD/.venv-harbor/bin:$PATH"
+  docker compose version
+  docker info
+
+Harbor 使用其原始 uv.lock。实际核验过的 uv 为 0.13.5，原始依赖版本另见
+installed-versions.json / constraints-linux.txt；对应文件随最终证据包提供。
+source-022 wheel SHA-256：
+c2ae434512643f6b91799d391f274270de7da7e7c22d0622ae7ab1052ea3f37b
+
+2. 准备固定四任务
+
+  python prepare_inputs.py --checkout "$PWD/upstream/SWE-bench_Pro-os" --docker-client "$(command -v docker)" --output prepared
+
+命令生成 config.json、workload.json、cpus.json、images.json。默认执行位置
+是 Docker 宿主机 CPU 0,1,2,3，可用 --cpu-indices 指定允许的四个位置。
+image map 同时记录官方 registry manifest digest 和实际 image/config ID。
+使用 images.json 中四个不可变 manifest 拉取镜像，逐一确认实际 config ID。
+例如：
+
+  docker pull ghcr.io/scaleapi/swe-bench_pro-v2@sha256:3dd7d06a5bf820d93245a474591578fe88158795a518b020270594b29bf85855
+
+其余三个 manifest 和全部 config ID 见 official-image-identities.json。
+远端 Docker 可通过 --docker-endpoint 配置；Compose 与控制客户端必须使用
+相同 DOCKER_HOST、DOCKER_TLS_VERIFY、DOCKER_CERT_PATH 和 DOCKER_CONFIG。
+凭据仅在运行宿主机加载，不写入配置、模型轨迹或任务容器。
+
+活动 SQLite/WAL 数据库必须放在运行调度器的控制主机本地文件系统；SQLite WAL 的
+共享内存协调要求读写进程位于同一主机，网络共享盘不满足此条件。
+本次账本位于 Linux 控制网关的任务专属 /dev/shm，任务与评分通过远程
+Docker 在用户本机运行。TMPDIR、SQLITE_TMPDIR 指向网关的同一临时位置，
+每个完整批次结束后复制到持久归档，逐文件核验 SHA-256 再移除临时副本。
+本地内存盘支持进程重启恢复，机器断电会丢失尚未归档的数据。复现时也可
+使用空间充足的本地磁盘；请分别记录实际存储与持久化边界。
+
+3. 同一模型与公共预算
+
+已验证服务的完整启动参数与环境范围见 MODEL-SERVICE.md。
+
+本轮 source-022 修复了截断回复/预算拒绝后的会话状态，以及 Python 语法
+错误造成空测试集合时的失败分类。全部正式运行使用同一修复版本。
+
+百度节点实际使用 vLLM 0.20.0，并由任务专用的兼容启动器保留 length
+结束原因。未修改共享安装目录。该版本原接口会把截断工具回复报告为
+tool_calls；修复前 8/16/32/64 token 四个上限均复现，修复后四个上限均
+返回 length，正常完整调用保持一致。启动器仅适配已记录的源文件摘要。
+原始修复依据：https://github.com/vllm-project/vllm/pull/59324
+
+使用相同已核验 vLLM 安装时，可先执行：
+  python "$OSA_RESEARCH_DIR/osa_eval/vllm_length_priority.py" --contract-check /absolute/path/to/vllm/entrypoints/openai/chat_completion/serving.py
+
+再以该启动器替换原 python -m vllm.entrypoints.openai.api_server，保留其余
+服务参数。OSA_VLLM_COMPAT_RECEIPT 指定运行身份记录路径。最终证据保存
+了服务参数、原始模块/启动器摘要和实际 HTTP 前后对照。其他接口也应
+先验证输出截断状态，再在五组间固定同一服务版本。
+
+填写 prepared/config.json 的模型接口与可核验模型身份。接口须支持标准
+chat completions 和同一服务端的 /tokenize，后者必须报告真实输入长度和
+max_model_len。密钥通过该配置的 api_key_env（默认 LLM_API_KEY）安全加载。
+
+本次模型：Qwen3-Coder-30B-A3B-Instruct，BF16，TP=4，context=262144，
+max sequences=4，max batched tokens=16384，GPU memory utilization=0.90，
+eager execution，prefix caching=false。请求 temperature=0.7，top_p=0.8，
+top_k=20，repetition_penalty=1.05，max output=8192；每次请求使用对应种子。
+精确权重与 tokenizer 文件摘要见模型身份与 26 文件校验清单。
+
+每任务最多 100 步，活跃执行限时 3000 秒，单条工具命令最多 600 秒。
+四任务总 token 预算 128,000,000，单任务参考为 32,000,000。每次请求
+按服务端实际输入 token + 最大输出 token 预留；实际用量来自 API usage。
+记录预留总量、未释放预留、拒绝次数和最终执行状态。单会话队列等待
+计入批次延迟，任务的活跃限时从取得会话锁后开始计算。
+
+4. 正负对照与五组运行
+
+  osa-eval pro-gates --config prepared/config.json --images prepared/images.json --task-ids $(python -c "import json;print(' '.join(json.load(open('prepared/images.json'))))") --output gates
+
+四个任务都须通过：参考补丁成功、空补丁失败、真实资源限制、禁网、隐藏
+测试与 Git 历史检查。保留所有失败尝试，不覆盖目录。正式比较前还须用
+原始 Harbor oracle/nop 复核全部任务；本次对应的 8 份结果已随证据交付。
+
+先准备并审阅全部运行配置，以下命令不调用模型：
+
+  python run_five_architectures.py --config prepared/config.json --workload prepared/workload.json --gates gates/evaluator-gates.json --output review-plan --checkout "$PWD/upstream/SWE-bench_Pro-os" --harbor "$PWD/.venv-harbor/bin/harbor" --cpus prepared/cpus.json --prepare-only
+
+确认配置后，使用新的输出目录运行，去掉 --prepare-only：
+
+  python run_five_architectures.py --config prepared/config.json --workload prepared/workload.json --gates gates/evaluator-gates.json --output experiment --checkout "$PWD/upstream/SWE-bench_Pro-os" --harbor "$PWD/.venv-harbor/bin/harbor" --cpus prepared/cpus.json
+
+固定 4 任务 × 3 种子 × 5 架构，共 15 个四任务批次、60 份主评分。
+配套 20 份单任务参考，共 35 个运行。顺序在首次请求前保存，全部请求
+到达时间为 0。首个种子的 20 份主评分若全为 0，自动停止后续种子，先
+诊断模型、任务与预算。原生 AsynCodeBench 的运行见冻结研究源码内的
+NATIVE-RUNBOOK.md，保持其原始协议名称与评分规则。
+
+仅复现一个公开任务时，可在正负对照通过后运行以下命令（默认使用固定
+子集中的第 4 个 OpenLibrary 任务；独立复现结果不加入架构比较统计）：
+
+  python run_public_task.py --prepared prepared --gates gates/evaluator-gates.json --checkout "$PWD/upstream/SWE-bench_Pro-os" --harbor "$PWD/.venv-harbor/bin/harbor" --output public-task
+
+该命令自动运行真实模型、捕获补丁、独立评分及原始 Harbor 评分，保存
+acceptance.json、全部轨迹和实际 API 用量。可添加 --prepare-only 先检查
+配置，不调用模型。一次运行使用新输出目录；保留失败尝试。
+
+5. 自动评分、失败分类与已有补丁重放
+
+每次模型执行后，脚本在全新镜像中评分，并调用原始 Harbor 重放同一补丁。
+official-harbor、protocol-attestation.json、原始 output.json 和 reward.txt
+保留官方证据；result.json、trace.jsonl、usage.json、model.patch 保留输入、
+调用、成本与补丁。研究内核的 raw official_protocol_valid=false 保留原值，
+每个补丁的正式验收由独立 protocol-attestation.json 证明。
+
+source-022 已直接记录明确的 Python 语法错误及收集失败，官方给出 0 分。
+规则 042 用于重放历史 source-021 原始无效标记，保留原始文件，须同时
+证明：同一镜像原始文件可编译、哈希校验后的模型补丁导致明确语法错误、
+错误行与原始日志对应、正对照有效、原始 Harbor 给出 0 且与独立输出一致。
+模型补丁造成运行时导入异常时，须证明原模块在同一镜像可导入、应用同一补丁后复现原日志中的明确异常，且异常堆栈指向模型修改的文件；最终仍须原始 Harbor 给出 0 分且原始测试输出一致。其他原因未明的无效评分仍停止执行。公开重放从不可变镜像和捕获补丁
+重新构建该证明，避免依赖原运行机器上残留的容器。
+
+官方测试达到 task.toml 的完整时限时，使用单独的超时说明。须同时满足：
+补丁应用成功、独立执行返回 124 且达到原始时限、原始 Harbor 报告
+VerifierTimeoutError、原始单任务 Job Mean 为 0，以及相同任务/镜像的
+参考补丁成功和空补丁失败。保留原始无效标记、缺失的 trial reward 和
+官方异常，另行记录解释后的失败分数。缺少 output.json 时，测试输出
+相等性记为 null。封装等待时限由原始测试时限加准备余量计算。
+
+已有模型补丁可在无需模型接口、无需新增推理费用的情况下重放：
+
+  python official_regrade.py --checkout "$PWD/upstream/SWE-bench_Pro-os" --harbor "$PWD/.venv-harbor/bin/harbor" --run /absolute/path/to/captured-run --output replay-new --cpus "$(cat prepared/cpus.json)"
+
+可用 --task-id 选择一个指定公开任务。实际已完成的评分、可移植性验证
+范围和未覆盖项，以最终 Markdown 报告、验收清单及 PORTABILITY-VALIDATION.json 为准。
+模型重新生成涉及服务端数值计算、采样和文件遍历顺序，可能产生不同轨迹；
+保留相同模型、代码、任务、资源和种子，并分别报告生成与补丁重放结果。
+
+6. 结果解释与发布
+
+报告应区分模型报告完成、达到步数或时间上限、补丁可运行和官方成功。
+API tokens 与 GPU 驻留时间分别统计，硬件货币价格未知时明确留空。
+比较使用相同任务、相同模型、相同工具和总预算，报告逐任务失败、吞吐、
+延迟、协调开销和真实重叠区间。独立任务对照与原生依赖协作分开解释。
+GitHub 提交、推送与发布状态由最终交付记录列明。

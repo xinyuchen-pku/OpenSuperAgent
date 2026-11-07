@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "actual_api_calls": 0,
+  "actual_api_tokens": 0,
+  "model_artifact_source": "historical source022; unchanged captured patch",
+  "installed_current_core": "clean only-distribution opensuperagent-eval0.1.4",
+  "started": 1793987891.819663,
+  "finished": 1793987920.6454995,
+  "command": [
+    "/dev/shm/osa-clean297/env/bin/python",
+    "/dev/shm/osa-public-replay313/research/reproduction/official_regrade.py",
+    "--checkout",
+    "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/official-pro-checkout-001",
+    "--harbor",
+    "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-env-harbor-003/bin/harbor",
+    "--run",
+    "/dev/shm/osa-public-replay313/research/public-example/captured-run",
+    "--output",
+    "/dev/shm/osa-public-replay313/official-replay",
+    "--task-id",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+    "--cpus",
+    "{\"instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818\": 3}",
+    "--docker-prefix",
+    "[\"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/docker-client-001/docker\", \"--host\", \"tcp://127.0.0.1:28239\", \"--tlsverify\", \"--tlscacert\", \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/docker-client-tls-001/ca.pem\", \"--tlscert\", \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/docker-client-tls-001/cert.pem\", \"--tlskey\", \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/docker-client-tls-001/key.pem\"]"
+  ],
+  "scores": [
+    {
+      "official_protocol_valid": true,
+      "scope": "This captured model artifact, task, architecture and seed only",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "architecture": "eager_delegation",
+      "seed": 20261102,
+      "success": true,
+      "official_reward": 1.0,
+      "official_aggregate_mean": 1.0,
+      "independent_success": true,
+      "independent_original_valid": true,
+      "coding_failure_adjudication": null,
+      "raw_output_equal": true,
+      "test_outcomes_equal": true,
+      "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+      "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+      "model_patch_sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20",
+      "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+      "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+      "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+      "official_task_verifier_modified": false,
+      "actual_resources": {
+        "container_id": "db5b9b1984266eb11942fa014c7e282c5b174553c1186107311ee72ab1809e7d",
+        "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "actual": {
+          "cpu.max": "100000 100000",
+          "memory.max": "4294967296",
+          "cpuset.cpus.effective": "3",
+          "affinity": [
+            3
+          ]
+        },
+        "host_limits": {
+          "NanoCpus": 1000000000,
+          "Memory": 4294967296,
+          "CpusetCpus": "3",
+          "MemorySwap": -1
+        },
+        "time": 1793987898.1214414
+      },
+      "elapsed_s": 28.07501284778118,
+      "trial": "/dev/shm/osa-public-replay313/official-replay/c5e3b484ba4a8302b305/jobs/patch-d09af14044d2e4/instance_internetarchive__openli__viQho3c/result.json",
+      "raw_campaign_protocol_flag_preserved": false,
+      "precomputed_original_harbor": null,
+      "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+    }
+  ],
+  "new_model_success_credit": false
+}

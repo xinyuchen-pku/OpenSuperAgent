@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "created": 1793998001.7901042,
+  "source025_files": 43,
+  "source025_tree": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+  "mini_files_rechecked": 77,
+  "mini_source_export_hashes_unchanged": true,
+  "mini_git_metadata_bundled": false,
+  "mini_commit": "04d809ceab9df28f9adaed044884180159172930",
+  "actual_operational_sources": {
+    "m2_native_docker_prefix027.py": {
+      "sha256": "6ddcf745e6c6ce5b93acc3ea7b5bfcc2979205c6efbcd5d2dd3bd9059728203d",
+      "bytes": 378
+    },
+    "m2_native_scoring074.py": {
+      "sha256": "e443f1879b76acf80d81dc2aaec3897d93be47d4de4994295250995b07039cc4",
+      "bytes": 889
+    }
+  },
+  "actual_api_calls": 0
+}

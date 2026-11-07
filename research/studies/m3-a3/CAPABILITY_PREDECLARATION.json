@@ -1,0 +1,72 @@
+{
+  "stage": "M3-A3",
+  "created_utc": "2026-11-06T17:02:43Z",
+  "strong_model": "Qwen/Qwen3-Coder-Next",
+  "strong_revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
+  "strong_dtype": "bfloat16",
+  "selection_basis": "Official model designed for coding agents, larger80Btotal3Bactive vs current30Btotal3Bactive; performance here remains an experimental question. Locally existing model inventory has no stronger coding checkpoint. Selected before capability outcomes.",
+  "standard_agent": {
+    "repo": "https://github.com/SWE-agent/mini-swe-agent",
+    "commit": "04d809ceab9df28f9adaed044884180159172930",
+    "config": "src/minisweagent/config/mini.yaml",
+    "agent_core_modified": false
+  },
+  "tasks_in_fixed_order": [
+    "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+    "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818"
+  ],
+  "selection_rule": "First occurrence of each distinct repository in previously frozen M2 first-four list; prior outcomes known and disclosed; no new task search or outcome-based replacement",
+  "arms": [
+    "Qwen3-Coder-30B+source025",
+    "Qwen3-Coder-Next+source025",
+    "Qwen3-Coder-Next+mini-SWE-agent"
+  ],
+  "seed": 20261102,
+  "task_token_cap": 2000000,
+  "max_calls_per_task": 100,
+  "max_output_tokens": 8192,
+  "context_window": 262144,
+  "task_cpu": 1,
+  "task_memory_mib": 4096,
+  "tool_timeout_s": 120,
+  "task_wall_cap_s": 3600,
+  "model_parameters": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repetition_penalty": 1.05,
+    "prefix_cache": false
+  },
+  "total_api_token_cap": 18020000,
+  "admission_token_cap": 20000,
+  "gpu_services": {
+    "devices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "baseline_max_s": 5400,
+    "strong_max_s": 7200,
+    "aggregate_gpu_hours_cap": 14
+  },
+  "stop_rules": [
+    "One admitted attempt per task/arm; meaningful agent failure is not rerun",
+    "Unknown usage, input/hash/protocol/resource mismatch: stop new cases and reconcile",
+    "No task replacement or prompt changes after outcomes",
+    "All zero: retain failures and reevaluate model/kernel; no24task expansion"
+  ],
+  "worker_frozen_tree": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+  "budget_is_upper_bound": true,
+  "download_is_cpu_only": true,
+  "execution_start_requires_zero_model_adapter_and_protocol_acceptance": true,
+  "amendment_before_any_model_calls": {
+    "created": 1793985475.8463566,
+    "previous_sha256": "0fbe95b05e03927239dbe578c85ab3a15aba5970cc941bb5f74018727f58f9dd",
+    "reason": "Pinned v2 source explicitly recommends native toolcalls; use official current CLI mini.yaml with DefaultAgent in noninteractive evaluation mode instead of legacy text default.yaml; model/task/budget/source025 unchanged",
+    "context_policy": "stop for every arm",
+    "artifact_handoff_checks": false,
+    "same_tool_capability": "one bash execution backend; original agent-specific prompt,tool schema,observation formatting and termination retained"
+  }
+}

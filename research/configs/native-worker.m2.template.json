@@ -1,0 +1,17 @@
+{
+  "architecture": "native",
+  "provider_model": "osa-qwen3-coder-30b",
+  "temperature": 0.7,
+  "max_output_tokens": 8192,
+  "seed": 20261102,
+  "timeout_s": 600,
+  "token_budget": 32000000,
+  "request_token_reservation": 262144,
+  "reservation_policy": "exact_prompt_plus_max_output",
+  "allow_private_http": false,
+  "tokenizer_preflight": true,
+  "context_policy": "shorten_old_tool_observations",
+  "input_usd_per_million": 0.0,
+  "output_usd_per_million": 0.0,
+  "cost_convention": "Zero API transport charge for self-hosted inference; GPU residence and hardware price reported separately"
+}

@@ -1,0 +1,143 @@
+{
+  "stage": "M3-B1",
+  "created_utc": "2026-11-07T02:07:20.205039+00:00",
+  "original_started_utc": "2026-11-02T15:12:09Z",
+  "user_decisions": [
+    "WorkerCalibration ended; no cachetools prompt tuning",
+    "Freeze Qwen3-Coder-Next+source025",
+    "Start B1 on previously unrun tasks from original24, then B2",
+    "Advance previously specified research publication branch,scope,PRandprerelease",
+    "Native multi-task/event evaluation must remain a separate track"
+  ],
+  "source025_tree": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+  "original24_manifest_sha256": "2e4de4b63a967ac99293fa71ec2998707396bcb1bec4fb94ee190fb24f6914c6",
+  "B1_selection": "positions5-8 in original frozen order; first4 previously unrun, no replacement",
+  "tasks": [
+    {
+      "id": "instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "task_files_sha256": {
+        "environment/Dockerfile": "537d75635a79f8ee527e720562c5c53687925ee228531fb068c9fd8b025fe8ae",
+        "instruction.md": "d3380f8371508424053f1afdef563e72afec8c9ce60732913e03667f8239866f",
+        "solution/gold_patch.diff": "fddb186f0fce85ec2b7c53423c58886a2577ca62752e8f2f73cb0d1b9c6dfeb5",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "11e726cf5948853deddd5405e96dc3a964ac580fb1c76e8bbcdef7b52b0c44f0",
+        "tests/config.json": "52c261ddbdfecd556b94c312effe3dd346585de0c4618f0b74f83c10da86af10",
+        "tests/parser.py": "eedbb04d9f71f140c4af38043d3bddb0fc6374799d2b84c95c5b8c8214efd4d6",
+        "tests/run_script.sh": "3d56cf4e07b5f0fe2f78edc6c759fa2bcb9d2422af64d51b91dc0d676c8f1505",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "c32e12c0fa83d72c7dacc180c08081d77552764df2b66c9981a7468b5d8c5ea4"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+      "task_files_sha256": {
+        "environment/Dockerfile": "043c72139a4cfd517b2a5c1b43194e76a7df45fb7c22d803fef08b521636dbbd",
+        "instruction.md": "acec7dc6f6889087a6ad2dd093efcf4fe504fdfd42b67e84885a95c326437ec5",
+        "solution/gold_patch.diff": "306e05c381560a93609ea6dccae5bb6fb515419a6cd7d05b3e40d2ac97d025da",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "6a154f72c9be413e17c6a8507866a0cc1cf2fea2df43b2c533173d6fdedf2981",
+        "tests/config.json": "75d9ea412635af355cbf1d80a1198011272173e0fee5c7bfa867b2ef976736f8",
+        "tests/parser.py": "264b094594a765a5dd6812a45154203110e3032c7de4704c993b09b2b4418534",
+        "tests/run_script.sh": "6093b8011034080b8aa2bddbbf459d4a67222475ea02a296f44ac61a86a10eb2",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "8fc6842365489e56b5b88874c721266565d0a7c9b99cca2781afd64a4716b4cd"
+      },
+      "instruction_path": "v2/tasks/instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+      "task_files_sha256": {
+        "instruction.md": "53f537e58b35275f24f7077a2a54f17d8557265e37e421a63fbe6df73ed868c0",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "203b5dac02dea6f9b80885142b7634880dd7193758d074b508282b98914c9562",
+        "tests/config.json": "530d4fe7fd2e54d4ee43b02bdcf909775a488ab180b3f4de839f1c19a88c86ed",
+        "tests/parser.py": "14451c49d5f347978407553041b1de3dba0d63be6b8bd6abeaa7aaf807e6e613",
+        "tests/run_script.sh": "7b1c1159e658aa0f60bc1fb7ff73dcd6d5f261e99e55b93520131b74443a451d",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0"
+      },
+      "instruction_path": "v2/tasks/instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+      "task_files_sha256": {
+        "environment/Dockerfile": "13826369ca5243e5c840d49117b5e442a40d5432d510530d5fb26808cb004624",
+        "instruction.md": "98df687bcd0014c829b97125d34b864d49c27b4f27394a26c3688808271df4bf",
+        "solution/gold_patch.diff": "f056446b5b5e606248ed8c15b4a74b1a31be3001a338ee23965ebbd23cb86834",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "3c9c2fede0848bd3bcfe5143e8417ba7cf083ab4082b84e0cf37bd2299f8d9bf",
+        "tests/config.json": "62f820117bb58650940865601bb09e6c424594722037da617ddaee63793d3c77",
+        "tests/parser.py": "dd9e16f9758617a0147b23dca25de01e1b8879c2f2cea60f07ea3bde80f56bdd",
+        "tests/run_script.sh": "b37fbfccd022046cd034c3797f0d3c1f65fb79c6ba9b9aa90e48a552e2556d84",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "b2ef167245b98320694fcf247d4245e760a6aae227b46f8384ba5fbffc29b547"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+      "resolved_image_digest": null
+    }
+  ],
+  "B1_architectures": [
+    "single",
+    "single_subagent",
+    "eager_delegation",
+    "router_worker",
+    "superagent"
+  ],
+  "seed": 20261102,
+  "slots": 4,
+  "model_concurrency": 4,
+  "batch_token_budget": 8000000,
+  "budget_scope": "shared four-task batch including every decision/main/worker call; nominal2M per task is not a hard per-task allocation",
+  "max_worker_steps_per_task": 100,
+  "task_timeout_s": 3600,
+  "tool_timeout_s": 120,
+  "horizon_s": 15000,
+  "B1_valid_task_grades": 20,
+  "B1_total_API_token_cap": 40020000,
+  "B1_service_GPU_hours_cap": 48,
+  "model": "Qwen/Qwen3-Coder-Next",
+  "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repetition_penalty": 1.05,
+    "max_output_tokens": 8192,
+    "model_context": 262144,
+    "prefix_cache": false,
+    "dtype": "bfloat16",
+    "tensor_parallel": 4
+  },
+  "protocol_stop": [
+    "input/image/resource mismatch",
+    "official reference fails or empty patch succeeds",
+    "unknown APIusage/accounting discrepancy",
+    "official/independent scoring disagreement",
+    "infrastructure fault, preserve completed results, no automatic outcome-based retry"
+  ],
+  "capability_rule": "Finish all five architectures regardless of wins or success rates. Allzero is a reported outcome; no architecture-specific model/prompt change. B2 resource/protocol plan is frozen before its calls.",
+  "B2_scope": {
+    "tasks": "all original24, originalorder",
+    "seeds": [
+      20261102,
+      20261103,
+      20261104
+    ],
+    "capacity": [
+      1,
+      4
+    ],
+    "architectures": "samefive",
+    "planned_task_grades": 720,
+    "statistics": "paired effects and resampling by unique task cluster,not treating seeds as independent tasks"
+  },
+  "publication_scope": "prior reviewedZIP28d9dade1a141e1f3e92c7e3a22764e21106978248dde837798af90f5535592d;branchstage1/m3-a3-research-release;README2+research;PRmain;prereleasev0.1.4-research;latestuserresponseauthorizesadvance",
+  "status": "preparing inputs and protocol gates; no new inference yet"
+}

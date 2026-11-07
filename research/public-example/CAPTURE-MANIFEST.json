@@ -1,0 +1,40 @@
+{
+  "created": 1793819365.2758775,
+  "source_run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+  "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+  "positive_task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+  "model_patch_sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20",
+  "original_captured_score": 1,
+  "files_exactly_copied": {
+    "identity.json": {
+      "bytes": 86329,
+      "sha256": "5d5fe61db8c46efda2daf70c92e70242d4c5c13701385111405dd215abf83e5c"
+    },
+    "result.json": {
+      "bytes": 108868,
+      "sha256": "7fc5fe6f7ccb68ace7db0b4b3ae54f8202e4b08ee8e3b4c8b3e918f328963125"
+    },
+    "usage.json": {
+      "bytes": 58770,
+      "sha256": "771a438df0e4b86e92d095655eb2f6333116b2e82eebd01dce6edbfcbe0d4a8c"
+    },
+    "accepted-summary.json": {
+      "bytes": 6906,
+      "sha256": "7ddf8f4fbf3dbba516a3474785fed7ac68332c7408a9d26a2346d51532d693ed"
+    },
+    "c5e3b484ba4a8302b305/model.patch": {
+      "bytes": 12270,
+      "sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20"
+    },
+    "c5e3b484ba4a8302b305/pristine-grade/output.json": {
+      "bytes": 2047,
+      "sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a"
+    }
+  },
+  "metadata_scope": "identity/result/usage/accepted-summary are unchanged ORIGINAL FOUR-TASK BATCH metadata. Only the positive task patch/output are included. Always pass --task-id; no other task patch is supplied. Whole batch cost is not one-task cost.",
+  "original_batch_model_calls": 224,
+  "original_batch_actual_API_tokens": 3991197,
+  "full_other_patches_and_trace": "Preserved in raw evidence valid-study062/primary/seed20261102-eager_delegation",
+  "copy_model_calls": 0,
+  "replay_validation_pending": true
+}

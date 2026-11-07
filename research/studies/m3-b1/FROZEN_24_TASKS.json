@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "benchmark": "swebench_pro_v2",
+  "provenance": {
+    "url": "https://github.com/scaleapi/SWE-bench_Pro-os.git",
+    "commit": "66f92766bba642462d4bbe5479e83f91f9211862",
+    "tag": "v2.0.0",
+    "observed_head": "66f92766bba642462d4bbe5479e83f91f9211862"
+  },
+  "seed": 20261102,
+  "selection": "SHA256-ranked sample of sorted public task ids, without model outcomes",
+  "official_task_count": 642,
+  "tasks": [
+    {
+      "id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "task_files_sha256": {
+        "environment/Dockerfile": "d22711cd46b1d78698281722c3859da079461d3a578b84c741b424248703909c",
+        "instruction.md": "f6179085ab03fb95fa7296dd8bf944bf5a7e5d25572ccd291c14b2b57099ba44",
+        "solution/gold_patch.diff": "a4db4088968e9a74fdf071dd2bf7b93606473c2f7d630cf57dfad12a91a3469d",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "753e4f48c6c5c3ec3315f7846f58ca482fc5b9ab78cd3c5de1a70c2b30a54d3b",
+        "tests/config.json": "f230c8a566fdb119289256b047c000b724bc33a282205406c8f495e53a6e4c82",
+        "tests/parser.py": "9a0f04486e3680a6e2f577e54fa9151da15e5bc0b2cc4804177a9da28adc1b17",
+        "tests/run_script.sh": "7da7750839e69d688bef503e658666193c2c1805bc13b2758e63bbd7dceb440d",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "7e364df76910ce65f59b0abb2ae5fd27e403b9bea1b2fa369e1ef28a8d55fb39"
+      },
+      "instruction_path": "v2/tasks/instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "task_files_sha256": {
+        "environment/Dockerfile": "e607fca86d1362a847e455e3b5429d5ad125af1e3364cf696bd3d89b6f4d5da2",
+        "instruction.md": "048abff0ceefca96c42c6460b8fd5303481cb4a6946be45c1247d6d7bdca2c7b",
+        "solution/gold_patch.diff": "0a7d798dfa3e58fc115d642802b13525455738be7807ad5a3db83a1d79f16a1d",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "3c9c1438e0ee38af1d0dac0fd8332ab741a568cafd682eb2b39fee9724a1b769",
+        "tests/config.json": "9400d79a067bab7a797f29582ea7fb67aff465c769844f3f6f10c4590ab625d5",
+        "tests/parser.py": "9a0f04486e3680a6e2f577e54fa9151da15e5bc0b2cc4804177a9da28adc1b17",
+        "tests/run_script.sh": "1d617b41a700476a39073c93881ebe2c36326132daab7629f0c3ef42393df7fd",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "07d7263f4bc61c14c2761ca9bb48b2edf9ca3df49920cb0c45f23e23a7389ae7"
+      },
+      "instruction_path": "v2/tasks/instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "task_files_sha256": {
+        "environment/Dockerfile": "250a2ccc94a80650b79af492443af8d7d1c0eddd0503c87fa52f1452d4fe0ca3",
+        "instruction.md": "08893d0583dcc54f25e0ed568e77fb2f65cae5fee98a1b3ca917ba30e26ee279",
+        "solution/gold_patch.diff": "0c0fcb031719bd9b832e63f105e353ac6c6be43d0a915fc5560454ee83690228",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "dcce333c7095d94b3a1fc97d376c6efbd012f6d747403fbfa79beb2112150e58",
+        "tests/config.json": "5ea28d8242418606d414d563dd353e69bed996940351d1e58a6cb68ed02ad062",
+        "tests/parser.py": "eedbb04d9f71f140c4af38043d3bddb0fc6374799d2b84c95c5b8c8214efd4d6",
+        "tests/run_script.sh": "3d56cf4e07b5f0fe2f78edc6c759fa2bcb9d2422af64d51b91dc0d676c8f1505",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "89d1421c28bf614912adc0b8f903478725fec519915ddfb0a295a95379c05858"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "task_files_sha256": {
+        "instruction.md": "972e3508782397c3678914683fb89acc42f7b496bd0868ee4b4c36eb9ef6882a",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "3b6aa81e7bb19708421aa8bf8471414b547c8cf9dfe073c053204068ce0773ee",
+        "tests/config.json": "d89a2d384f6f648dc0c0daf481bb7ba1c244ec0205ea6749b8774eb67cce20f3",
+        "tests/parser.py": "d8167fbf57e7abc29ea6f97708fbf74bdc559a695cf254cf32206eca0726d549",
+        "tests/run_script.sh": "1ca04a777141fde51b2ddc9f35171f7df3531645c4909954d73febe6f89cd6d2",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0"
+      },
+      "instruction_path": "v2/tasks/instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "task_files_sha256": {
+        "environment/Dockerfile": "537d75635a79f8ee527e720562c5c53687925ee228531fb068c9fd8b025fe8ae",
+        "instruction.md": "d3380f8371508424053f1afdef563e72afec8c9ce60732913e03667f8239866f",
+        "solution/gold_patch.diff": "fddb186f0fce85ec2b7c53423c58886a2577ca62752e8f2f73cb0d1b9c6dfeb5",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "11e726cf5948853deddd5405e96dc3a964ac580fb1c76e8bbcdef7b52b0c44f0",
+        "tests/config.json": "52c261ddbdfecd556b94c312effe3dd346585de0c4618f0b74f83c10da86af10",
+        "tests/parser.py": "eedbb04d9f71f140c4af38043d3bddb0fc6374799d2b84c95c5b8c8214efd4d6",
+        "tests/run_script.sh": "3d56cf4e07b5f0fe2f78edc6c759fa2bcb9d2422af64d51b91dc0d676c8f1505",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "c32e12c0fa83d72c7dacc180c08081d77552764df2b66c9981a7468b5d8c5ea4"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+      "task_files_sha256": {
+        "environment/Dockerfile": "043c72139a4cfd517b2a5c1b43194e76a7df45fb7c22d803fef08b521636dbbd",
+        "instruction.md": "acec7dc6f6889087a6ad2dd093efcf4fe504fdfd42b67e84885a95c326437ec5",
+        "solution/gold_patch.diff": "306e05c381560a93609ea6dccae5bb6fb515419a6cd7d05b3e40d2ac97d025da",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "6a154f72c9be413e17c6a8507866a0cc1cf2fea2df43b2c533173d6fdedf2981",
+        "tests/config.json": "75d9ea412635af355cbf1d80a1198011272173e0fee5c7bfa867b2ef976736f8",
+        "tests/parser.py": "264b094594a765a5dd6812a45154203110e3032c7de4704c993b09b2b4418534",
+        "tests/run_script.sh": "6093b8011034080b8aa2bddbbf459d4a67222475ea02a296f44ac61a86a10eb2",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "8fc6842365489e56b5b88874c721266565d0a7c9b99cca2781afd64a4716b4cd"
+      },
+      "instruction_path": "v2/tasks/instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+      "task_files_sha256": {
+        "instruction.md": "53f537e58b35275f24f7077a2a54f17d8557265e37e421a63fbe6df73ed868c0",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "203b5dac02dea6f9b80885142b7634880dd7193758d074b508282b98914c9562",
+        "tests/config.json": "530d4fe7fd2e54d4ee43b02bdcf909775a488ab180b3f4de839f1c19a88c86ed",
+        "tests/parser.py": "14451c49d5f347978407553041b1de3dba0d63be6b8bd6abeaa7aaf807e6e613",
+        "tests/run_script.sh": "7b1c1159e658aa0f60bc1fb7ff73dcd6d5f261e99e55b93520131b74443a451d",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0"
+      },
+      "instruction_path": "v2/tasks/instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+      "task_files_sha256": {
+        "environment/Dockerfile": "13826369ca5243e5c840d49117b5e442a40d5432d510530d5fb26808cb004624",
+        "instruction.md": "98df687bcd0014c829b97125d34b864d49c27b4f27394a26c3688808271df4bf",
+        "solution/gold_patch.diff": "f056446b5b5e606248ed8c15b4a74b1a31be3001a338ee23965ebbd23cb86834",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "3c9c2fede0848bd3bcfe5143e8417ba7cf083ab4082b84e0cf37bd2299f8d9bf",
+        "tests/config.json": "62f820117bb58650940865601bb09e6c424594722037da617ddaee63793d3c77",
+        "tests/parser.py": "dd9e16f9758617a0147b23dca25de01e1b8879c2f2cea60f07ea3bde80f56bdd",
+        "tests/run_script.sh": "b37fbfccd022046cd034c3797f0d3c1f65fb79c6ba9b9aa90e48a552e2556d84",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "b2ef167245b98320694fcf247d4245e760a6aae227b46f8384ba5fbffc29b547"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_NodeBB__NodeBB-0c81642997ea1d827dbd02c311db9d4976112cd4-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "task_files_sha256": {
+        "environment/Dockerfile": "42744e572a64b44c609f1b0ddb512ac51832b6823dae0e8570638d617e3798cc",
+        "instruction.md": "8ed2a243090993423a5fb6f2fb774ac9243a08f5e065e59c7a5e402ad2b20805",
+        "solution/gold_patch.diff": "acc59546cc0184bd10e1109849231353fd3e452e3885713203cb1cc29e550a34",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "b9569de5f0fc0c193b202e1afb07c1cd68a14130cbb0402be848c93e1dc813ee",
+        "tests/config.json": "a40beddb62f707ff04c25dfe45ad0cb2c9cdadec810929ffd4472a666076bd0a",
+        "tests/parser.py": "55c2418512e1f11fac1893043e2a588d6c0809071c373b989a6c3d86906cbd97",
+        "tests/run_script.sh": "f7ae8ff66fd6a77a26a909b2812c84cfb5bfc3b369effc1e8bb683e7dfc56a47",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "f11100aa4aa6c8fe665f9650ae0bd319c04e1ef1fd5b7bbaa6b80c53e35c2082"
+      },
+      "instruction_path": "v2/tasks/instance_NodeBB__NodeBB-0c81642997ea1d827dbd02c311db9d4976112cd4-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_NodeBB__NodeBB-0c81642997ea1d827dbd02c311db9d4976112cd4-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_element-hq__element-web-41dfec20bfe9b62cddbbbf621bef2e9aa9685157-vnan",
+      "task_files_sha256": {
+        "environment/Dockerfile": "a87a3a78230fba0c7436002665cae79fd616e982c185072081bc23c5d67245b0",
+        "instruction.md": "5236ee491ccd313a938de40b272db729e01ddd01fec1b3f73e7ba58fe646aa20",
+        "solution/gold_patch.diff": "f8d059a80d2ab37678ef1830dab9742e72d63e7bad7353b767214acc57019ae5",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "5191339c7a488f66fe9c56407f53b56e7149d8d0c2b4a10046478a702a4bae35",
+        "tests/config.json": "8652aec70a3c25d4bf488e5e6447ef24edeeb1c9d31069c10598cc40bace32a8",
+        "tests/parser.py": "53aff51506358c3895f23046a9e1e374fff838d4110b4355e6dea257efe54db2",
+        "tests/run_script.sh": "8fa955298afd7223f9d1f7196c614de668ce66e77799fe2ec6d6f43d41082246",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "36428091633252ac3af1d4010660473d0fc75993e21aff06e6216d1aaafc695a"
+      },
+      "instruction_path": "v2/tasks/instance_element-hq__element-web-41dfec20bfe9b62cddbbbf621bef2e9aa9685157-vnan/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_element-hq__element-web-41dfec20bfe9b62cddbbbf621bef2e9aa9685157-vnan",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_internetarchive__openlibrary-b4f7c185ae5f1824ac7f3a18e8adf6a4b468459c-v08d8e8889ec945ab821fb156c04c7d2e2810debb",
+      "task_files_sha256": {
+        "instruction.md": "35e3cec7bedd91f5dfc432fde1f5fe884a2324680a22edeb3698aa4474e32a8b",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "05e645718742b0240c7e526fa7baa91c63f9434d540b7e208c11371ae92b86c9",
+        "tests/config.json": "91fe5ead130eb2a33a582d35151dde4e536bec82d240a9de80b4397766b41d55",
+        "tests/parser.py": "954c0a68c4cd45d6848774a59b093b825333b2f8bc51b8393ebac77bd4ff91ca",
+        "tests/run_script.sh": "9426c5d3b174c487acc5d90873a7461c604cc23682c3809b418a50c0c3066875",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0"
+      },
+      "instruction_path": "v2/tasks/instance_internetarchive__openlibrary-b4f7c185ae5f1824ac7f3a18e8adf6a4b468459c-v08d8e8889ec945ab821fb156c04c7d2e2810debb/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_internetarchive__openlibrary-b4f7c185ae5f1824ac7f3a18e8adf6a4b468459c-v08d8e8889ec945ab821fb156c04c7d2e2810debb",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_ansible__ansible-29aea9ff3466e4cd2ed00524b9e56738d568ce8b-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5",
+      "task_files_sha256": {
+        "environment/Dockerfile": "d2df8fd378a8b96143bfb511972cbab563909540f8e31636a54930b8b5de7bda",
+        "instruction.md": "2f8da4cc1c9d5db59475bba4be3a2c91261e6d5ca477a8f3d8169bf495e4cfed",
+        "solution/gold_patch.diff": "4a8240fbbf481045fe51fee349fd5eaf8746f3bc2f1233db5a0c1d0dce7dcc5a",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "36ce06d5d0a252a63a80cfda16979c887650693d6d9132943ba2bcae5b89d124",
+        "tests/config.json": "a6c9f1efad9889d37d58879b8551fad599002c451067d842379a16d3a600ac3d",
+        "tests/parser.py": "3bb7f471aa61ea90f7c8992cb901f61c14efc2a703dee9a14cd682840006c2dd",
+        "tests/run_script.sh": "4194d6f1b638b5475c58b11a36cda2637b7001993d5171233ef11aab6bf726f9",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "94d478db60bb6d23cacd042391393eac3883b17f598efeb1ede6cd73303a8880"
+      },
+      "instruction_path": "v2/tasks/instance_ansible__ansible-29aea9ff3466e4cd2ed00524b9e56738d568ce8b-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_ansible__ansible-29aea9ff3466e4cd2ed00524b9e56738d568ce8b-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_flipt-io__flipt-cd18e54a0371fa222304742c6312e9ac37ea86c1",
+      "task_files_sha256": {
+        "environment/Dockerfile": "c599428a1ccd8649e7a5ed387a2048b4dbf4f93f39fc6ab606b56b17b3bf8b04",
+        "instruction.md": "2309d9d2d04455c1575a2aa75311dfeab1b036706af5bb3539b0287a48a77153",
+        "solution/gold_patch.diff": "d2a46cc75d4e39874f360df9b81ba82dee2507cddd8239231da263682c40588b",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "36bc4f688bb4d31777d574155482479435274060bce41dd63a66b210058ca55e",
+        "tests/config.json": "f19af7aa3b9418ac8fdd535d75afa280e2d293641805154a0855395223a9f110",
+        "tests/parser.py": "fedec88f7bb3094f8c694a517fc4894d26cc508a5e932fd2099a0355dbcbd81a",
+        "tests/run_script.sh": "6ae13eba754c34ee3f3e0f82578b57d1e5c21be29270507c7bc76052cfd4648e",
+        "tests/test.sh": "92bf02068676b61c79f4415241b94705d8bd3c431e5f18eeef4d3fbaae238e32",
+        "tests/test_patch.patch": "f8aeabb877f1bbf39c74cdb5a0da9b3ecdbf212954fcbbf9ba26a658550b8e3b"
+      },
+      "instruction_path": "v2/tasks/instance_flipt-io__flipt-cd18e54a0371fa222304742c6312e9ac37ea86c1/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_flipt-io__flipt-cd18e54a0371fa222304742c6312e9ac37ea86c1",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_NodeBB__NodeBB-be43cd25974681c9743d424238b7536c357dc8d3-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "task_files_sha256": {
+        "environment/Dockerfile": "f2b349598f6fc89845ef47cd5751623e37dab3066065e95023fac346967c1034",
+        "instruction.md": "2eef87176fb3ee803ceb65f9a611d89f92c8e14bd3154d7b50d66acf6b65831a",
+        "solution/gold_patch.diff": "cc28406d896d1d1f7ccfe3151137326b3167d1b8551f3f203208390571ce3120",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "86b2c3848c82a4fcfe82745a26eae84b64d354dd464587a51fac4c2a8ab4d92c",
+        "tests/config.json": "ed53a0a1f94146593bfe3f04d5f9a8e0ad025dee69e3523c8d012908340001ee",
+        "tests/parser.py": "55c2418512e1f11fac1893043e2a588d6c0809071c373b989a6c3d86906cbd97",
+        "tests/run_script.sh": "f7ae8ff66fd6a77a26a909b2812c84cfb5bfc3b369effc1e8bb683e7dfc56a47",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "ab4a2dd096f8f40d16d45e9ef9c74ee5f35e2c6e8b62c6d9c1be5a2078816165"
+      },
+      "instruction_path": "v2/tasks/instance_NodeBB__NodeBB-be43cd25974681c9743d424238b7536c357dc8d3-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_NodeBB__NodeBB-be43cd25974681c9743d424238b7536c357dc8d3-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_navidrome__navidrome-6bd4c0f6bfa653e9b8b27cfdc2955762d371d6e9",
+      "task_files_sha256": {
+        "environment/Dockerfile": "e841c227a11a8f3850da027ea405d086422e682f47e0d83d0d8066fb5246c601",
+        "instruction.md": "e60b8f646c759851553de294971059277e15cfb8fea38724cfcaa3d2f8fcddd9",
+        "solution/gold_patch.diff": "cff95b6b6c3a97e1fdc72ef6d2505007da2f46a2417c867fbd01a8c16496ebbd",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "d1cffeb3515cd5bdf0605f81c6bc5c3e5b726143df0ef6a53a9465989987b6dd",
+        "tests/config.json": "5858f77eee7ae7811b14b1539de9b44b274cf7cb28d8d3f08da59f7f624c2849",
+        "tests/parser.py": "b1c0279417bc528109d5022e6ac4e0ba27899b09dfc7500e020be0754ee21039",
+        "tests/run_script.sh": "4c639170bb967a94478b206dcbd314824653189b9c0d4443000d531c83b8375b",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "754e9e1b54f7ff823f5490bd0130765f6b5a6d0d78f1afab52e11883ef12de15"
+      },
+      "instruction_path": "v2/tasks/instance_navidrome__navidrome-6bd4c0f6bfa653e9b8b27cfdc2955762d371d6e9/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_navidrome__navidrome-6bd4c0f6bfa653e9b8b27cfdc2955762d371d6e9",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-7f9713b20f623fc40473b7167a082d6db0f0fd40-va0fd88aac89cde702ec1ba84877234da33adce8a",
+      "task_files_sha256": {
+        "environment/Dockerfile": "5387d4736eb90ee13b3ecc6bcba5713e428c447ad9d4507688ede7c2a254462f",
+        "instruction.md": "7cd4afe9654f72a42e682f815a456f89fb43299b85c67b4cdccb19f67bd94927",
+        "solution/gold_patch.diff": "7fa457b2e1972a74e8ee401884670e6a01a9193c6064d80328d3f447c03dd85a",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "5c5947c77ec5dd2c09e62c1f3409903bf7ebf55c36fd4f82746b3d7530889b3a",
+        "tests/config.json": "ee9198843c57bf9c2d30a230e2f882703c195c125b246e55f89874236ea1cedc",
+        "tests/parser.py": "dd9e16f9758617a0147b23dca25de01e1b8879c2f2cea60f07ea3bde80f56bdd",
+        "tests/run_script.sh": "7fc86bf343f5527c3e1dc7551c95ae4f63aa4fb661a7384da0d1f84cfec06e1e",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "22c02610f0496d3cf448a6c8bb1499fac7737f28f82b7cb6cac4c7ed9832215d"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-7f9713b20f623fc40473b7167a082d6db0f0fd40-va0fd88aac89cde702ec1ba84877234da33adce8a/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-7f9713b20f623fc40473b7167a082d6db0f0fd40-va0fd88aac89cde702ec1ba84877234da33adce8a",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_ansible__ansible-a1569ea4ca6af5480cf0b7b3135f5e12add28a44-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "task_files_sha256": {
+        "environment/Dockerfile": "838c89e78821caf8638e08a9358a2e7c84a34c3fbf3168b538c44c50f8192c2d",
+        "instruction.md": "8b31d0218f71660bac5b26774a84151f1ff76dca82a61da6b018b43df2a59147",
+        "solution/gold_patch.diff": "b47ffb6ef51f10a096f1d593ec71d8d74d9be902a987af78142eb28d649c0aaf",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "f58c0082ec94baae640bc345fdb673191c31ec91a2bf524baaeda5bc00fda7fc",
+        "tests/config.json": "ca2e8c1864a37e87ce881776f45a33dce6d11d2c47c936c41bf6ac147a73a315",
+        "tests/parser.py": "5bd3590c174898489d8bf55c60c7938cb8b32806ce812ad6e192651419396b6c",
+        "tests/run_script.sh": "6266fd04d263adc7fe7356680ccc934e5a1d9668898e553c54671104487dc0f8",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "5770b97e4d068872c22b698a9e0210915a3ee8c7be1d78fe8bc522ca4451cdab"
+      },
+      "instruction_path": "v2/tasks/instance_ansible__ansible-a1569ea4ca6af5480cf0b7b3135f5e12add28a44-v0f01c69f1e2528b935359cfe578530722bca2c59/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_ansible__ansible-a1569ea4ca6af5480cf0b7b3135f5e12add28a44-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_ansible__ansible-3b823d908e8a5d17674f8c26d337d3114b7493b1-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "task_files_sha256": {
+        "environment/Dockerfile": "384d873c86c080f0c7ff97df4a58726f53122fc8f0a9f4c5f341fc94380e1ebf",
+        "instruction.md": "3798523cf86aa73391d3f49db621b6b561e951ae005625555dc0f41295fba10e",
+        "solution/gold_patch.diff": "0b44c156f5faa56fe381fcc2a65d9e2a0f1296923376e7291d92b14c0f72ae6f",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "fdf13ca33a70f7beb8c56e02f13dc71b1f4f1a07f2d9f0fac0d3a374fc81a721",
+        "tests/config.json": "779c860ec33335f85223065ef8cfc775705a0104f084dd6c2a167b0356dad8ec",
+        "tests/parser.py": "5bd3590c174898489d8bf55c60c7938cb8b32806ce812ad6e192651419396b6c",
+        "tests/run_script.sh": "6266fd04d263adc7fe7356680ccc934e5a1d9668898e553c54671104487dc0f8",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "bd25a658952b484245e9565690f8019cd90dc7de00ab8145ce81d612cf2f5776"
+      },
+      "instruction_path": "v2/tasks/instance_ansible__ansible-3b823d908e8a5d17674f8c26d337d3114b7493b1-v0f01c69f1e2528b935359cfe578530722bca2c59/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_ansible__ansible-3b823d908e8a5d17674f8c26d337d3114b7493b1-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_protonmail__webclients-b9387af4cdf79c2cb2a221dea33d665ef789512e",
+      "task_files_sha256": {
+        "environment/Dockerfile": "150fc14140d45a0892a3750968ebed07eeef8b52c4f742f30bb5aa1c61a4adce",
+        "instruction.md": "a1c89826ac62f6c2ac6aadfa7d0b2db998fdc5322d65c09bf98a5392722337f7",
+        "solution/gold_patch.diff": "1b81536e54e75acc85c8557f3a090b6959108dcc584e4ad422b9bc48a33dd077",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "905b2a1159bf08b6ea4ec64570061707f9d381dfb9c092299e3f2b8ee3534b43",
+        "tests/config.json": "ca5cbab0dd6404aee2796cb19e857ed41536f2a0b3561503500dd05c7ce076e4",
+        "tests/parser.py": "b9ab810bdad23626e75fd4e831e5cbb93656775b107904c147353b27eec1c2e2",
+        "tests/run_script.sh": "9310a87b6e012c3fa937de4cb10fd4d72a69df9555f37bf2a338cc494ec238c6",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "a792d78213dbb3d1b5873cf8b8c24b4272947050474fcc4998e516a3f11247d9"
+      },
+      "instruction_path": "v2/tasks/instance_protonmail__webclients-b9387af4cdf79c2cb2a221dea33d665ef789512e/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_protonmail__webclients-b9387af4cdf79c2cb2a221dea33d665ef789512e",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_protonmail__webclients-51742625834d3bd0d10fe0c7e76b8739a59c6b9f",
+      "task_files_sha256": {
+        "environment/Dockerfile": "e980bf9e2454db849b09c8af990954f9a7a1be6e29d4cace85185017b269b388",
+        "instruction.md": "ad36670ba65e7ec73d1b2357b9a4dddaedb29cb500077cff30a6a5c2f772623a",
+        "solution/gold_patch.diff": "0a5a998d447e384e7a789b65b3372788efe805804ee745d8959edd456530ae1d",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "9c69a68cd1875b332707274153e979c00f2ad087f0530fd2595c60b164c82163",
+        "tests/config.json": "af956e6289eb4f14242e36fc16eaa90027aaea0796149f44e424caf0b4881e62",
+        "tests/parser.py": "ed9fdce7768825057db4726a21a7545863df541ec25e64e0cd6c566097534142",
+        "tests/run_script.sh": "11d00d8f7dbe86bbccbcae84466db6da990fa22a3ad76a65387817dddfdfed50",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "1dece752df8ad2ea02141b62379cd344a3568eeec139f6166441f27e368dfbf6"
+      },
+      "instruction_path": "v2/tasks/instance_protonmail__webclients-51742625834d3bd0d10fe0c7e76b8739a59c6b9f/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_protonmail__webclients-51742625834d3bd0d10fe0c7e76b8739a59c6b9f",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_protonmail__webclients-e65cc5f33719e02e1c378146fb981d27bc24bdf4",
+      "task_files_sha256": {
+        "environment/Dockerfile": "32cc4c10ce13651033efc63c536849d80647649c2a65e6e7ebe2f9fcfeb8d189",
+        "instruction.md": "9fc5e6dacf38b7fb6c798afcc692151fb7136637e966f71ac56da295757456fb",
+        "solution/gold_patch.diff": "160c7d05b1c7e05df763d8ca1c0a897ee0fe20ce8a6a7a1c282a31e32b385f2e",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "ec3c190976efd03d3ec2ba75fca12a5b91f639654b9e7a39f51905605602eaeb",
+        "tests/config.json": "47b7561ba12c9423f9800b819c83524dbdb1485871048417222945f79e3b1d71",
+        "tests/parser.py": "ed9fdce7768825057db4726a21a7545863df541ec25e64e0cd6c566097534142",
+        "tests/run_script.sh": "11d00d8f7dbe86bbccbcae84466db6da990fa22a3ad76a65387817dddfdfed50",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "aed33267a1d2fa1a5a984b7b51094676e83032bffd5c248093def6691b4bb244"
+      },
+      "instruction_path": "v2/tasks/instance_protonmail__webclients-e65cc5f33719e02e1c378146fb981d27bc24bdf4/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_protonmail__webclients-e65cc5f33719e02e1c378146fb981d27bc24bdf4",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_flipt-io__flipt-56a620b8fc9ef7a0819b47709aa541cdfdbba00b",
+      "task_files_sha256": {
+        "environment/Dockerfile": "f2da1deaba751416d1ab23004bd37703b2e8387dfe05f709400d52c75c84ed3a",
+        "instruction.md": "debef6a7dbb7ce70d75966b67cc4873c6954255649a410c7588b32b823c1d380",
+        "solution/gold_patch.diff": "a50da8c72f7d1d75aedb2760bd1811fafd96c7ce06f2108ff542254a10d368d7",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "6d9f9bb677100c236bed4fd5d15f7165796e2a1b225bba273b86ad9798dccfbd",
+        "tests/config.json": "f7574e664abf2a6804c0eba7779574a978086992905f577f3759c7e84fb0540f",
+        "tests/parser.py": "fedec88f7bb3094f8c694a517fc4894d26cc508a5e932fd2099a0355dbcbd81a",
+        "tests/run_script.sh": "8ca011fd9807f700dba42474db009b3a4e633c2dd654265afbaab15ab9f99299",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "d90cc43fbc19410e2605ceb6aad6b9f98049dc5e6afe5c5201f4cff901f680a4"
+      },
+      "instruction_path": "v2/tasks/instance_flipt-io__flipt-56a620b8fc9ef7a0819b47709aa541cdfdbba00b/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_flipt-io__flipt-56a620b8fc9ef7a0819b47709aa541cdfdbba00b",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_qutebrowser__qutebrowser-ed19d7f58b2664bb310c7cb6b52c5b9a06ea60b2-v059c6fdc75567943479b23ebca7c07b5e9a7f34c",
+      "task_files_sha256": {
+        "environment/Dockerfile": "1508011216baad98be0fd45dcfa7d634f685467a5f4ba0a0cdfd6f6ef6aed013",
+        "instruction.md": "e58eac445bcd170f0ba0993784e67f2c79560ad6072f803bdc3c968584b03d91",
+        "solution/gold_patch.diff": "92c29b8678686a2ba846347e5fa922717fee4690a5cb49fd4cdfe8c0e829fb89",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "5772a4bc2f4ba1b99a1a0e432824cbbcf8ca77b8155f85239e97f3ae1e23a3d3",
+        "tests/config.json": "d0ea3d09aefd12242e5e64167f54d194d004f7f3e6e4e1ab43a33c9173d12da1",
+        "tests/parser.py": "4a1f537ce46faf1b056064a9e9318ac27a001fd53d9fa3c7767d3138d7067e42",
+        "tests/run_script.sh": "ed4dc888c27901447e2065a5c09f7702909dfcd7c6aa2f02cc19fde3535fcfc8",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "aab82f0f5c3c770de550e8f5e5e4f3b04bd1bf39fbfa80987ebf32fee1e7f39a"
+      },
+      "instruction_path": "v2/tasks/instance_qutebrowser__qutebrowser-ed19d7f58b2664bb310c7cb6b52c5b9a06ea60b2-v059c6fdc75567943479b23ebca7c07b5e9a7f34c/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_qutebrowser__qutebrowser-ed19d7f58b2664bb310c7cb6b52c5b9a06ea60b2-v059c6fdc75567943479b23ebca7c07b5e9a7f34c",
+      "resolved_image_digest": null
+    },
+    {
+      "id": "instance_ansible__ansible-379058e10f3dbc0fdcaf80394bd09b18927e7d33-v1055803c3a812189a1133297f7f5468579283f86",
+      "task_files_sha256": {
+        "environment/Dockerfile": "8c06d197b77dbc6d9eea86a066bbe4943a2e1c7fef782741937ab1e01da142e6",
+        "instruction.md": "b65762552fa1f6c64086e3935afaecf59dc2e506c2a0b3975c3b621cd229331d",
+        "solution/gold_patch.diff": "0734d3ab148cde3555a5b4af1b61057527bb20e674461b57a3ec3119f02cc8d3",
+        "solution/solve.sh": "6d7497394937410135791cc64ba2f32ad48a94daf6308f0f4c64c74d24c50f97",
+        "task.toml": "fa7dc6aab0f48c0b87412d52d2240d4e28039eff3194e60ddf98c1522f84b915",
+        "tests/config.json": "67c65d6e4d21aa671c16b0a736fd3ce86fd758d3f8f9c3c6b294e3df312ce9a7",
+        "tests/parser.py": "3bb7f471aa61ea90f7c8992cb901f61c14efc2a703dee9a14cd682840006c2dd",
+        "tests/run_script.sh": "e8c61cf1ba381c6f91c5457d248152cf1b0339d52252d0af0d1ea60c2ba483b7",
+        "tests/test.sh": "b6f26eecd87c1696a3702ee115d31f9d42f4704cf2116419cd879f66b60976d0",
+        "tests/test_patch.patch": "37c4e47f19c8f07bacf7b4755e2b765ef26d73a498f4e48c79ba7ba82670534b"
+      },
+      "instruction_path": "v2/tasks/instance_ansible__ansible-379058e10f3dbc0fdcaf80394bd09b18927e7d33-v1055803c3a812189a1133297f7f5468579283f86/instruction.md",
+      "image_reference": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_ansible__ansible-379058e10f3dbc0fdcaf80394bd09b18927e7d33-v1055803c3a812189a1133297f7f5468579283f86",
+      "resolved_image_digest": null
+    }
+  ],
+  "formal_ready": false,
+  "remaining_gates": [
+    "Resolve and verify image digests",
+    "Run network/history probes",
+    "Validate oracle and empty patch on selected tasks",
+    "Grade each patch on a pristine image"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+  "success": true,
+  "official_grade": {
+    "official_protocol_valid": true,
+    "scope": "This captured model artifact, task, architecture and seed only",
+    "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+    "architecture": "single",
+    "seed": 20261102,
+    "success": true,
+    "official_reward": 1.0,
+    "official_aggregate_mean": 1.0,
+    "independent_success": true,
+    "independent_original_valid": true,
+    "coding_failure_adjudication": null,
+    "raw_output_equal": true,
+    "test_outcomes_equal": true,
+    "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+    "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+    "model_patch_sha256": "1ae31bc0cf487733e9d1ce9a805b17b346bc9f87d03085efa8cbcde2b673ba72",
+    "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+    "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+    "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+    "official_task_verifier_modified": false,
+    "actual_resources": {
+      "container_id": "277b0fd94ab423cef73fd67c999fe0715e3eaf6037264d8c69bd5d3a834e936e",
+      "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+      "actual": {
+        "cpu.max": "100000 100000",
+        "memory.max": "4294967296",
+        "cpuset.cpus.effective": "3",
+        "affinity": [
+          3
+        ]
+      },
+      "host_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 4294967296,
+        "CpusetCpus": "3",
+        "MemorySwap": -1
+      },
+      "time": 1793822811.0792706
+    },
+    "elapsed_s": 24.98423931747675,
+    "trial": "/dev/shm/osa-public-acceptance078/result/official-harbor/c5e3b484ba4a8302b305/jobs/patch-b7a7a8823caf1d/instance_internetarchive__openli__zXfweJz/result.json",
+    "raw_campaign_protocol_flag_preserved": false,
+    "precomputed_original_harbor": null,
+    "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+  },
+  "model_calls": 27,
+  "actual_api_tokens": 338106,
+  "agent_wall_s": 544.0747876968235,
+  "finished": 1793822831.0853302,
+  "scope": "Independent public reproduction acceptance; excluded from architecture comparison statistics"
+}

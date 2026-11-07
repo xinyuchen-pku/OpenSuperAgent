@@ -1,0 +1,14 @@
+{
+  "created": 1793819698.9667473,
+  "status": "completed",
+  "completed_primary_grades": 60,
+  "completed_secondary_grades": 20,
+  "fixed_transport_reference081_accepted": true,
+  "raw_original_cohort_grades": 80,
+  "retired_infrastructure_reference_attempts": 1,
+  "additional_fixed_reference_attempts": 1,
+  "eligible_comparison_grades": 80,
+  "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+  "final_summary_sha256": "7d937cf7c22b4d70dca68e5be6288a7e8ec4a9af710f0f78a69556d6b624fbe5",
+  "native_or_other_heavy_local_CPU_work_now_allowed": true
+}

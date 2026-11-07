@@ -1,0 +1,4 @@
+counterfactual/** -text
+*.gz -text
+*.svg -diff
+**/*.patch -diff

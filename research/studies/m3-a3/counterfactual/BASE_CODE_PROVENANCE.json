@@ -1,0 +1,319 @@
+{
+  "parent_full_artifact_sha256": "f0904b504e6dbb1976aa5a6633cf22491937499efcf1942ad32c852caa52c8d1",
+  "public_code_archive_sha256": "4d7424b4e5b3b201377def128247adc01ef4198107eff7be9eb004802b5e5b97",
+  "all_non_git_file_bytes_equal": true,
+  "excluded_git_metadata_entries": 101,
+  "source_tests_licenses_preserved": true,
+  "files": [
+    {
+      "path": "cachetools_repo/spec.pdf.bz2",
+      "bytes": 695238,
+      "sha256": "a827ea6d3d7e556b62e931861e137d048cedf185d522bd87f23cec3ce59b4c90"
+    },
+    {
+      "path": "cachetools_repo/setup.py",
+      "bytes": 38,
+      "sha256": "843ac26c38a41abae578250bc0f9419194b320a0f67327d941037a4268f6cfe7"
+    },
+    {
+      "path": "cachetools_repo/pyproject.toml",
+      "bytes": 100,
+      "sha256": "07778f62074eb0a43248090b860ce613be3765c753bc8e52c613bdd83eb6547b"
+    },
+    {
+      "path": "cachetools_repo/tests/test_lru.py",
+      "bytes": 1370,
+      "sha256": "70b148c95d77fb578bca7e64973146ef99eb595fcd9a3f0286e306a4d533f9a2"
+    },
+    {
+      "path": "cachetools_repo/tests/__init__.py",
+      "bytes": 9743,
+      "sha256": "ed63a356aff7d2a4555651ee0f40124a1dd3cb58ae5da18c3462f4bb018a1ff6"
+    },
+    {
+      "path": "cachetools_repo/tests/test_cached.py",
+      "bytes": 8383,
+      "sha256": "35442246514f31ded740e4b06f43cfd2b3b85938445fe747dee09711132729c8"
+    },
+    {
+      "path": "cachetools_repo/tests/test_keys.py",
+      "bytes": 4768,
+      "sha256": "0708d2eb7bdc2db2ca3b07bb2691ca81deab5f66d63fd584889c8739183c9f2b"
+    },
+    {
+      "path": "cachetools_repo/tests/test_rr.py",
+      "bytes": 831,
+      "sha256": "f158a700df1c16920d83b7f28843ea5d0906886b1263b37db2dde3e097692152"
+    },
+    {
+      "path": "cachetools_repo/tests/test_ttl.py",
+      "bytes": 5989,
+      "sha256": "9c437b3bd2365a32ae6e775266f35932b248d028e7465d955f60e0aec96d0477"
+    },
+    {
+      "path": "cachetools_repo/tests/test_cachedmethod.py",
+      "bytes": 7060,
+      "sha256": "253d579f7345655b8e0ae03896330820b431179a5e7702730e0e9fbefc8eea45"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_cachedmethod.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 8328,
+      "sha256": "0706980bcd06fed7b8dbded85b9c50297ce5fa7fc77ea7247282553715471a09"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_fifo.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 1639,
+      "sha256": "62b2df02a880e6a52596e67f063e17dc416d8e45da3585d3a4015a8b12152d1d"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_lfu.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 1558,
+      "sha256": "8e81688418afd22f5d790088c29be49f3147f1088433fcd9a89d1bb7e8c66bda"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_rr.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 1040,
+      "sha256": "8f6317d2cf9ced612d79d04143ba3ea8196b3fb5090b0bf179192a4614c21ea9"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_cached.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 8259,
+      "sha256": "c4997fd6a0d630a81fdb54a054c7bea28e7283ef941096f45ec06a8f0f658930"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_mru.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 4102,
+      "sha256": "0a7eb3086268f4b6eb173391d80b3550359b2f69cdf853c3cb70708673afde68"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_cache.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 526,
+      "sha256": "8386906e23e64896f2e36348b4677444e82f44e64bada6e2a2aef29addd12cc8"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_keys.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 3887,
+      "sha256": "233a543145a2b8aa0036d394205ba46f6ce65a2d91252b6d355152b0d2d8fa04"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 8595,
+      "sha256": "62acb9e62aa70fbc37b91225f52a57b7e47cafce60af167ceef258b91d2840aa"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_tlru.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 7374,
+      "sha256": "da0d634290a7c8959bf21122d15f9a2163d98ff66c9113e1637d08fdf34eb9e5"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_func.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 6519,
+      "sha256": "bd1fd39d551fc7f622fa36bcb29fdfd12eb5e92415441226f78686e83af82866"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_ttl.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 5242,
+      "sha256": "131b1ae3a9e8ba5cc0a1090100ca359c152d34b19caea8dd8e93771fbfd3f893"
+    },
+    {
+      "path": "cachetools_repo/tests/__pycache__/test_lru.cpython-310-pytest-9.0.3.pyc",
+      "bytes": 1632,
+      "sha256": "549321a21d666db3a355d32b075a0526816e67f907fc57bd87a09881510d3e73"
+    },
+    {
+      "path": "cachetools_repo/tests/test_mru.py",
+      "bytes": 1917,
+      "sha256": "27b9e785ec1330bd30f572bb5eb877f7094c953bd4d1c7dd8c943f777aab1919"
+    },
+    {
+      "path": "cachetools_repo/tests/test_lfu.py",
+      "bytes": 1197,
+      "sha256": "ec9b94a0cbcdbc5a0db2d9f86157f54126cff4b7a9d377c3ae0c174c8b4735f0"
+    },
+    {
+      "path": "cachetools_repo/tests/test_tlru.py",
+      "bytes": 8154,
+      "sha256": "d6040e6b043bc277899208c14272f1bd230b73cdd4fc80eda08d79f18fec7936"
+    },
+    {
+      "path": "cachetools_repo/tests/test_func.py",
+      "bytes": 5382,
+      "sha256": "0d6df7b65486524fe5b2a433cdfabc3311bcaa91fa94498a188a7123a3af0993"
+    },
+    {
+      "path": "cachetools_repo/tests/test_cache.py",
+      "bytes": 148,
+      "sha256": "dbdf81b02f344a0e62a5dcf2364be7e135e2511e765e93b43864aeb7aa3b115c"
+    },
+    {
+      "path": "cachetools_repo/tests/test_fifo.py",
+      "bytes": 1376,
+      "sha256": "fa8e27944d56d4001286af79924b99874f4f942ef3d6a1230fc146a749d3a0e0"
+    },
+    {
+      "path": "cachetools_repo/tox.ini",
+      "bytes": 850,
+      "sha256": "ce198bf223c41965beea180a91767459ea4402fc68a8e57fb4b54abf890077b1"
+    },
+    {
+      "path": "cachetools_repo/MANIFEST.in",
+      "bytes": 193,
+      "sha256": "279953a1f3ca6baf66f5ef13761bacdbe6d6e7a7ba0c00cf3ea3ba8d56439918"
+    },
+    {
+      "path": "cachetools_repo/.readthedocs.yaml",
+      "bytes": 135,
+      "sha256": "b1de96e4268b68cc14244b07036107590cb17535a0f0f1064b4a6e979991b5d8"
+    },
+    {
+      "path": "cachetools_repo/CHANGELOG.rst",
+      "bytes": 9708,
+      "sha256": "c149dc25e93e901782144587b0b93c801ee2f1e725df197206b29393fed47277"
+    },
+    {
+      "path": "cachetools_repo/.gitignore",
+      "bytes": 98,
+      "sha256": "959e953eaf6757ec42f895308830912560bad4ceaf6fe052807d355527c8c6f3"
+    },
+    {
+      "path": "cachetools_repo/test_output.txt",
+      "bytes": 28588,
+      "sha256": "ab2b9043821d0fafc0208e146931fe90c42c8965eac1d4606ffcccb71257788a"
+    },
+    {
+      "path": "cachetools_repo/.github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 535,
+      "sha256": "fe60abb33e32d4475035dd134dece87c9642788c7eb2e3a186d5ac3015a3fe19"
+    },
+    {
+      "path": "cachetools_repo/.github/ISSUE_TEMPLATE/feature_request.md",
+      "bytes": 190,
+      "sha256": "3fe8ef9f691cae5cbce2a2f91263dd248e1eeb8fa5831badf620d6a4f4560dff"
+    },
+    {
+      "path": "cachetools_repo/.github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 28,
+      "sha256": "1f103c6a9dd07cd13a9a6f17ace6b813f47747eb9cb7e00488cb2073caaf91bb"
+    },
+    {
+      "path": "cachetools_repo/.github/workflows/ci.yml",
+      "bytes": 839,
+      "sha256": "1f119158a2cd163745e25a237571ebc63f575d178ffc65668ec2170f0f320852"
+    },
+    {
+      "path": "cachetools_repo/.github/SECURITY.md",
+      "bytes": 775,
+      "sha256": "b9146b5a0e2ce32216a6cb60b8209b41871b82eaac536392c76211f5ffd9d13c"
+    },
+    {
+      "path": "cachetools_repo/.github/dependabot.yml",
+      "bytes": 119,
+      "sha256": "8912c495e7a2514170ad43170ceda3e1c0a48402c92bd096215c4b6ec6a31a03"
+    },
+    {
+      "path": "cachetools_repo/README.rst",
+      "bytes": 4344,
+      "sha256": "da12aaebd5ef46e6e867a71f80aa898b48ff77c5b8c0182b28f3e1b49f5c9edc"
+    },
+    {
+      "path": "cachetools_repo/docs/index.rst",
+      "bytes": 25104,
+      "sha256": "3e28d85fea6bd2ff518a82e32d5747dce0a5cc7baf3e6f36d77cef8a885c5922"
+    },
+    {
+      "path": "cachetools_repo/docs/conf.py",
+      "bytes": 911,
+      "sha256": "b0f394e8b8c5643a13c66542497d7e419eb1c5a16638360dbe0d36307fdb6ac7"
+    },
+    {
+      "path": "cachetools_repo/setup.cfg",
+      "bytes": 1296,
+      "sha256": "caba38abd2ff139ca14cd37385fa740659410febc1c181015603ae0cf05a1932"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools.egg-info/SOURCES.txt",
+      "bytes": 590,
+      "sha256": "99016b845288672e849d1e4577c9975beff76284bac4c90eb47d81ba19a91c3a"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools.egg-info/PKG-INFO",
+      "bytes": 5350,
+      "sha256": "389dd6430d8fd103cc7ce9f2179cccbc0bae407351208d5f8102db57f1bdc130"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools.egg-info/top_level.txt",
+      "bytes": 11,
+      "sha256": "6a2d851fbf131b0a017028157e8a9bce4e48402b670ee91d4ace332ae54fbc3b"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/__init__.py",
+      "bytes": 25557,
+      "sha256": "20a566561a2b78a8a2d0e514d4c299228ab8fe089276c981901b508cc23fa71e"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/func.py",
+      "bytes": 5394,
+      "sha256": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 25592,
+      "sha256": "96b1c27cab82e916ef1c3d94379dc8321a194674a24bf2b4d97f11cf8d4230c3"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/__pycache__/keys.cpython-310.pyc",
+      "bytes": 3269,
+      "sha256": "f231f8aae35c6e3d0f1ac2fa8178ee0a2413037edf72b2fbdc3844fd96dd2282"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/__pycache__/func.cpython-310.pyc",
+      "bytes": 4042,
+      "sha256": "b040fadcdd33988d0a0255812bace0b7ca1a9840d7e55c7711618206d625b5d3"
+    },
+    {
+      "path": "cachetools_repo/src/cachetools/keys.py",
+      "bytes": 3367,
+      "sha256": "be654a8429d74d6a010d0571a44d102f4eb2067b5b552ae093a5ded83dbd78fb"
+    },
+    {
+      "path": "cachetools_repo/.pytest_cache/README.md",
+      "bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    {
+      "path": "cachetools_repo/.pytest_cache/CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    {
+      "path": "cachetools_repo/.pytest_cache/.gitignore",
+      "bytes": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    {
+      "path": "cachetools_repo/.pytest_cache/v/cache/nodeids",
+      "bytes": 3503,
+      "sha256": "ea6a5ebe8747667d7228d82ae39c099c259df6ffa6ab88fa68eeb7b9819d89e5"
+    },
+    {
+      "path": "cachetools_repo/.pytest_cache/v/cache/lastfailed",
+      "bytes": 2781,
+      "sha256": "3067b31d591bdffb3188846a3c8572ada3d9f7501a4bba24b978e192517a733c"
+    },
+    {
+      "path": "cachetools_repo/LICENSE",
+      "bytes": 1085,
+      "sha256": "2f4d2ff05f05c5da3879f40292b7600332d775dc7ed320d43dd42f3cd7d92c9b"
+    },
+    {
+      "path": "cachetools_repo/report.json",
+      "bytes": 151073,
+      "sha256": "0badd9465d6e982f1f1d455b3553d21c6670ad89958833645a173822165a5ffa"
+    }
+  ]
+}

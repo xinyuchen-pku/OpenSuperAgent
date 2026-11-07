@@ -1,0 +1,30 @@
+{
+  "architecture": "superagent",
+  "seed": 20261102,
+  "horizon_s": 3000,
+  "subscriptions": true,
+  "pro_checkout": "/path/to/SWE-bench_Pro-os",
+  "api_key_env": "LLM_API_KEY",
+  "model": {
+    "base_url": "http://127.0.0.1:8000/v1",
+    "model": "osa-qwen3-coder-30b",
+    "temperature": 0,
+    "max_output_tokens": 2048,
+    "timeout_s": 300,
+    "seed": 20261102,
+    "tokenizer_preflight": true,
+    "context_policy": "shorten_old_tool_observations",
+    "artifact_identity": {"status": "Replace with verified model/serving manifests before comparing runs"}
+  },
+  "limits": {
+    "slots": 1,
+    "model_concurrency": 1,
+    "token_budget": 2000000,
+    "request_token_reservation": 32768,
+    "max_steps": 100,
+    "tool_timeout_s": 120,
+    "task_timeout_s": 3000
+  },
+  "workspace_backend": {"kind": "docker"},
+  "study": {"status": "template; environment/evaluator/cache gates required", "track": "A", "comparison": "tokens"}
+}

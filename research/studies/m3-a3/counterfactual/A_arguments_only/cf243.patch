@@ -1,0 +1,28 @@
+--- a/src/cachetools/keys.py
++++ b/src/cachetools/keys.py
+@@ -42,10 +42,10 @@
+     if kwargs:
+         # Sort kwargs to ensure consistent ordering
+         kwargs_items = sorted(kwargs.items())
+-        # Create a tuple with args[1:] (excluding self) followed by sorted kwargs items
+-        return _HashedTuple(args[1:] + tuple(kwargs_items))
++        # Create a tuple with args (excluding self) followed by sorted kwargs items
++        return _HashedTuple(args + tuple(kwargs_items))
+     else:
+-        return _HashedTuple(args[1:])
++        return _HashedTuple(args)
+ 
+ def typedkey(*args, **kwargs):
+     """Return a typed cache key for the specified hashable arguments."""
+@@ -72,9 +72,8 @@
+     # Ignore the first argument (self) when creating the key
+     # Process all args, but skip the first one (self)
+     typed_args = []
+-    for i, arg in enumerate(args):
+-        if i > 0:  # Skip the first argument (self)
+-            typed_args.append(_make_typed(arg))
++    for arg in args:
++        typed_args.append(_make_typed(arg))
+     
+     if kwargs:
+         # Sort kwargs to ensure consistent ordering

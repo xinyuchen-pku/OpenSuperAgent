@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "created": 1793823318.956005,
+  "archive_sha256": "a74572846bfcfdb28eacb33719e5baabd8d1b32c0757df2623b247d393998228",
+  "all_members_sha256_verified": 4350,
+  "selected_native_analysis_and_public_example_materialized": true,
+  "completed_SQLite_databases_opened": false
+}

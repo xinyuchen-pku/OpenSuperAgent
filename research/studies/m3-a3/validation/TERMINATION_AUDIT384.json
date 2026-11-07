@@ -1,0 +1,25 @@
+{
+  "actual_api_calls": 0,
+  "cases": [
+    {
+      "cohort": "qwen-source025",
+      "task": "task002",
+      "trace_seq": 442,
+      "call_id": "510cad9a26c44b26b1c4f0dd62950abc",
+      "sqlite_sha256": "7d34151cb0256ed6d183d5936d14bf33a4a639b3cbcd7a4bfb4e714192bd179e",
+      "last_response_payload_sha256": "5a37d310ee4bc53b4eaa903f67a6b34acc91d2be9871701106116362c58d2f86",
+      "observation": "Final response claims requirements completed; API finish_reason=stop; no structured tool call; ends with a bare tool_call opening tag without an action payload",
+      "scope": "Observed final response and original score; no claim about a universal model defect or unobserved action intent"
+    },
+    {
+      "cohort": "qwen-source025",
+      "task": "task003",
+      "trace_seq": 378,
+      "call_id": "d7c592b098dc43a1bf575fe5b0eeb4c7",
+      "sqlite_sha256": "b70e66dcba0a502eb00e4baef90147d62c1700b1bdf0c495ee0840ced7a3d5e0",
+      "last_response_payload_sha256": "a731e5beba5e8e52e65ff361fd64710d9ec37dbc225be2fa74d96b9e7cc15593",
+      "observation": "Final response explicitly acknowledges 11/12 existing tests pass, describes the failure as old behavior, and declares the implementation satisfies requirements; original final grading passes12/13 required tests",
+      "scope": "Observed final response and original score; no claim about a universal model defect or unobserved action intent"
+    }
+  ]
+}

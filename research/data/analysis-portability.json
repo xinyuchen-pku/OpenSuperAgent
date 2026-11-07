@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "created": 1793822947.1526237,
+  "scope": "Actual relocated analysis/ sibling to reproduction/ layout; complete80 accepted cases, no model or benchmark calls",
+  "plot_values_equal": true,
+  "all_three_PNG_pixels_equal": {
+    "success-vs-concurrency.png": true,
+    "throughput-vs-tokens.png": true,
+    "active-session-timeline.png": true
+  },
+  "all_three_tables_bytes_equal": true,
+  "summary_sha256": "7d937cf7c22b4d70dca68e5be6288a7e8ec4a9af710f0f78a69556d6b624fbe5",
+  "source_sha256": {
+    "plot_results.py": "bddfb73bedb65cbb73d79d1309bb576c5f26db7af0be0951f8035dcb56c8033c",
+    "write_analysis_tables.py": "5b8fe94564f4fd49951d5f7ffebad1f45355704060dd7d155f6b9fd46714dd1a"
+  }
+}

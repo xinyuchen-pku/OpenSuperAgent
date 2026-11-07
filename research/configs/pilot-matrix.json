@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "planned; execution gated by image, evaluator, resource and protocol validation",
+  "task_selection_seed": 20261102,
+  "pro_task_count": 24,
+  "asyn_task_count": 19,
+  "paired_seeds": [20261102, 20261103, 20261104],
+  "architectures": ["single", "single_subagent", "eager_delegation", "router_worker", "superagent"],
+  "arm_order": "seeded cyclic balance using osa_eval.campaign.balanced_arm_order; freeze before outcomes",
+  "track_a": {"task_timeout_s": 3000, "reset_sessions_each_task": true, "slots": 1, "model_concurrency": 1},
+  "track_b": {
+    "common_task_pool": "same24tasks in each workload cell",
+    "offered_burst_sizes": [1, 4, 8, 16],
+    "execution_slot_ceilings": [1, 4, 8, 16],
+    "common_model_request_ceiling": 4,
+    "workload_modes": ["burst", "fixed", "poisson"],
+    "arrival_rate_status": "calibrate one common reference on real tasks, then freeze all rates and replay identical schedules across architectures"
+  },
+  "track_c": {"native_protocols_are_separate_axis": true, "native_run_bundle_validation_required": true, "custom_coordination_requires_new_protocol_id": true},
+  "ablations": {"subscription_bypass": [true, false], "slot_ceiling": [1, 4, 8, 16], "additional_toggles": ["retained_router_history", "completion_notifications", "recovery", "priority_exceptions"]},
+  "comparisons": ["capacity_matched", "total_token_budget_matched"],
+  "cache_policy": "reset own serving prefix cache between arms, or disable it for the complete block; record actual receipt",
+  "third_party_content": "Fetch pinned upstream sources/images under their licenses; do not expose tests/reference solutions to agents"
+}

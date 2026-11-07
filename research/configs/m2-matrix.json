@@ -1,0 +1,49 @@
+{
+  "milestone": "Stage1-M2",
+  "status": "frozen task selection; execution requires successful environment admission",
+  "source_selection_manifest_sha256": "be8c813fe2a13021a21b46a53a81ce7a05c317f460122bf3c97e0e06242b9895",
+  "task_ids": [
+    "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+    "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+    "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818"
+  ],
+  "seeds": [
+    20261102,
+    20261103,
+    20261104
+  ],
+  "architectures": [
+    "single",
+    "single_subagent",
+    "eager_delegation",
+    "router_worker",
+    "superagent"
+  ],
+  "arrivals_s": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "workload_batches": 15,
+  "task_grades": 60,
+  "arm_order": "balanced_arm_order(3, seed=20261102), fixed before model outcomes",
+  "first_block_all_zero": "Stop after20grades and diagnose before additional seeds",
+  "supplementary_concurrency1": {
+    "task_ids": "same four",
+    "seed": 20261102,
+    "architectures": "same five",
+    "task_grades": 20,
+    "purpose": "matched public-task reference points for concurrency1vs4 curves; secondary analysis",
+    "admission": "same model, code, tools and runtime gates; declared before any M2 model outcomes"
+  },
+  "native_admission_case": {
+    "task": "asyncodebench:cachetools",
+    "protocol": "async_private",
+    "agents": 2,
+    "execution_profile": "asyncodebench-v0.3-standard-100",
+    "profile_modified": false,
+    "scope": "Original benchmark orchestration and grading with common assignment worker; separate from five-architecture Pro comparison"
+  }
+}

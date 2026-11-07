@@ -1,0 +1,117 @@
+diff --git a/src/cachetools/keys.py b/src/cachetools/keys.py
+index 0c06c1d..efa5b50 100644
+--- a/src/cachetools/keys.py
++++ b/src/cachetools/keys.py
+@@ -42,10 +42,10 @@ def methodkey(self, *args, **kwargs):
+     if kwargs:
+         # Sort kwargs to ensure consistent ordering
+         kwargs_items = sorted(kwargs.items())
+-        # Create a tuple with args[1:] (excluding self) followed by sorted kwargs items
+-        return _HashedTuple(args[1:] + tuple(kwargs_items))
++        # Create a tuple with args (excluding self) followed by sorted kwargs items
++        return _HashedTuple(args + tuple(kwargs_items))
+     else:
+-        return _HashedTuple(args[1:])
++        return _HashedTuple(args)
+ 
+ def typedkey(*args, **kwargs):
+     """Return a typed cache key for the specified hashable arguments."""
+@@ -72,9 +72,8 @@ def typedmethodkey(self, *args, **kwargs):
+     # Ignore the first argument (self) when creating the key
+     # Process all args, but skip the first one (self)
+     typed_args = []
+-    for i, arg in enumerate(args):
+-        if i > 0:  # Skip the first argument (self)
+-            typed_args.append(_make_typed(arg))
++    for arg in args:
++        typed_args.append(_make_typed(arg))
+     
+     if kwargs:
+         # Sort kwargs to ensure consistent ordering
+diff --git a/src/cachetools/func.py b/src/cachetools/func.py
+index 956a120..9f7cf87 100644
+--- a/src/cachetools/func.py
++++ b/src/cachetools/func.py
+@@ -40,8 +40,11 @@ def fifo_cache(maxsize=128, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+ 
+ def lfu_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -67,8 +70,11 @@ def lfu_cache(maxsize=128, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+ 
+ def lru_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -94,8 +100,11 @@ def lru_cache(maxsize=128, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+ 
+ def mru_cache(maxsize=128, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -120,8 +129,11 @@ def mru_cache(maxsize=128, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+ 
+ def rr_cache(maxsize=128, choice=random.choice, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -147,8 +159,11 @@ def rr_cache(maxsize=128, choice=random.choice, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+ 
+ def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):
+     """Decorator to wrap a function with a memoizing callable that saves
+@@ -173,5 +188,8 @@ def ttl_cache(maxsize=128, ttl=600, timer=time.monotonic, typed=False):
+         return {"maxsize": maxsize, "typed": typed}
+     
+     # Attach the method to the returned decorator function
+-    result.cache_parameters = cache_parameters
+-    return result
+\ No newline at end of file
++    def decorate(user_function):
++        wrapper = result(user_function)
++        wrapper.cache_parameters = cache_parameters
++        return wrapper
++    return decorate
+\ No newline at end of file

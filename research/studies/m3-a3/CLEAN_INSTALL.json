@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "created": 1793986457.8278685,
+  "commands": [
+    {
+      "command": [
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m3a2/native-env026/bin/python",
+        "-m",
+        "venv",
+        "--without-pip",
+        "/dev/shm/osa-clean297/env"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/uv-tools-001/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/dev/shm/osa-clean297/env/bin/python",
+        "--no-deps",
+        "--no-index",
+        "/dev/shm/osa-clean297/opensuperagent_eval-0.1.4-py3-none-any.whl"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/dev/shm/osa-clean297/env/bin/python",
+        "-I",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/dev/shm/osa-clean297/tests",
+        "-v"
+      ],
+      "exit": 0
+    }
+  ],
+  "identity": {
+    "distribution": "0.1.4",
+    "package": "/dev/shm/osa-clean297/env/lib/python3.12/site-packages/osa_eval",
+    "module_bytes_equal": true,
+    "files": {
+      "osa_eval/analysis.py": "ecf483864ef65ccdad5cc657326be7b92112d6d025806b4bd7232da4f2be317d",
+      "osa_eval/artifact_validation.py": "3f631728b01c571b31e516d71eb951b9d28399ba3e20b1c85b7cc8bc79340964",
+      "osa_eval/asyncodebench_adapter.py": "405268193f847e5ea05830e5bb733b093980c19b75ece3aa236ac9504210796d",
+      "osa_eval/benchmarks.py": "9b646cb0ab6f65cfa44ff48144bc74d7db457f0e9cc5b1dd287d4c75273d9da3",
+      "osa_eval/campaign.py": "09e12c9d7f1eb840b6915b81cc650eb42347bcceab7d96c41a627da482f56029",
+      "osa_eval/cli.py": "382503155c7605e45c9583345af29f3b16003bae1413f8881bc513dea05e7f6c",
+      "osa_eval/contracts.py": "819e20dcbc286369b500ab89958cb8cdf91db30af19675dc3ebbda1ec7eb0868",
+      "osa_eval/gates.py": "976dafcee5a241ee3c5cf9fa3a039e724b5757cb8ce52333a89f8a0af1b46e9c",
+      "osa_eval/image_probe.py": "bea9d403481c4ada26a3283426a6ca4b5b7523c2c0670bfda0df7691f6052cfb",
+      "osa_eval/journal.py": "c06435ab216fa9e6b9a0a51814790d71c82189c6903e33d96e59de2890d90653",
+      "osa_eval/kernel.py": "d260ba989399bd3e54f2d70c742d8f797b433bd1f299714e9c793b665fb038c1",
+      "osa_eval/metrics.py": "1067e24ccefa9a218287aaaa516bfd77d081910f8c190afca68f9fa8b6f15378",
+      "osa_eval/model.py": "eff05b9ca1145cc0696342105e73be500d22e8181c2d889f05ca9bb925989f72",
+      "osa_eval/podman_backend.py": "ca8fbb858a56979dcb851e84e4427e07d4571b9c999d7f23029bf43bbcba3a32",
+      "osa_eval/reclassification.py": "19f2782bbdcab830e3a9ffc07098dbbc43b1a9caba57185467634aab63c70c52",
+      "osa_eval/runtime.py": "0210055df5fc3d6594fd02f30c14cc5e383ad75a08a091d85e0d1a0922c14d19",
+      "osa_eval/scoped_workspace.py": "d40b8d48fa18b8320757e71879020e53866ab3f3c97f4cf8d4b74d848f86e929",
+      "osa_eval/smoke.py": "38044db9748dbeeca4398999f753db69e2f477a3b3b492ee1aeb80f4a0c72ef3",
+      "osa_eval/swebench_pro.py": "81bdcddd67b16851560b6c014130f8f235ebd83e0b17931f82d4e4cafdb1e0e4",
+      "osa_eval/upstream_runtime.py": "4aa1ff6e33f5829c2c1ef00f530cc760de14f7340586f9af909fd46037d6cd97",
+      "osa_eval/vllm_length_priority.py": "eb55622932f1b470d1d16d3f94e542c9e6535c2314b6250a4ef64699230b0026",
+      "osa_eval/workload.py": "ac09b0ba5b8f7ef553c6899bdf27fbe5a88ff5dd4f48e09d255a6603e60c644d",
+      "osa_eval/workspace.py": "8c3c025aaaec2df2296077c1383d8c03dc8159c9c596c866d9ba7a52149b483a",
+      "osa_eval/__init__.py": "a09dbeb3d6547e7c1d5ed36847fab8053704c4cffa6e36597ee5e1d98250e29e",
+      "osa_eval/adapters/upstream_core.mjs": "8191cabf798a03d0d3550cff306fa0a3b27f3e727c7d449f43bfbdb3da8542aa"
+    },
+    "installed_distributions": [
+      "opensuperagent-eval"
+    ]
+  },
+  "actual_api_calls": 0,
+  "wheel_sha256": "4ede1ee0145333b140d7d0e1cf538fb0dacf3bec7f562373b91f9c91645a0b91",
+  "source025_modules_equal": true
+}

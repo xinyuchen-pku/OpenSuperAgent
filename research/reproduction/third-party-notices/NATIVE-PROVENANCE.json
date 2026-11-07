@@ -1,0 +1,8 @@
+{
+  "source": "Exact original native final repository snapshot; task base a0a7e2b73f9e146b8a8f2912948b17a918e5fe83; scope checks rejected worker artifacts, original license untouched",
+  "archive_sha256": "d2a9fb810b4d334c77603f927d865519bbcc5691b28510f959503b8998229c89",
+  "member": "cachetools_repo/LICENSE",
+  "copied_file": "cachetools\\LICENSE",
+  "sha256": "2f4d2ff05f05c5da3879f40292b7600332d775dc7ed320d43dd42f3cd7d92c9b",
+  "upstream": "https://github.com/tkem/cachetools"
+}

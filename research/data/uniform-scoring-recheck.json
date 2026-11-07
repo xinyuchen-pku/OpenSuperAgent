@@ -1,0 +1,2487 @@
+{
+  "passed": true,
+  "created": 1793821036.0994732,
+  "model_calls": 0,
+  "timed_runs_modified": false,
+  "source022_unchanged": true,
+  "case_count": 25,
+  "cases": [
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "ddded13b14276fdba031ee8919adc58dcaff2e539c348d42897ae02cec599ef9",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793774524.267988
+        },
+        "architecture": "eager_delegation",
+        "elapsed_s": 104.08673073723912,
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_output_sha256": "5260a8e35adca287db37447dacb20e90326a305138fd76669becf099cfc5b551",
+        "independent_success": false,
+        "model_patch_sha256": "40c3e4677309368af9eb29f83b033773e73bb417745fa0fb434444a653431854",
+        "official_output_sha256": "5260a8e35adca287db37447dacb20e90326a305138fd76669becf099cfc5b551",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-eager_delegation/official-harbor/8c99cbfc60095148d7c4/jobs/patch-beba1f6d6b99b2/instance_gravitational__teleport__65TuqvM/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "eager_delegation",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "5260a8e35adca287db37447dacb20e90326a305138fd76669becf099cfc5b551",
+        "independent_output_sha256": "5260a8e35adca287db37447dacb20e90326a305138fd76669becf099cfc5b551",
+        "model_patch_sha256": "40c3e4677309368af9eb29f83b033773e73bb417745fa0fb434444a653431854",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "c145331beac7115b86082d71fbb15223e1b719022ddfc1eac023941f3c3d714d",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820022.860987
+        },
+        "elapsed_s": 102.0645170994103,
+        "trial": "/dev/shm/osa-uniform-score075/case01/jobs/patch-b1dcad438b7434/instance_gravitational__teleport__NoYWFZj/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "576cd17c57eee8f184bd895e076532a03725c22551ecc3c363faa609024cfd97",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793774628.3945832
+        },
+        "architecture": "eager_delegation",
+        "elapsed_s": 56.59306315332651,
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "66cb175cf359baf655af13a86e238e1946de0cb317994f704867632a52c9aaaf",
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-eager_delegation/official-harbor/a13833a79121ac141c9f/jobs/patch-f32e59db213a88/instance_gravitational__teleport__sHxrvFM/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "eager_delegation",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "66cb175cf359baf655af13a86e238e1946de0cb317994f704867632a52c9aaaf",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "276e0901819ea109189c7b637b400b0d075f1c74691666a55d9c42f44d077b4e",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820125.1599686
+        },
+        "elapsed_s": 57.05760551802814,
+        "trial": "/dev/shm/osa-uniform-score075/case02/jobs/patch-8fadffc8a2ee4c/instance_gravitational__teleport__CCQhhkS/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "35dd002d261997dffb7d6ca25e3d44e21d72a58790112ae37737b318ed2ac245",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793774684.9747493
+        },
+        "architecture": "eager_delegation",
+        "elapsed_s": 29.074489584192634,
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "0c1f6ee6e1570746229ffcf92cfa41b094ef3bd774374d32bfd45d4ebe4bf8d6",
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-eager_delegation/official-harbor/725ac57a326476f5c327/jobs/patch-ff25509d86b2ba/instance_qutebrowser__qutebrowse__vPZYufi/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "eager_delegation",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "0c1f6ee6e1570746229ffcf92cfa41b094ef3bd774374d32bfd45d4ebe4bf8d6",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "ae4077ef6038badfc26ac0c4486b27a84673af0dca6271d2984ee3e214ba3f58",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820182.3889527
+        },
+        "elapsed_s": 29.05585572682321,
+        "trial": "/dev/shm/osa-uniform-score075/case03/jobs/patch-8ed9c9e51afe25/instance_qutebrowser__qutebrowse__nSpmdpr/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              3
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "3",
+            "memory.max": "4294967296"
+          },
+          "container_id": "40def2ecdd03ed7793ee0c42d8a6cadc0afeb7ff1fc022cad00da6ad010311a7",
+          "host_limits": {
+            "CpusetCpus": "3",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793774714.0197806
+        },
+        "architecture": "eager_delegation",
+        "elapsed_s": 25.543555473908782,
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_success": true,
+        "model_patch_sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20",
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "official_protocol_valid": true,
+        "official_reward": 1.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": true,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-eager_delegation/official-harbor/c5e3b484ba4a8302b305/jobs/patch-f3c8a560aa11e3/instance_internetarchive__openli__bdLZKm9/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "eager_delegation",
+        "seed": 20261102,
+        "success": true,
+        "official_reward": 1.0,
+        "official_aggregate_mean": 1.0,
+        "independent_success": true,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "model_patch_sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "381ec59488d92e2db454872621a5e90c0bff07305427906e4a9174c87fc59099",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "3",
+            "affinity": [
+              3
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "3",
+            "MemorySwap": -1
+          },
+          "time": 1793820211.5825403
+        },
+        "elapsed_s": 25.996760750189424,
+        "trial": "/dev/shm/osa-uniform-score075/case04/jobs/patch-7943485ee200f3/instance_internetarchive__openli__jJ6Kjmz/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/secondary/seed20261102-single-task003",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "7cf2f95c4bd6d06889e5a414b126f3d13ffeb0a0f1c3c0d601398c0f762eb423",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793773031.6037953
+        },
+        "architecture": "single",
+        "elapsed_s": 29.029201390221715,
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "496d8370443903a8780a0379614b3e800ab857d37f78fe2c7d461941ef5bd858",
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/secondary/seed20261102-single-task003/official-harbor/725ac57a326476f5c327/jobs/patch-32ea4cf48db10e/instance_qutebrowser__qutebrowse__Cdev42H/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "single",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "496d8370443903a8780a0379614b3e800ab857d37f78fe2c7d461941ef5bd858",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "8e6e2dde073250b94e1421daed5c095306f120056d0d13c9abb3203d976551d0",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820237.7405136
+        },
+        "elapsed_s": 28.950861575081944,
+        "trial": "/dev/shm/osa-uniform-score075/case05/jobs/patch-859c1059f53471/instance_qutebrowser__qutebrowse__HPCZZNu/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-router_worker",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "2e585aa8b1266b459993c1f104ace22081e8e102b97b5ee70563083b749e4256",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793780827.631006
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 55.001021249219775,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "c0546f6c6eb1536cebe18540bb5ac476772da8ad147a205657a7198757b116bc",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-router_worker/official-harbor067/8c99cbfc60095148d7c4/jobs/patch-59adc0282f4ccf/instance_gravitational__teleport__dtCiYLM/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "router_worker",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "c0546f6c6eb1536cebe18540bb5ac476772da8ad147a205657a7198757b116bc",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "2e57c5d586e044c28a1a5770caa724ed1493f17db966b9c949868cd3043dbfa2",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820266.9060972
+        },
+        "elapsed_s": 55.5112378615886,
+        "trial": "/dev/shm/osa-uniform-score075/case06/jobs/patch-740a1ec5227269/instance_gravitational__teleport__9ku8ALS/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-router_worker",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "bcad4035a2e8872b394dc72548442dbc46b1271303f74608253710373f001af4",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793780882.8430114
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 51.54436469823122,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-router_worker/official-harbor067/a13833a79121ac141c9f/jobs/patch-dfd52c78f6c117/instance_gravitational__teleport__uFwhssX/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "router_worker",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "b18b6d83540821d2d3f68417dc59f717fdaabb65f1b66545c8142ccaffee6fea",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820322.5458186
+        },
+        "elapsed_s": 52.47935628332198,
+        "trial": "/dev/shm/osa-uniform-score075/case07/jobs/patch-27e6f1b26345e4/instance_gravitational__teleport__DxZBci6/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-router_worker",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "d56108aca6e9e488de6ae5d92c0ded83186157d7f5524742d2ffc0b3ce87def9",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793780934.5605757
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 29.048389898613095,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_original_valid": true,
+        "independent_output_sha256": "67977cc99e79458c716de465e1ed73e6687bb0f910ec0f57f09153d33039ab6b",
+        "independent_success": false,
+        "model_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "67977cc99e79458c716de465e1ed73e6687bb0f910ec0f57f09153d33039ab6b",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-router_worker/official-harbor067/725ac57a326476f5c327/jobs/patch-f6e1d38330e8f0/instance_qutebrowser__qutebrowse__HTcnRVR/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "router_worker",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "67977cc99e79458c716de465e1ed73e6687bb0f910ec0f57f09153d33039ab6b",
+        "independent_output_sha256": "67977cc99e79458c716de465e1ed73e6687bb0f910ec0f57f09153d33039ab6b",
+        "model_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "7e90c244694e233f2fd8811ea802e95e8031f501df21f37e79104463d5c6bcd3",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820375.312573
+        },
+        "elapsed_s": 29.03821500018239,
+        "trial": "/dev/shm/osa-uniform-score075/case08/jobs/patch-3d8d998a40a8ec/instance_qutebrowser__qutebrowse__ukYoYcP/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-router_worker",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "6757866e2569f9d81eb8eef090dac82988704313f5c5618a35a834317be435ba",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793777793.22491
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": {
+          "architecture": "router_worker",
+          "empty_success": false,
+          "failure_category": "official_verifier_timeout",
+          "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "independent_elapsed_s": 3001.373062133789,
+          "independent_reward_file_authoritative": false,
+          "independent_reward_file_raw": "1",
+          "interpreted_success": false,
+          "interpreted_valid": true,
+          "model_patch_sha256": "2a964309039d58f66b50624da26b14cf0f721806517a69c007410b4de97a84ba",
+          "official_aggregate_mean": 0,
+          "official_exception_info": {
+            "exception_message": "Verifier execution timed out after 3000.0 seconds",
+            "exception_traceback": "Traceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/verifier/verifier.py\", line 269, in verify\n    await self.environment.exec(\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 1363, in exec\n    return await self._compose_exec(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 1440, in _compose_exec\n    return await self._run_docker_compose_command(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 758, in _run_docker_compose_command\n    result = await self._collect_buffered_output(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 788, in _collect_buffered_output\n    stdout_bytes, stderr_bytes = await process.communicate(input=stdin_data)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/subprocess.py\", line 201, in communicate\n    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/subprocess.py\", line 181, in _read_stream\n    output = await stream.read()\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 706, in read\n    block = await self.read(self._limit)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 713, in read\n    await self._wait_for_data('read')\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 545, in _wait_for_data\n    await self._waiter\nasyncio.exceptions.CancelledError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 974, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/tasks.py\", line 519, in wait_for\n    async with timeouts.timeout(timeout):\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/timeouts.py\", line 115, in __aexit__\n    raise TimeoutError from exc_val\nTimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 609, in run\n    await self._run()\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/single_step.py\", line 105, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 1011, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 978, in _verify_with_timeout\n    raise VerifierTimeoutError(\nharbor.trial.errors.VerifierTimeoutError: Verifier execution timed out after 3000.0 seconds\n",
+            "exception_type": "VerifierTimeoutError",
+            "occurred_at": "2026-11-04T08:26:36.494907Z"
+          },
+          "official_reward_raw": null,
+          "official_timeout_sec": 3000.0,
+          "official_verifier_elapsed_s": 3000.09969,
+          "original_success": null,
+          "original_valid": false,
+          "raw_result_modified": false,
+          "raw_test_output_comparison_available": false,
+          "reference_success": true,
+          "result_sha256": "2c6cf44476bf7675d094c4cd7858d9408db8d92e64b5b65071bbd078606ac16e",
+          "rule": "Both fresh-image graders reach the unchanged official deadline after successful patch application; original Harbor reports VerifierTimeoutError and a one-trial job Mean0. Positive and empty controls match task and image. No test-output equality is asserted; unrelated infrastructure failures remain invalid.",
+          "rule_sha256": "b8ee9a62858e223f58e1c828f51b95826795888298e9009f1205670866ac4f11",
+          "schema_version": 1,
+          "seed": 20261102,
+          "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818"
+        },
+        "elapsed_s": 0.005528932437300682,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_original_valid": false,
+        "independent_output_sha256": null,
+        "independent_success": false,
+        "model_patch_sha256": "2a964309039d58f66b50624da26b14cf0f721806517a69c007410b4de97a84ba",
+        "official_aggregate_mean": 0,
+        "official_output_sha256": null,
+        "official_protocol_valid": true,
+        "official_reward": null,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": {
+          "all_raw_bytes_equal": true,
+          "archive_receipt_sha256": "2bc73d98ef0db26eeb3a061eee2f19aa12700f99a24f2d3fe9f998aee7ba1c01",
+          "directory": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/parallel-timeout-native065",
+          "model_calls": 0,
+          "original_elapsed_s": 3022.593835093081
+        },
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": null,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": null,
+        "trial": "/dev/shm/osa-stage1-m2-study062/primary/seed20261102-router_worker/official-harbor067/c5e3b484ba4a8302b305/precomputed-original/jobs/native-timeout065/instance_internetarchive__openli__d8eP3Lg/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "router_worker",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": null,
+        "official_aggregate_mean": 0,
+        "independent_success": false,
+        "independent_original_valid": false,
+        "coding_failure_adjudication": {
+          "schema_version": 1,
+          "raw_result_modified": false,
+          "result_sha256": "2c6cf44476bf7675d094c4cd7858d9408db8d92e64b5b65071bbd078606ac16e",
+          "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+          "seed": 20261102,
+          "architecture": "router_worker",
+          "original_valid": false,
+          "original_success": null,
+          "interpreted_valid": true,
+          "interpreted_success": false,
+          "failure_category": "official_verifier_timeout",
+          "model_patch_sha256": "2a964309039d58f66b50624da26b14cf0f721806517a69c007410b4de97a84ba",
+          "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "official_timeout_sec": 3000.0,
+          "independent_elapsed_s": 3001.373062133789,
+          "official_verifier_elapsed_s": 3000.09969,
+          "official_exception_info": {
+            "exception_type": "VerifierTimeoutError",
+            "exception_message": "Verifier execution timed out after 3000.0 seconds",
+            "exception_traceback": "Traceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/verifier/verifier.py\", line 269, in verify\n    await self.environment.exec(\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 1363, in exec\n    return await self._compose_exec(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 1440, in _compose_exec\n    return await self._run_docker_compose_command(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 758, in _run_docker_compose_command\n    result = await self._collect_buffered_output(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/environments/docker/docker.py\", line 788, in _collect_buffered_output\n    stdout_bytes, stderr_bytes = await process.communicate(input=stdin_data)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/subprocess.py\", line 201, in communicate\n    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/subprocess.py\", line 181, in _read_stream\n    output = await stream.read()\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 706, in read\n    block = await self.read(self._limit)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 713, in read\n    await self._wait_for_data('read')\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/streams.py\", line 545, in _wait_for_data\n    await self._waiter\nasyncio.exceptions.CancelledError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 974, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/tasks.py\", line 519, in wait_for\n    async with timeouts.timeout(timeout):\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/runtime/root-vm-001/usr/local/lib/python3.12/asyncio/timeouts.py\", line 115, in __aexit__\n    raise TimeoutError from exc_val\nTimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 609, in run\n    await self._run()\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/single_step.py\", line 105, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 1011, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/native-sources-002/Harbor/src/harbor/trial/trial.py\", line 978, in _verify_with_timeout\n    raise VerifierTimeoutError(\nharbor.trial.errors.VerifierTimeoutError: Verifier execution timed out after 3000.0 seconds\n",
+            "occurred_at": "2026-11-04T08:26:36.494907Z"
+          },
+          "official_reward_raw": null,
+          "official_aggregate_mean": 0,
+          "raw_test_output_comparison_available": false,
+          "independent_reward_file_raw": "1",
+          "independent_reward_file_authoritative": false,
+          "reference_success": true,
+          "empty_success": false,
+          "rule_sha256": "b8ee9a62858e223f58e1c828f51b95826795888298e9009f1205670866ac4f11",
+          "rule": "Both fresh-image graders reach the unchanged official deadline after successful patch application; original Harbor reports VerifierTimeoutError and a one-trial job Mean0. Positive and empty controls match task and image. No test-output equality is asserted; unrelated infrastructure failures remain invalid."
+        },
+        "raw_output_equal": null,
+        "test_outcomes_equal": null,
+        "official_output_sha256": null,
+        "independent_output_sha256": null,
+        "model_patch_sha256": "2a964309039d58f66b50624da26b14cf0f721806517a69c007410b4de97a84ba",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "6757866e2569f9d81eb8eef090dac82988704313f5c5618a35a834317be435ba",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793777793.22491
+        },
+        "elapsed_s": 0.005308214575052261,
+        "trial": "/dev/shm/osa-uniform-score075/case09/precomputed-original/jobs/native-timeout065/instance_internetarchive__openli__d8eP3Lg/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": {
+          "directory": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/parallel-timeout-native065",
+          "archive_receipt_sha256": "2bc73d98ef0db26eeb3a061eee2f19aa12700f99a24f2d3fe9f998aee7ba1c01",
+          "all_raw_bytes_equal": true,
+          "model_calls": 0,
+          "original_elapsed_s": 3022.593835093081
+        },
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "bd4bb004a089ea04681d97990632952a071ed69ee91a2df37bb2259ac2028e82",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793785146.8121247
+        },
+        "architecture": "single",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 104.5584478136152,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_original_valid": true,
+        "independent_output_sha256": "0da087af021869d4ff5cfa748278a6d4dcf4d7beafc0d6c5dc37fe6ea4129abc",
+        "independent_success": false,
+        "model_patch_sha256": "621d2fe408621298a43caf523e017166d30da867fa84027fe0bd77bf2e32662c",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "0da087af021869d4ff5cfa748278a6d4dcf4d7beafc0d6c5dc37fe6ea4129abc",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single/official-harbor067/8c99cbfc60095148d7c4/jobs/patch-e87a9767bb0e79/instance_gravitational__teleport__hGZmsmx/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "single",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "0da087af021869d4ff5cfa748278a6d4dcf4d7beafc0d6c5dc37fe6ea4129abc",
+        "independent_output_sha256": "0da087af021869d4ff5cfa748278a6d4dcf4d7beafc0d6c5dc37fe6ea4129abc",
+        "model_patch_sha256": "621d2fe408621298a43caf523e017166d30da867fa84027fe0bd77bf2e32662c",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "1e61ad5e6440a3e0b4d0e724b3c6e6bd0484b4e7b2ddacc29cf7809b83df4e9b",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820404.6767054
+        },
+        "elapsed_s": 97.48607690818608,
+        "trial": "/dev/shm/osa-uniform-score075/case10/jobs/patch-b4ab7232ff265f/instance_gravitational__teleport__ickceo5/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "27a63c2b0c29d172b12a03ca96e6b4119a4e204487e83ef08c72fa93b5819b16",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793785251.6283426
+        },
+        "architecture": "single",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 53.627991031855345,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "6b442873939ac72590419f19eaf82d8e3ee4d0bed28d9cdb33e5fd9eca16a72b",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single/official-harbor067/a13833a79121ac141c9f/jobs/patch-d40be70e6cb109/instance_gravitational__teleport__apQEPun/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "single",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "6b442873939ac72590419f19eaf82d8e3ee4d0bed28d9cdb33e5fd9eca16a72b",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "7cec244c3c43e1c454c384ac1198717a30753dfece6c7230ee379e57c5cecc4a",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820502.3098981
+        },
+        "elapsed_s": 52.45807030983269,
+        "trial": "/dev/shm/osa-uniform-score075/case11/jobs/patch-c57107faf0448c/instance_gravitational__teleport__xt8UBEw/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "a22fd6fb0f082cce011b11e301debaa29ab9aaf1ca8eaa1f52885709769d8e50",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793785305.394432
+        },
+        "architecture": "single",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 29.588573165237904,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_original_valid": true,
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "114999c3f544bb0b5ae669c2c1aeb06fa68943f3f5e8c59c589c66ee0f4e1355",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single/official-harbor067/725ac57a326476f5c327/jobs/patch-1a5ba86e2b6e5e/instance_qutebrowser__qutebrowse__jPmDaAc/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "single",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "114999c3f544bb0b5ae669c2c1aeb06fa68943f3f5e8c59c589c66ee0f4e1355",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "77de190e54a13b73c81d96b23bd4cd1b492c35270e8dc22b322b85fe679248ae",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820554.9636445
+        },
+        "elapsed_s": 29.490690706297755,
+        "trial": "/dev/shm/osa-uniform-score075/case12/jobs/patch-e95116e52887db/instance_qutebrowser__qutebrowse__zEPreoK/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              3
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "3",
+            "memory.max": "4294967296"
+          },
+          "container_id": "87462e54ea867bfd23061994eab49ab4a2129771976e5e95f866451b1e26a2b1",
+          "host_limits": {
+            "CpusetCpus": "3",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793785335.1459239
+        },
+        "architecture": "single",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 26.01263582520187,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_original_valid": true,
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_success": true,
+        "model_patch_sha256": "32a25d154d85a887489c0397e8b6c0499b97c08d248efa823857ad985929f30f",
+        "official_aggregate_mean": 1.0,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "official_protocol_valid": true,
+        "official_reward": 1.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": true,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single/official-harbor067/c5e3b484ba4a8302b305/jobs/patch-2c599de708c243/instance_internetarchive__openli__gH3f2Sv/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "single",
+        "seed": 20261102,
+        "success": true,
+        "official_reward": 1.0,
+        "official_aggregate_mean": 1.0,
+        "independent_success": true,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "model_patch_sha256": "32a25d154d85a887489c0397e8b6c0499b97c08d248efa823857ad985929f30f",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "35775d89764b87a2923be6b17139d53741f2f5ff8b12cb61ff538083914f1215",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "3",
+            "affinity": [
+              3
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "3",
+            "MemorySwap": -1
+          },
+          "time": 1793820584.6768522
+        },
+        "elapsed_s": 24.99237580411136,
+        "trial": "/dev/shm/osa-uniform-score075/case13/jobs/patch-25e6d8b6d98a5c/instance_internetarchive__openli__FwPxYXM/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single_subagent",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "23eca1ec5a46e86de44e3ba0623ba434f3494d63928ddcc3d266271eb57ed2c6",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793781881.0045424
+        },
+        "architecture": "single_subagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 25.54046466574073,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "bdf38bb6661724bc36197a38cf661947df0386b725a1b8a6da81770322af1384",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single_subagent/official-harbor067/8c99cbfc60095148d7c4/jobs/patch-d3b9a55b4d1442/instance_gravitational__teleport__sTgCkH9/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "single_subagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "bdf38bb6661724bc36197a38cf661947df0386b725a1b8a6da81770322af1384",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "c2b37e4a357f9ba9ff21bec95edd44b75cffc9c46f3e051221482a39f61ec21f",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820609.8400393
+        },
+        "elapsed_s": 25.462503856047988,
+        "trial": "/dev/shm/osa-uniform-score075/case14/jobs/patch-593080b00f11c5/instance_gravitational__teleport__a72uqDT/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single_subagent",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "c4855695eb52820011fc96c5761f5ba2cea1a24a0f7eebb9a7dc1783af79fa46",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793781906.6725717
+        },
+        "architecture": "single_subagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 51.5058537311852,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "4bf598459f23d0682a960ec3c6acc6250f7c676fff1e7dc8fa3667b1cc615c17",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single_subagent/official-harbor067/a13833a79121ac141c9f/jobs/patch-9af72dc65053cf/instance_gravitational__teleport__4ZQnLuG/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "single_subagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "4bf598459f23d0682a960ec3c6acc6250f7c676fff1e7dc8fa3667b1cc615c17",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "3e30d660fb124023614fb43311128891cf64d74de1c34a931925341dd113bbcc",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820635.560843
+        },
+        "elapsed_s": 52.52277798578143,
+        "trial": "/dev/shm/osa-uniform-score075/case15/jobs/patch-c2b964c522c448/instance_gravitational__teleport__PXSeXZm/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single_subagent",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "0b11b3726a4049ae6cf5a04c7bafdd7b7b742d9d60652f61b15a59c41f304478",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793781958.3814561
+        },
+        "architecture": "single_subagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 29.020947275683284,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_original_valid": true,
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "75a17875490a0f241789923f9fc3d5b3cd91fbf6b3b1191334b21aaaf6ac4ebe",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single_subagent/official-harbor067/725ac57a326476f5c327/jobs/patch-4115b574f97a13/instance_qutebrowser__qutebrowse__hfC5uLG/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "single_subagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "75a17875490a0f241789923f9fc3d5b3cd91fbf6b3b1191334b21aaaf6ac4ebe",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "f1c70b4d278c43ce8f5ee5235708656fdc5c414183d09fa71d9ab19c63dd44c4",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820688.169375
+        },
+        "elapsed_s": 28.924875646829605,
+        "trial": "/dev/shm/osa-uniform-score075/case16/jobs/patch-b9320d89ba4b87/instance_qutebrowser__qutebrowse__yprHpAe/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single_subagent",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              3
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "3",
+            "memory.max": "4294967296"
+          },
+          "container_id": "8dfcd794c1588b33070d796ebc2dcf81fb1878b6ec87d6a866290936bfc88594",
+          "host_limits": {
+            "CpusetCpus": "3",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793781987.5526924
+        },
+        "architecture": "single_subagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 25.021147403866053,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_original_valid": true,
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_success": true,
+        "model_patch_sha256": "f8c91cda2fe5f4f83e9838419a91d1ef75b67a63d94ab31f93779510622921b8",
+        "official_aggregate_mean": 1.0,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "official_protocol_valid": true,
+        "official_reward": 1.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": true,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-single_subagent/official-harbor067/c5e3b484ba4a8302b305/jobs/patch-fd559159d6b839/instance_internetarchive__openli__mmNp4M9/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "single_subagent",
+        "seed": 20261102,
+        "success": true,
+        "official_reward": 1.0,
+        "official_aggregate_mean": 1.0,
+        "independent_success": true,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "model_patch_sha256": "f8c91cda2fe5f4f83e9838419a91d1ef75b67a63d94ab31f93779510622921b8",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "16011e7d5ee8c0675be954b6109c2f4631424b5bf9398ec7565edbd7edc96ae3",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "3",
+            "affinity": [
+              3
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "3",
+            "MemorySwap": -1
+          },
+          "time": 1793820717.279515
+        },
+        "elapsed_s": 24.9425556845963,
+        "trial": "/dev/shm/osa-uniform-score075/case17/jobs/patch-7aaa6ef28dd7d4/instance_internetarchive__openli__cfG3AsR/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-superagent",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "53c22d38ca4f35081e5155a12098a1c3b312579fa8f128364074204a955f74ba",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793786938.519953
+        },
+        "architecture": "superagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 56.011075066402555,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "9c9d9db8d9bd5ed6f1c3efecebfa0e24f48c050c37ad0a0af5ecc2bd4faa0327",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-superagent/official-harbor067/8c99cbfc60095148d7c4/jobs/patch-4fe6a1cdaae58d/instance_gravitational__teleport__XEQmvLn/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "superagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "9c9d9db8d9bd5ed6f1c3efecebfa0e24f48c050c37ad0a0af5ecc2bd4faa0327",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "f1cb08f366b0cd2d1e4e9df841d3e2d3683b11aff87e9bd78b3d107043ec1427",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820742.4843426
+        },
+        "elapsed_s": 55.48293801769614,
+        "trial": "/dev/shm/osa-uniform-score075/case18/jobs/patch-3e575eaf021236/instance_gravitational__teleport__36oY4fe/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-superagent",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "6d2395c2ada1863c7c196ced931fc23539910b674d260652e18b5c288151bb4a",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793786994.7040133
+        },
+        "architecture": "superagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 25.998758191242814,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "a3e891ffd6da413d557f9e345a87b16290cfa72c48445ab3a1b2e1bae5f40680",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-superagent/official-harbor067/a13833a79121ac141c9f/jobs/patch-ee471856ea87f3/instance_gravitational__teleport__96fEBh9/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "superagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "a3e891ffd6da413d557f9e345a87b16290cfa72c48445ab3a1b2e1bae5f40680",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "d415a616f5a6489831c2bd866bae11ee0e63a70f183a1baf29a78e7a8b925403",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820798.1485808
+        },
+        "elapsed_s": 25.9704757835716,
+        "trial": "/dev/shm/osa-uniform-score075/case19/jobs/patch-79e218dd0d2d67/instance_gravitational__teleport__8W3srKU/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-superagent",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "4c1737ac1711a79ae8e66bde70c7718091b49d90d09309775fe5cfaeefeb7904",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793787020.9224324
+        },
+        "architecture": "superagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 29.04584640264511,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_original_valid": true,
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "0b1fce2992ac9ba3ca18b70c7df88056c98a2d966d9675d4ef5ed2a3b49155e5",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-superagent/official-harbor067/725ac57a326476f5c327/jobs/patch-42050f1e067e02/instance_qutebrowser__qutebrowse__5qbBCt4/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "superagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "0b1fce2992ac9ba3ca18b70c7df88056c98a2d966d9675d4ef5ed2a3b49155e5",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "ff831c940b640845e015f933f2f5431f7f2b6d543238f02b1168e16f8ec76bb8",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820824.2659984
+        },
+        "elapsed_s": 28.94184054620564,
+        "trial": "/dev/shm/osa-uniform-score075/case20/jobs/patch-d5e6bae20ef1a8/instance_qutebrowser__qutebrowse__d3HBuTm/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-superagent",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              3
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "3",
+            "memory.max": "4294967296"
+          },
+          "container_id": "73800224b55a402c6b6070bc204e73e026ec27993f521159f9f85c6771bdd0b4",
+          "host_limits": {
+            "CpusetCpus": "3",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793787050.127777
+        },
+        "architecture": "superagent",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 25.520191073417664,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_original_valid": true,
+        "independent_output_sha256": "171122fc066edd5cd7126818417162b754f029438c6eb829b292f6c40b368b17",
+        "independent_success": false,
+        "model_patch_sha256": "1bfb38b6b5b07fa2441ab4e571772fd85a8e8a2b3f69ce3ed545f26da107c4f0",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "171122fc066edd5cd7126818417162b754f029438c6eb829b292f6c40b368b17",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261102,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261102-superagent/official-harbor067/c5e3b484ba4a8302b305/jobs/patch-a6985cecabe7f0/instance_internetarchive__openli__JXj6gVt/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "superagent",
+        "seed": 20261102,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "171122fc066edd5cd7126818417162b754f029438c6eb829b292f6c40b368b17",
+        "independent_output_sha256": "171122fc066edd5cd7126818417162b754f029438c6eb829b292f6c40b368b17",
+        "model_patch_sha256": "1bfb38b6b5b07fa2441ab4e571772fd85a8e8a2b3f69ce3ed545f26da107c4f0",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "7ea1aa800164ec707aab966efcb0b96f395513de600792c02e876b3f8fe9fd92",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "3",
+            "affinity": [
+              3
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "3",
+            "MemorySwap": -1
+          },
+          "time": 1793820853.3514585
+        },
+        "elapsed_s": 24.92669919319451,
+        "trial": "/dev/shm/osa-uniform-score075/case21/jobs/patch-96cb406d5c35e9/instance_internetarchive__openli__bsMxXDW/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261103-router_worker",
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              0
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "0",
+            "memory.max": "4294967296"
+          },
+          "container_id": "e9050918889ef79a233a4df9c3897e12c6124dded0212b7bd3007d162723e787",
+          "host_limits": {
+            "CpusetCpus": "0",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "time": 1793788586.4380705
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 56.59991849772632,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "4eb996a47caabda9cdd839a5e9ac757a313150c5d628509c5be0cbd271fe5b6a",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261103,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261103-router_worker/official-harbor067/8c99cbfc60095148d7c4/jobs/patch-294a718ad44268/instance_gravitational__teleport__7zph695/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+        "architecture": "router_worker",
+        "seed": 20261103,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "4eb996a47caabda9cdd839a5e9ac757a313150c5d628509c5be0cbd271fe5b6a",
+        "image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "33bb5b9910e9d8ec768bd5af6ba3396c7a0b8223e4b5f2784146b098d027103a",
+          "image": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "0",
+            "affinity": [
+              0
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "0",
+            "MemorySwap": -1
+          },
+          "time": 1793820878.5353703
+        },
+        "elapsed_s": 55.477309396490455,
+        "trial": "/dev/shm/osa-uniform-score075/case22/jobs/patch-9b143d6dca0b8f/instance_gravitational__teleport__Mv27qce/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261103-router_worker",
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              1
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "1",
+            "memory.max": "4294967296"
+          },
+          "container_id": "65dca799020490e59769d3a7347e8951c473ba157cab6928db127c353f8dc9e9",
+          "host_limits": {
+            "CpusetCpus": "1",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "time": 1793788643.1548588
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 53.019749065861106,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "independent_original_valid": true,
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_success": false,
+        "model_patch_sha256": "e425d4f8a6bd7e2e23d43714fa88a26225420dc53037b02eb95b6d0189f4db9a",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261103,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261103-router_worker/official-harbor067/a13833a79121ac141c9f/jobs/patch-e02c6c3fea2fb2/instance_gravitational__teleport__4LskAGE/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+        "architecture": "router_worker",
+        "seed": 20261103,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "independent_output_sha256": "a6e6e0c6f67ecbaad5929001483f8bdba42ed2f43e2ebb33c9c679e43b9e044d",
+        "model_patch_sha256": "e425d4f8a6bd7e2e23d43714fa88a26225420dc53037b02eb95b6d0189f4db9a",
+        "image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "b18032d56dec29a76e6f669286e304b971a5f37ded7619802c52a7cf491c12dd",
+          "image": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "1",
+            "affinity": [
+              1
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "1",
+            "MemorySwap": -1
+          },
+          "time": 1793820934.2735305
+        },
+        "elapsed_s": 52.53444546088576,
+        "trial": "/dev/shm/osa-uniform-score075/case23/jobs/patch-d0bca08527a51e/instance_gravitational__teleport__7eHDEkS/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261103-router_worker",
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              2
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "2",
+            "memory.max": "4294967296"
+          },
+          "container_id": "f68bd47cc697d2a3cbfa3de6691e57a72eb4e80573d257422e12bcfb5663e8f2",
+          "host_limits": {
+            "CpusetCpus": "2",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "time": 1793788696.3714676
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 29.020530922338367,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "independent_original_valid": true,
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_success": false,
+        "model_patch_sha256": "69bc2eaa0cc3b4761b5fd76ee573167ee60f3b20c0798b77d133d480fe8ba6e0",
+        "official_aggregate_mean": 0.0,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "official_protocol_valid": true,
+        "official_reward": 0.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261103,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": false,
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261103-router_worker/official-harbor067/725ac57a326476f5c327/jobs/patch-2f00804650e398/instance_qutebrowser__qutebrowse__oHhpbiC/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "architecture": "router_worker",
+        "seed": 20261103,
+        "success": false,
+        "official_reward": 0.0,
+        "official_aggregate_mean": 0.0,
+        "independent_success": false,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "independent_output_sha256": "c3ac95f23c09d33a744b59f68422f0bb5a7f72ab43bb001d99745908ed521938",
+        "model_patch_sha256": "69bc2eaa0cc3b4761b5fd76ee573167ee60f3b20c0798b77d133d480fe8ba6e0",
+        "image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "0c2a0e38dc87cb8d37d185b412de541d1cc3ef04c0e213418ed8990954b5adb0",
+          "image": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "2",
+            "affinity": [
+              2
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "2",
+            "MemorySwap": -1
+          },
+          "time": 1793820986.9327102
+        },
+        "elapsed_s": 28.983470804989338,
+        "trial": "/dev/shm/osa-uniform-score075/case24/jobs/patch-da34853554aa2e/instance_qutebrowser__qutebrowse__fxD48Js/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    },
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261103-router_worker",
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "prior_attestation": {
+        "actual_resources": {
+          "actual": {
+            "affinity": [
+              3
+            ],
+            "cpu.max": "100000 100000",
+            "cpuset.cpus.effective": "3",
+            "memory.max": "4294967296"
+          },
+          "container_id": "71e28d27cd4233c455dd829424adc8a9ae47949c9fe0b4dabe4acf76a6b29206",
+          "host_limits": {
+            "CpusetCpus": "3",
+            "Memory": 4294967296,
+            "MemorySwap": -1,
+            "NanoCpus": 1000000000
+          },
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "time": 1793788725.5871172
+        },
+        "architecture": "router_worker",
+        "coding_failure_adjudication": null,
+        "elapsed_s": 25.540549896657467,
+        "grading_rule_sha256": "204dd9a836c9775f0ab606742201d49d31f77cac8acd8eac0b27b1b6dc71f852",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "independent_original_valid": true,
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_success": true,
+        "model_patch_sha256": "37ec18280c5e7b9af5abf0c3fe448f490db58adf439bc478713cc8dcbde27e33",
+        "official_aggregate_mean": 1.0,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "official_protocol_valid": true,
+        "official_reward": 1.0,
+        "official_task_verifier_modified": false,
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "precomputed_original_harbor": null,
+        "raw_campaign_protocol_flag_preserved": false,
+        "raw_output_equal": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "seed": 20261103,
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "success": true,
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "test_outcomes_equal": true,
+        "trial": "/dev/shm/osa-stage1-m2-study067/primary/seed20261103-router_worker/official-harbor067/c5e3b484ba4a8302b305/jobs/patch-ce1f0c03df04f3/instance_internetarchive__openli__9f4P6Ee/result.json"
+      },
+      "final_attestation": {
+        "official_protocol_valid": true,
+        "scope": "This captured model artifact, task, architecture and seed only",
+        "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "architecture": "router_worker",
+        "seed": 20261103,
+        "success": true,
+        "official_reward": 1.0,
+        "official_aggregate_mean": 1.0,
+        "independent_success": true,
+        "independent_original_valid": true,
+        "coding_failure_adjudication": null,
+        "raw_output_equal": true,
+        "test_outcomes_equal": true,
+        "official_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "independent_output_sha256": "6e9bc13b73413373a65a89ab41a4ef81459c0ef3f084792f5eebca2a81618a4a",
+        "model_patch_sha256": "37ec18280c5e7b9af5abf0c3fe448f490db58adf439bc478713cc8dcbde27e33",
+        "image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+        "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+        "original_harbor_commit": "f6cf2e2e86a102a9d2980ce8888f4bda251aa998",
+        "official_task_verifier_modified": false,
+        "actual_resources": {
+          "container_id": "ba7b0fe2153661ba58d31abefe5f50f411bd1cc0fd278c163e9c35b2c1708418",
+          "image": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+          "actual": {
+            "cpu.max": "100000 100000",
+            "memory.max": "4294967296",
+            "cpuset.cpus.effective": "3",
+            "affinity": [
+              3
+            ]
+          },
+          "host_limits": {
+            "NanoCpus": 1000000000,
+            "Memory": 4294967296,
+            "CpusetCpus": "3",
+            "MemorySwap": -1
+          },
+          "time": 1793821016.0939152
+        },
+        "elapsed_s": 24.968104410916567,
+        "trial": "/dev/shm/osa-uniform-score075/case25/jobs/patch-6333b76f9bcce7/instance_internetarchive__openli__KyrRdpU/result.json",
+        "raw_campaign_protocol_flag_preserved": false,
+        "precomputed_original_harbor": null,
+        "grading_rule_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+      },
+      "same_original_result": true
+    }
+  ],
+  "grading_code_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c"
+}

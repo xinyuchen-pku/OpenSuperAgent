@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "created": 1793823207.6193185,
+  "archive": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/final-evidence-export076/OpenSuperAgent-M2-raw-evidence076.tar.gz",
+  "sha256": "a74572846bfcfdb28eacb33719e5baabd8d1b32c0757df2623b247d393998228",
+  "bytes": 383522090,
+  "files": 4350,
+  "uncompressed_bytes": 1493931489,
+  "exported_raw_bytes_equal": true,
+  "credential_scan": "All known task credential values absent from selected regular files; credentials/privateDockerTLS files excluded by allowlist",
+  "primary_grades": 60,
+  "secondary_grades": 20
+}
