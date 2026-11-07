@@ -1,5 +1,10 @@
 # Research notes
 
+**Current evaluation work:** [Stage 2 Evaluation Suite](../suite/README.md) and
+[its preregistration protocol](../suite/PROTOCOL.md). The notes below describe
+the original workspace application reviewed on 2026-11-02. Its executor and
+claims are separate from the frozen common Worker used in the research suite.
+
 Reviewed on **2026-11-02**, against DeepSeek’s published repository at commit [`6337fc823ce20251c8de8085948165c81aaa701e`](https://github.com/deepseek-ai/dsh-superagent-prototype/tree/6337fc823ce20251c8de8085948165c81aaa701e).
 
 ## What DeepSeek published

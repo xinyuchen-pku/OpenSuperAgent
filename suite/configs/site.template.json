@@ -1,0 +1,58 @@
+{
+  "campaign_id": "stage2-native-v1",
+  "campaign_ledger": "/absolute/evidence/campaign/task-budgets.sqlite3",
+  "research_root": "/absolute/OpenSuperAgent/research",
+  "admission_file": "/absolute/private/admission.json",
+  "api_key_env": "LLM_API_KEY",
+  "model_base_url": "http://model-host:18691/v1",
+  "native_executable": "/absolute/native-env/bin/asyncodebench",
+  "native_runner_root": "/absolute/AsynCodeBench/reproductions/async-swe-agents",
+  "native_image_ids": {
+    "asyncodebench:cachetools": "sha256:RESOLVED_IMAGE_CONFIG_ID"
+  },
+  "pro_checkout": "/absolute/SWE-bench_Pro-os",
+  "pro_gates": "/absolute/evidence/pro-gates.json",
+  "harbor": "/absolute/harbor-env/bin/harbor",
+  "docker_prefix": [
+    "docker"
+  ],
+  "docker_command_prefix_by_cpu": {
+    "0": [
+      "python",
+      "/absolute/OpenSuperAgent/research/reproduction/docker_cpu_prefix.py",
+      "0",
+      "/absolute/bin/docker",
+      "unix:///var/run/docker.sock"
+    ],
+    "1": [
+      "python",
+      "/absolute/OpenSuperAgent/research/reproduction/docker_cpu_prefix.py",
+      "1",
+      "/absolute/bin/docker",
+      "unix:///var/run/docker.sock"
+    ],
+    "2": [
+      "python",
+      "/absolute/OpenSuperAgent/research/reproduction/docker_cpu_prefix.py",
+      "2",
+      "/absolute/bin/docker",
+      "unix:///var/run/docker.sock"
+    ],
+    "3": [
+      "python",
+      "/absolute/OpenSuperAgent/research/reproduction/docker_cpu_prefix.py",
+      "3",
+      "/absolute/bin/docker",
+      "unix:///var/run/docker.sock"
+    ]
+  },
+  "environment": {
+    "ASYNCODEBENCH_ROOT": "/absolute/AsynCodeBench",
+    "PYTHONPATH": "/absolute/AsynCodeBench/reproductions/async-swe-agents"
+  },
+  "scope": "Copy outside repository, resolve all image IDs and paths, keep credentials in the named existing environment. A site file does not grant admission.",
+  "resource_guard_receipt": "/absolute/private/immutable-resource-guard.json",
+  "native_image_receipts": {
+    "asyncodebench:cachetools": "/absolute/evidence/images/cachetools-sdk-image.json"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "osa-development-exclusions-v1",
+  "task_ids": [
+    "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+    "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+    "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+    "instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+    "instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+    "instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+    "instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+    "instance_NodeBB__NodeBB-0c81642997ea1d827dbd02c311db9d4976112cd4-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "instance_element-hq__element-web-41dfec20bfe9b62cddbbbf621bef2e9aa9685157-vnan",
+    "instance_internetarchive__openlibrary-b4f7c185ae5f1824ac7f3a18e8adf6a4b468459c-v08d8e8889ec945ab821fb156c04c7d2e2810debb",
+    "instance_ansible__ansible-29aea9ff3466e4cd2ed00524b9e56738d568ce8b-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5",
+    "instance_flipt-io__flipt-cd18e54a0371fa222304742c6312e9ac37ea86c1",
+    "instance_NodeBB__NodeBB-be43cd25974681c9743d424238b7536c357dc8d3-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "instance_navidrome__navidrome-6bd4c0f6bfa653e9b8b27cfdc2955762d371d6e9",
+    "instance_qutebrowser__qutebrowser-7f9713b20f623fc40473b7167a082d6db0f0fd40-va0fd88aac89cde702ec1ba84877234da33adce8a",
+    "instance_ansible__ansible-a1569ea4ca6af5480cf0b7b3135f5e12add28a44-v0f01c69f1e2528b935359cfe578530722bca2c59",
+    "instance_ansible__ansible-3b823d908e8a5d17674f8c26d337d3114b7493b1-v0f01c69f1e2528b935359cfe578530722bca2c59",
+    "instance_protonmail__webclients-b9387af4cdf79c2cb2a221dea33d665ef789512e",
+    "instance_protonmail__webclients-51742625834d3bd0d10fe0c7e76b8739a59c6b9f",
+    "instance_protonmail__webclients-e65cc5f33719e02e1c378146fb981d27bc24bdf4",
+    "instance_flipt-io__flipt-56a620b8fc9ef7a0819b47709aa541cdfdbba00b",
+    "instance_qutebrowser__qutebrowser-ed19d7f58b2664bb310c7cb6b52c5b9a06ea60b2-v059c6fdc75567943479b23ebca7c07b5e9a7f34c",
+    "instance_ansible__ansible-379058e10f3dbc0fdcaf80394bd09b18927e7d33-v1055803c3a812189a1133297f7f5468579283f86"
+  ],
+  "reason": "Entire original24 excluded, including M2, M3-A, M3-A3 and B1 positions5–8; initial smoke task was original position1.",
+  "source_manifest_sha256": "2e4de4b63a967ac99293fa71ec2998707396bcb1bec4fb94ee190fb24f6914c6",
+  "known_m2_tasks": [
+    "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+    "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+    "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171"
+  ],
+  "remaining_audit": "Archive-only runs retained; historical smoke and calibration manifests reconciled with original24. Final confirmatory admission must recheck no newly added development task.",
+  "observed_model_run_task_ids": [
+    "instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+    "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+    "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+    "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+    "instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+    "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+    "instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+    "instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171"
+  ],
+  "native_journals_audited": 393,
+  "audit_scope": "Durable run journals under operational root. Frozen sources, benchmark catalogs, dependencies, OCI stores, caches and symlinks excluded.",
+  "audit_errors": [],
+  "audit_partial": []
+}

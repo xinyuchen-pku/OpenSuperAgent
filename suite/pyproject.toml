@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opensuperagent-suite"
+version = "0.2.0.dev0"
+description = "Versioned controlled architecture and native benchmark evaluation"
+requires-python = ">=3.11"
+dependencies = ["opensuperagent-eval==0.1.4"]
+
+[project.optional-dependencies]
+analysis = ["matplotlib==3.9.2"]
+
+[project.scripts]
+osa-suite = "osa_suite.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["osa_suite*"]

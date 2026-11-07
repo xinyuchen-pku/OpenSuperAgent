@@ -1,0 +1,306 @@
+{
+  "schema": "osa-task-manifest-v1",
+  "benchmark": "swebench_pro_v2",
+  "status": "diagnostic_only",
+  "source_commit": "66f92766bba642462d4bbe5479e83f91f9211862",
+  "tasks": [
+    {
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "repository": "gravitational/teleport",
+      "language": "go",
+      "instruction_sha256": "f6179085ab03fb95fa7296dd8bf944bf5a7e5d25572ccd291c14b2b57099ba44",
+      "task_toml_sha256": "753e4f48c6c5c3ec3315f7846f58ca482fc5b9ab78cd3c5de1a70c2b30a54d3b",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 1168,
+      "public_source_paths": [
+        "lib/srv/db/ca.go"
+      ]
+    },
+    {
+      "task_id": "instance_gravitational__teleport-10123c046e21e1826098e485a4c2212865a49d9f",
+      "repository": "gravitational/teleport",
+      "language": "go",
+      "instruction_sha256": "048abff0ceefca96c42c6460b8fd5303481cb4a6946be45c1247d6d7bdca2c7b",
+      "task_toml_sha256": "3c9c1438e0ee38af1d0dac0fd8332ab741a568cafd682eb2b39fee9724a1b769",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "dependency_coupled_text",
+      "instruction_words": 412,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "repository": "qutebrowser/qutebrowser",
+      "language": "python",
+      "instruction_sha256": "08893d0583dcc54f25e0ed568e77fb2f65cae5fee98a1b3ca917ba30e26ee279",
+      "task_toml_sha256": "dcce333c7095d94b3a1fc97d376c6efbd012f6d747403fbfa79beb2112150e58",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 387,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "repository": "internetarchive/openlibrary",
+      "language": "python",
+      "instruction_sha256": "972e3508782397c3678914683fb89acc42f7b496bd0868ee4b4c36eb9ef6882a",
+      "task_toml_sha256": "3b6aa81e7bb19708421aa8bf8471414b547c8cf9dfe073c053204068ce0773ee",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 703,
+      "public_source_paths": [
+        "openlibrary/plugins/upstream/table_of_contents.py"
+      ]
+    },
+    {
+      "task_id": "instance_qutebrowser__qutebrowser-e57b6e0eeeb656eb2c84d6547d5a0a7333ecee85-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "repository": "qutebrowser/qutebrowser",
+      "language": "python",
+      "instruction_sha256": "d3380f8371508424053f1afdef563e72afec8c9ce60732913e03667f8239866f",
+      "task_toml_sha256": "11e726cf5948853deddd5405e96dc3a964ac580fb1c76e8bbcdef7b52b0c44f0",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 385,
+      "public_source_paths": [
+        "qutebrowser/components/utils/blockutils.py"
+      ]
+    },
+    {
+      "task_id": "instance_gravitational__teleport-02d1efb8560a1aa1c72cfb1c08edd8b84a9511b4-vce94f93ad1030e3136852817f2423c1b3ac37bc4",
+      "repository": "gravitational/teleport",
+      "language": "go",
+      "instruction_sha256": "acec7dc6f6889087a6ad2dd093efcf4fe504fdfd42b67e84885a95c326437ec5",
+      "task_toml_sha256": "6a154f72c9be413e17c6a8507866a0cc1cf2fea2df43b2c533173d6fdedf2981",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 256,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_internetarchive__openlibrary-43f9e7e0d56a4f1d487533543c17040a029ac501-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4",
+      "repository": "internetarchive/openlibrary",
+      "language": "python",
+      "instruction_sha256": "53f537e58b35275f24f7077a2a54f17d8557265e37e421a63fbe6df73ed868c0",
+      "task_toml_sha256": "203b5dac02dea6f9b80885142b7634880dd7193758d074b508282b98914c9562",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 375,
+      "public_source_paths": [
+        "openlibrary/catalog/add_book/__init__.py"
+      ]
+    },
+    {
+      "task_id": "instance_qutebrowser__qutebrowser-66cfa15c372fa9e613ea5a82d3b03e4609399fb6-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+      "repository": "qutebrowser/qutebrowser",
+      "language": "python",
+      "instruction_sha256": "98df687bcd0014c829b97125d34b864d49c27b4f27394a26c3688808271df4bf",
+      "task_toml_sha256": "3c9c2fede0848bd3bcfe5143e8417ba7cf083ab4082b84e0cf37bd2299f8d9bf",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 638,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_NodeBB__NodeBB-0c81642997ea1d827dbd02c311db9d4976112cd4-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "repository": "NodeBB/NodeBB",
+      "language": "javascript",
+      "instruction_sha256": "8ed2a243090993423a5fb6f2fb774ac9243a08f5e065e59c7a5e402ad2b20805",
+      "task_toml_sha256": "b9569de5f0fc0c193b202e1afb07c1cd68a14130cbb0402be848c93e1dc813ee",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 401,
+      "public_source_paths": [
+        "src/posts/queue.js"
+      ]
+    },
+    {
+      "task_id": "instance_element-hq__element-web-41dfec20bfe9b62cddbbbf621bef2e9aa9685157-vnan",
+      "repository": "element-hq/element-web",
+      "language": "javascript",
+      "instruction_sha256": "5236ee491ccd313a938de40b272db729e01ddd01fec1b3f73e7ba58fe646aa20",
+      "task_toml_sha256": "5191339c7a488f66fe9c56407f53b56e7149d8d0c2b4a10046478a702a4bae35",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 493,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_internetarchive__openlibrary-b4f7c185ae5f1824ac7f3a18e8adf6a4b468459c-v08d8e8889ec945ab821fb156c04c7d2e2810debb",
+      "repository": "internetarchive/openlibrary",
+      "language": "python",
+      "instruction_sha256": "35e3cec7bedd91f5dfc432fde1f5fe884a2324680a22edeb3698aa4474e32a8b",
+      "task_toml_sha256": "05e645718742b0240c7e526fa7baa91c63f9434d540b7e208c11371ae92b86c9",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 285,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_ansible__ansible-29aea9ff3466e4cd2ed00524b9e56738d568ce8b-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5",
+      "repository": "ansible/ansible",
+      "language": "python",
+      "instruction_sha256": "2f8da4cc1c9d5db59475bba4be3a2c91261e6d5ca477a8f3d8169bf495e4cfed",
+      "task_toml_sha256": "36ce06d5d0a252a63a80cfda16979c887650693d6d9132943ba2bcae5b89d124",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 712,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_flipt-io__flipt-cd18e54a0371fa222304742c6312e9ac37ea86c1",
+      "repository": "flipt-io/flipt",
+      "language": "go",
+      "instruction_sha256": "2309d9d2d04455c1575a2aa75311dfeab1b036706af5bb3539b0287a48a77153",
+      "task_toml_sha256": "36bc4f688bb4d31777d574155482479435274060bce41dd63a66b210058ca55e",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 992,
+      "public_source_paths": [
+        "internal/config/config.go"
+      ]
+    },
+    {
+      "task_id": "instance_NodeBB__NodeBB-be43cd25974681c9743d424238b7536c357dc8d3-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "repository": "NodeBB/NodeBB",
+      "language": "javascript",
+      "instruction_sha256": "2eef87176fb3ee803ceb65f9a611d89f92c8e14bd3154d7b50d66acf6b65831a",
+      "task_toml_sha256": "86b2c3848c82a4fcfe82745a26eae84b64d354dd464587a51fac4c2a8ab4d92c",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "dependency_coupled_text",
+      "instruction_words": 486,
+      "public_source_paths": [
+        "src/topics/posts.js"
+      ]
+    },
+    {
+      "task_id": "instance_navidrome__navidrome-6bd4c0f6bfa653e9b8b27cfdc2955762d371d6e9",
+      "repository": "navidrome/navidrome",
+      "language": "go",
+      "instruction_sha256": "e60b8f646c759851553de294971059277e15cfb8fea38724cfcaa3d2f8fcddd9",
+      "task_toml_sha256": "d1cffeb3515cd5bdf0605f81c6bc5c3e5b726143df0ef6a53a9465989987b6dd",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 662,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_qutebrowser__qutebrowser-7f9713b20f623fc40473b7167a082d6db0f0fd40-va0fd88aac89cde702ec1ba84877234da33adce8a",
+      "repository": "qutebrowser/qutebrowser",
+      "language": "python",
+      "instruction_sha256": "7cd4afe9654f72a42e682f815a456f89fb43299b85c67b4cdccb19f67bd94927",
+      "task_toml_sha256": "5c5947c77ec5dd2c09e62c1f3409903bf7ebf55c36fd4f82746b3d7530889b3a",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 620,
+      "public_source_paths": [
+        "qutebrowser/browser/webengine/webview.py"
+      ]
+    },
+    {
+      "task_id": "instance_ansible__ansible-a1569ea4ca6af5480cf0b7b3135f5e12add28a44-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "repository": "ansible/ansible",
+      "language": "python",
+      "instruction_sha256": "8b31d0218f71660bac5b26774a84151f1ff76dca82a61da6b018b43df2a59147",
+      "task_toml_sha256": "f58c0082ec94baae640bc345fdb673191c31ec91a2bf524baaeda5bc00fda7fc",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 380,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_ansible__ansible-3b823d908e8a5d17674f8c26d337d3114b7493b1-v0f01c69f1e2528b935359cfe578530722bca2c59",
+      "repository": "ansible/ansible",
+      "language": "python",
+      "instruction_sha256": "3798523cf86aa73391d3f49db621b6b561e951ae005625555dc0f41295fba10e",
+      "task_toml_sha256": "fdf13ca33a70f7beb8c56e02f13dc71b1f4f1a07f2d9f0fac0d3a374fc81a721",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 442,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_protonmail__webclients-b9387af4cdf79c2cb2a221dea33d665ef789512e",
+      "repository": "protonmail/webclients",
+      "language": "javascript",
+      "instruction_sha256": "a1c89826ac62f6c2ac6aadfa7d0b2db998fdc5322d65c09bf98a5392722337f7",
+      "task_toml_sha256": "905b2a1159bf08b6ea4ec64570061707f9d381dfb9c092299e3f2b8ee3534b43",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 555,
+      "public_source_paths": [
+        "applications/drive/src/app/store/_downloads/fileSaver/fileSaver.ts"
+      ]
+    },
+    {
+      "task_id": "instance_protonmail__webclients-51742625834d3bd0d10fe0c7e76b8739a59c6b9f",
+      "repository": "protonmail/webclients",
+      "language": "javascript",
+      "instruction_sha256": "ad36670ba65e7ec73d1b2357b9a4dddaedb29cb500077cff30a6a5c2f772623a",
+      "task_toml_sha256": "9c69a68cd1875b332707274153e979c00f2ad087f0530fd2595c60b164c82163",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 522,
+      "public_source_paths": [
+        "packages/components/helpers/url.ts"
+      ]
+    },
+    {
+      "task_id": "instance_protonmail__webclients-e65cc5f33719e02e1c378146fb981d27bc24bdf4",
+      "repository": "protonmail/webclients",
+      "language": "javascript",
+      "instruction_sha256": "9fc5e6dacf38b7fb6c798afcc692151fb7136637e966f71ac56da295757456fb",
+      "task_toml_sha256": "ec3c190976efd03d3ec2ba75fca12a5b91f639654b9e7a39f51905605602eaeb",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "multi_path_text",
+      "instruction_words": 842,
+      "public_source_paths": [
+        "applications/mail/src/app/logic/elements/elementsActions.ts",
+        "applications/mail/src/app/logic/elements/elementsReducers.ts",
+        "applications/mail/src/app/logic/elements/elementsSelectors.ts"
+      ]
+    },
+    {
+      "task_id": "instance_flipt-io__flipt-56a620b8fc9ef7a0819b47709aa541cdfdbba00b",
+      "repository": "flipt-io/flipt",
+      "language": "go",
+      "instruction_sha256": "debef6a7dbb7ce70d75966b67cc4873c6954255649a410c7588b32b823c1d380",
+      "task_toml_sha256": "6d9f9bb677100c236bed4fd5d15f7165796e2a1b225bba273b86ad9798dccfbd",
+      "complexity_proxy": "long",
+      "parallelizability_proxy": "multi_path_text",
+      "instruction_words": 1227,
+      "public_source_paths": [
+        "internal/config/audit.go",
+        "internal/server/audit/webhook/client.go",
+        "internal/server/audit/webhook/webhook.go"
+      ]
+    },
+    {
+      "task_id": "instance_qutebrowser__qutebrowser-ed19d7f58b2664bb310c7cb6b52c5b9a06ea60b2-v059c6fdc75567943479b23ebca7c07b5e9a7f34c",
+      "repository": "qutebrowser/qutebrowser",
+      "language": "python",
+      "instruction_sha256": "e58eac445bcd170f0ba0993784e67f2c79560ad6072f803bdc3c968584b03d91",
+      "task_toml_sha256": "5772a4bc2f4ba1b99a1a0e432824cbbcf8ca77b8155f85239e97f3ae1e23a3d3",
+      "complexity_proxy": "short",
+      "parallelizability_proxy": "unspecified_text",
+      "instruction_words": 281,
+      "public_source_paths": []
+    },
+    {
+      "task_id": "instance_ansible__ansible-379058e10f3dbc0fdcaf80394bd09b18927e7d33-v1055803c3a812189a1133297f7f5468579283f86",
+      "repository": "ansible/ansible",
+      "language": "python",
+      "instruction_sha256": "b65762552fa1f6c64086e3935afaecf59dc2e506c2a0b3975c3b621cd229331d",
+      "task_toml_sha256": "fa7dc6aab0f48c0b87412d52d2240d4e28039eff3194e60ddf98c1522f84b915",
+      "complexity_proxy": "medium",
+      "parallelizability_proxy": "dependency_coupled_text",
+      "instruction_words": 393,
+      "public_source_paths": [
+        "ansible/module_utils/common/_collections_compat.py",
+        "common/collections.py",
+        "common/parameters.py",
+        "lib/ansible/module_utils/basic.py",
+        "lib/ansible/module_utils/common/_collections_compat.py"
+      ]
+    }
+  ]
+}
