@@ -1,0 +1,42 @@
+{
+  "stage": "S2.0 local candidate",
+  "base_main": "e9ce8039cbbe66cfac5aa566da0b61a856b643e3",
+  "source025": {
+    "tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+    "source_files_verified": 43,
+    "installed_modules_verified": 25
+  },
+  "local_checks": {
+    "fresh_environment_install": true,
+    "unit_and_contract_tests_passed": 16,
+    "architecture_cells": 5,
+    "mechanism_cells": 4,
+    "synthetic_report_rows": 40,
+    "actual_model_calls": 0
+  },
+  "official_native_preparation": {
+    "benchmark_commit": "2a639b049f249e79eb2031876bc06a110be9ac3a",
+    "sdk_commit": "944284310d9a5f1ccad0ef8c2d7c4c38342b9952",
+    "task_artifact_checksums_verified": 140,
+    "tasks_dry_run": 19,
+    "protocol_conditions_dry_run": 95,
+    "official_registry_manifest_digests_verified": 19,
+    "actual_new_native_scores": 0
+  },
+  "zero_model_docker_controls": {
+    "cgroup_cpu_max": "100000 100000",
+    "cgroup_memory_max_bytes": 4294967296,
+    "role_own_live_edits_visible": true,
+    "role_sibling_read_blocked": true,
+    "role_shell_source_write_blocked": true,
+    "isolated_git_diff_works": true,
+    "scope": "Stock Docker/Git fixture; full installed native adapter acceptance remains pending"
+  },
+  "remaining": [
+    "Complete immutable image/SDK staging and live provider/guard admission",
+    "Run all19 native async_private tasks with the common frozen Worker",
+    "Verify same-protocol architecture coordination hook and independent native regrade",
+    "Run Pro precheck and independent confirmatory sample",
+    "Real-model mechanism extension; external Async-RBench Judge; Terminal-Bench adapter"
+  ]
+}

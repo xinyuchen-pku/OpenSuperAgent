@@ -1,0 +1,148 @@
+{
+  "schema": "osa-stage2-v1",
+  "name": "OpenSuperAgent Comprehensive Evaluation",
+  "status": "candidate_local_implementation_not_benchmark_acceptance",
+  "base_main": "e9ce8039cbbe66cfac5aa566da0b61a856b643e3",
+  "order_seed": 20261107,
+  "model": {
+    "id": "qwen3-coder-next",
+    "served_name": "osa-qwen3-coder-next",
+    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
+    "precision": "bfloat16",
+    "tensor_parallel": 4,
+    "maximum_context": 262144,
+    "max_sequences": 4,
+    "prefix_cache": false,
+    "transport": {
+      "temperature": 0.7,
+      "max_output_tokens": 8192,
+      "timeout_s": 1800,
+      "allow_private_http": true,
+      "tokenizer_preflight": true,
+      "context_policy": "shorten_old_tool_observations",
+      "input_usd_per_million": 0.0,
+      "output_usd_per_million": 0.0
+    },
+    "extra_sampling": {
+      "top_p": 0.8,
+      "top_k": 20,
+      "repetition_penalty": 1.05
+    }
+  },
+  "worker": {
+    "label": "source025",
+    "tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+    "changes": "none"
+  },
+  "benchmarks": {
+    "asyncodebench_native": {
+      "track": "native_capability",
+      "protocol": "async_private",
+      "tasks_path": "../manifests/asyn19.json",
+      "tasks_sha256": "48828c5eebbdc19bb8382269fcc8d14977aec4cbe0d470ae9f0fdae1f2ef9e43",
+      "task_count": 19,
+      "agents": [
+        "native"
+      ],
+      "seeds": [
+        20261107
+      ],
+      "task_tokens": 2000000,
+      "maximum_api_tokens": 38000000,
+      "slots": 4,
+      "model_concurrency": 4,
+      "task_timeout_s": 3000,
+      "batch_horizon_s": 20000,
+      "maximum_wall_s": 86400,
+      "maximum_service_gpu_hours": 96.0,
+      "readiness": "implementation_ready",
+      "admission_token_allowance": 10000
+    },
+    "swebench_pro_v2_precheck": {
+      "track": "controlled_architecture",
+      "protocol": "official-v2-multitask",
+      "tasks_path": "../manifests/pro24.json",
+      "tasks_sha256": "bbe8c7ba08cdc76fa616a23c86a643eaca3b777a5f3e37ca9ce0b7fe0fe0c9cb",
+      "task_count": 24,
+      "agents": [
+        "single",
+        "single_subagent",
+        "eager_delegation",
+        "router_worker",
+        "superagent"
+      ],
+      "seeds": [
+        20261107,
+        20261108
+      ],
+      "task_tokens": 2000000,
+      "maximum_api_tokens": 480000000,
+      "slots": 4,
+      "model_concurrency": 4,
+      "task_timeout_s": 3000,
+      "batch_horizon_s": 20000,
+      "maximum_wall_s": 360000,
+      "maximum_service_gpu_hours": 400.0,
+      "readiness": "implementation_ready",
+      "admission_token_allowance": 10000
+    },
+    "swebench_pro_v2": {
+      "track": "controlled_architecture",
+      "protocol": "official-v2-multitask",
+      "tasks_path": "../manifests/pro120.json",
+      "tasks_sha256": "15ea1a8f2cd9911d0595d70534303045d1602d3232c7b1e6c3b7d18ec31a8484",
+      "task_count": 120,
+      "agents": [
+        "single",
+        "single_subagent",
+        "eager_delegation",
+        "router_worker",
+        "superagent"
+      ],
+      "seeds": [
+        20261107,
+        20261108
+      ],
+      "task_tokens": 2000000,
+      "maximum_api_tokens": 2400000000,
+      "slots": 4,
+      "model_concurrency": 4,
+      "task_timeout_s": 3000,
+      "batch_horizon_s": 20000,
+      "maximum_wall_s": 1440000,
+      "maximum_service_gpu_hours": 1600.0,
+      "readiness": "development_inventory_gate",
+      "admission_token_allowance": 10000
+    }
+  },
+  "queued_benchmarks": {
+    "asyncodebench_architectures": "Official public API retains coordination. Same-protocol coordinator injection needs a compatible verified hook; no mapping of protocols to architecture names.",
+    "async_rbench": {
+      "priority": "P0 conditional",
+      "task_count": 200,
+      "scenarios": 8,
+      "commit": "56c25554768a7eeb9b493361f4243ef330dbff8b",
+      "blocked_by": "External command-boundaries-v1 Judge Bundle, validated public/judge identity, controlled architecture adapter",
+      "official_paper_results_comparable": false
+    },
+    "terminal_bench_2": {
+      "priority": "P1",
+      "task_count": 89,
+      "commit": "2fd12b88aafdd04a52c298e3940bcb189f9766d6",
+      "dataset": "terminal-bench@2.0",
+      "blocked_by": "Version-bound task/image manifest, adapter and oracle/empty gates"
+    },
+    "swebench_verified": {
+      "priority": "P2",
+      "task_count": 500,
+      "blocked_by": "Dataset/evaluator pin and independent protocol gates"
+    }
+  },
+  "stop_rules": [
+    "Protocol/resource/usage/compute failure: stop and preserve all receipts and artifacts",
+    "Zero success or Super-agent disadvantage: retain results and continue prespecified coverage",
+    "No architecture-specific model/Worker/tool tuning",
+    "No automatic generation retries with missing receipts"
+  ],
+  "cost_convention": "USD fields use explicit zero-rate self-hosted reporting convention. Publish actual API tokens, reserved tokens, denials, unknown usage and GPU service residence separately."
+}
