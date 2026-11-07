@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "parsed_JSON_exactly_equal": true,
+  "LF_normalized_bytes_equal": true,
+  "local_generated_newlines": "CRLF",
+  "remote_generated_newlines": "LF",
+  "normalization_note": "Derived summary text differs only in operating-system line endings; original exported evidence unchanged",
+  "canonical_JSON_sha256": "10fcc6807d63cdb51197a24e99bcb109723f629ca50627d131a3be0cb6164e8e",
+  "remote_LF_sha256": "44f6053fdecf57eba1e4e8def2c9b2f564bf69e32a159f75dae71baee445c290",
+  "local_sha256": "ced70dd02f1dd3a6e4ff29cf1af42db36b1fbda5f240d944ca638282160ce936"
+}

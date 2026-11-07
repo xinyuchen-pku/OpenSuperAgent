@@ -1,0 +1,46 @@
+{
+  "time": 1793966267.990072,
+  "own_gateway_evaluations": [
+    {
+      "script": "m3a2_paid161.py",
+      "state": "exited"
+    },
+    {
+      "script": "metrics174.py",
+      "state": "exited"
+    },
+    {
+      "script": "network185.py",
+      "state": "exited"
+    },
+    {
+      "script": "audit166.py",
+      "state": "exited"
+    },
+    {
+      "script": "independent196.py",
+      "state": "exited"
+    },
+    {
+      "script": "merge205.py",
+      "state": "exited"
+    },
+    {
+      "script": "replay208.py",
+      "state": "exited"
+    },
+    {
+      "script": "replay216.py",
+      "state": "exited"
+    },
+    {
+      "script": "export223.py",
+      "state": "exited"
+    }
+  ],
+  "Docker_workloads_active": "",
+  "inference_stopped": true,
+  "original_GPU_reservations_restored": true,
+  "platform_jobs_retained": true,
+  "local_VM_and_access_tunnel_retained": true
+}

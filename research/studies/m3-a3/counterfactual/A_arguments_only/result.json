@@ -1,0 +1,102 @@
+{
+  "arm": "A_arguments_only",
+  "tests": {
+    "passed": 179,
+    "failed": 36,
+    "total": 215,
+    "collected": 215
+  },
+  "dependency_pass": 1,
+  "dependency_total": 5,
+  "dependencies": [
+    {
+      "dependency_id": "cachetools.keys_to_func.untyped_key_contract",
+      "passed": false,
+      "original_selectors": [
+        "tests/test_keys.py::CacheKeysTest::test_hashkey",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator",
+        "tests/test_func.py::RRDecoratorTest::test_decorator",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator"
+      ]
+    },
+    {
+      "dependency_id": "cachetools.keys_to_func.typed_key_contract",
+      "passed": false,
+      "original_selectors": [
+        "tests/test_keys.py::CacheKeysTest::test_typedkey",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_typed",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_typed"
+      ]
+    },
+    {
+      "dependency_id": "cachetools.keys_to_cachedmethod.typed_method_key_contract",
+      "passed": true,
+      "original_selectors": [
+        "tests/test_keys.py::CacheKeysTest::test_typedmethodkey",
+        "tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict",
+        "tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru"
+      ]
+    },
+    {
+      "dependency_id": "cachetools.core_to_func.wrapper_metadata_contract",
+      "passed": false,
+      "original_selectors": [
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_clear",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_clear"
+      ]
+    },
+    {
+      "dependency_id": "cachetools.core_to_func.maxsize_and_lock_contract",
+      "passed": false,
+      "original_selectors": [
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_needs_rlock"
+      ]
+    }
+  ],
+  "FSR_credit": false,
+  "model_calls": 0,
+  "receipt": {
+    "arm": "A_arguments_only",
+    "model_calls": 0,
+    "before_files": {
+      "src/cachetools/keys.py": "be654a8429d74d6a010d0571a44d102f4eb2067b5b552ae093a5ded83dbd78fb",
+      "src/cachetools/func.py": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+    },
+    "after_files": {
+      "src/cachetools/keys.py": "e33e386b5575e3093cb270770c6f7da25c27f2633334b518bb5722ce0f5d7a43",
+      "src/cachetools/func.py": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+    },
+    "changed_paths": [
+      "src/cachetools/keys.py"
+    ],
+    "test_source_hashes_unchanged": true,
+    "pytest_exit": 1,
+    "source025_worker_modified": false,
+    "diagnostic_only": true
+  }
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opensuperagent-eval"
+version = "0.1.4"
+description = "Independent Stage 1 controlled agent runtime and evaluation utilities"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+analysis = ["matplotlib>=3.8,<4"]
+
+[project.scripts]
+osa-eval = "osa_eval.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["osa_eval*"]
+
+[tool.setuptools.package-data]
+osa_eval = ["adapters/*.mjs"]

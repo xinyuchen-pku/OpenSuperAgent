@@ -1,5 +1,16 @@
 # OpenSuperAgent
 
+Stage 1 research release: [开始复现 / Start here](research/START-HERE.md). Current core: source025 (0.1.4); historical M2 comparisons retain source022.
+The independent **Stage 1 reproduction and evaluation toolkit** is in
+[research/](research/README.md), with its [evaluation protocol](research/PROTOCOL.md).
+It includes five task-level controlled schedulers, a common execution kernel,
+and an adapter to the pinned original DeepSeek domain core. Public benchmark
+pilot results and limitations are in [M2 results](research/M2-REPORT-003.md).
+The fixed four-task, three-seed comparison and native task acceptance use
+frozen source-022. Start with the [reproduction instructions](research/reproduction/INSTALL.txt).
+Full DSH host integration and within-task recursive delegation remain declared gaps.
+The local workspace application described below is a separate implementation.
+
 **A local-first coding agent workspace: explicit permissions, isolated execution, and reviewable results.**
 
 [Interactive demo](https://xinyuchen-pku.github.io/OpenSuperAgent/) · [Quick start](docs/getting-started.md) · [Architecture](docs/architecture.md) · [中文说明](README.zh-CN.md)

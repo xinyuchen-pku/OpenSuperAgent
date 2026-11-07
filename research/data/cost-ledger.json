@@ -1,0 +1,208 @@
+{
+  "created": 1793822995.2201934,
+  "model_calls": 5445,
+  "actual_api_tokens": 136016288,
+  "observed_GPU_hours": 73.3354911184311,
+  "unresolved_usage": [],
+  "serving_instances_disjoint": [
+    {
+      "service": "001",
+      "model_calls": 290,
+      "actual_api_tokens": 8965386,
+      "observed_GPU_hours": 10.041128174993727,
+      "scope": "Historical native runs",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-001",
+      "closure_sha256": "425eea89803a0a065a0c7aa014b277429701c0f66168d23ea4415830383e799c",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "002",
+      "model_calls": 25,
+      "actual_api_tokens": 564833,
+      "observed_GPU_hours": 0.3803631610340542,
+      "scope": "Historical minimum Pro run",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-002",
+      "closure_sha256": "ceac44b11928c97e5406c8afd36fe2db4428c6670b977f9059c8239d73ba4408",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "003",
+      "model_calls": 344,
+      "actual_api_tokens": 8633069,
+      "observed_GPU_hours": 2.4202287742826676,
+      "scope": "LocalSingleminimum51calls plus firstEager293calls, samefrozen source021; guard004 subsequent model service is separate.",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-003",
+      "closure_sha256": "d327ec9a9b7448369570559c4d12c3cd82ef1547f035dcab2aa017bf34070731",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "004",
+      "model_calls": 161,
+      "actual_api_tokens": 3887061,
+      "observed_GPU_hours": 3.25909510506524,
+      "scope": "Retired source021 Router156calls plus5 nonexecuting before-contract requests; complete billing matched provider totals.",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-004",
+      "closure_sha256": "6447af23b400a142a33f9259ab9a0aed7863f1fbbd2df5d8957eef7e1d353025",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "005",
+      "model_calls": 254,
+      "actual_api_tokens": 5575468,
+      "observed_GPU_hours": 2.3681140621503194,
+      "scope": "Source022 provider after-grid5calls4696tokens, retired sharedstorage minimum69calls2540018tokens and failed Eager180calls3030754tokens; allknownusage. Final localWAL cohort062 excluded.",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-005",
+      "closure_sha256": "ebc5adac852c8b015f2e405927e9cbe68d59a36a5396fbfa5178729679030764",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "006",
+      "model_calls": 446,
+      "actual_api_tokens": 8672668,
+      "observed_GPU_hours": 7.738038838704427,
+      "scope": "Accepted architecture cohort plus two provider contract diagnostics",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-006",
+      "closure_sha256": "99d63e046755fb098572f76f7e27f0786383a3faa1752096b31884c6971f946e",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "007",
+      "model_calls": 1058,
+      "actual_api_tokens": 31190953,
+      "observed_GPU_hours": 11.783784881167941,
+      "scope": "Accepted architecture cohort plus two provider contract diagnostics",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-007",
+      "closure_sha256": "6f52d14841bc3eac466ff8d5b08e9caf98109cf1eb0e317335b33f73e58b2446",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "008",
+      "model_calls": 2700,
+      "actual_api_tokens": 64913840,
+      "observed_GPU_hours": 30.956764187282985,
+      "scope": "Accepted architecture cohort plus two provider contract diagnostics",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-008",
+      "closure_sha256": "bac698219f6a3dbcfe3b0f0b30779b391ab48f8296cc3333350fc9f314af62f7",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    },
+    {
+      "service": "009",
+      "model_calls": 167,
+      "actual_api_tokens": 3613010,
+      "observed_GPU_hours": 4.387973933749729,
+      "scope": "Predeclared infrastructure replacement081 plus native final022 plus clean public task plus two contract diagnostics",
+      "HTTP200_count_matches": true,
+      "closure": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/model-service-closure-009",
+      "closure_sha256": "ee307c33921f020eed6072f28d0922a45fdc85d6956724719ec96030c1740f04",
+      "original_reservations_restored": true,
+      "platform_jobs_modified": false
+    }
+  ],
+  "original074_cohort_breakdown_including_transport_fault": {
+    "m2-service-006": {
+      "calls": 444,
+      "tokens": 8671268,
+      "runs": [
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/secondary/seed20261102-single-task003",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-router_worker"
+      ]
+    },
+    "m2-service-007": {
+      "calls": 1056,
+      "tokens": 31189553,
+      "runs": [
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-single_subagent",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261102-superagent",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study067/primary/seed20261103-router_worker",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261103-single_subagent"
+      ]
+    },
+    "m2-service-008": {
+      "calls": 2698,
+      "tokens": 64912440,
+      "runs": [
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261103-eager_delegation",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261103-single",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261103-superagent",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261104-eager_delegation",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261104-router_worker",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261104-single",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261104-single_subagent",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/primary/seed20261104-superagent",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-eager_delegation-task001",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-eager_delegation-task002",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-eager_delegation-task003",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-eager_delegation-task004",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-router_worker-task001",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-router_worker-task002",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-router_worker-task003",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-router_worker-task004",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single-task001",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single-task002",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single-task004",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single_subagent-task001",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single_subagent-task002",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single_subagent-task003",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-single_subagent-task004",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-superagent-task001",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-superagent-task002",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-superagent-task003",
+        "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-superagent-task004"
+      ]
+    }
+  },
+  "final_eligible_comparison_breakdown": {
+    "m2-service-006": {
+      "calls": 444,
+      "tokens": 8671268
+    },
+    "m2-service-007": {
+      "calls": 1056,
+      "tokens": 31189553
+    },
+    "m2-service-008": {
+      "calls": 2675,
+      "tokens": 64676100
+    },
+    "m2-service-009": {
+      "calls": 23,
+      "tokens": 242595
+    }
+  },
+  "fixed_infrastructure_replacement081": {
+    "calls": 23,
+    "tokens": 242595
+  },
+  "native_final": {
+    "calls": 115,
+    "tokens": 3030909
+  },
+  "public_final": {
+    "calls": 27,
+    "tokens": 338106
+  },
+  "breakdown_policy": "Instance totals are additive. Original cohort/replacement/native/public numbers describe subsets already included and must not be added again. Includes historical failed or retired M2 runs and diagnostic API calls. Earlier M1 smoke164calls2434227tokens excluded.",
+  "monetary_cost": {
+    "self_hosted_API_transport_convention": 0,
+    "hardware_currency_cost": null,
+    "reason": "No applicable hardware price supplied; observed GPU residence includes loading/tool/grade/idle waiting and does not measure GPU kernel execution time."
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "time": 1793965053.0520196,
+  "paid_model_runs": [
+    {
+      "condition": "source022",
+      "frozen_tree": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+      "native_bundle_status": "valid",
+      "native_instrumentation_valid": true,
+      "profile": "asyncodebench-v0.3-standard-100",
+      "profile_deviations": [],
+      "native_final_test": {
+        "collected": 215,
+        "errors": 0,
+        "evaluation_failure_kind": null,
+        "exit_code": 1,
+        "failed": 62,
+        "outcome": "failed",
+        "passed": 153,
+        "success": false,
+        "synthetic_summary": false,
+        "timed_out": false
+      },
+      "FSR_numerator": 0,
+      "FSR_denominator": 1,
+      "dependency_pass": {
+        "resolved": 0,
+        "total": 5,
+        "value": 0.0
+      },
+      "DRS": {
+        "max": null,
+        "min": null,
+        "observed_count": 0,
+        "unresolved_count": 5
+      },
+      "dependency_details": [
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.keys_to_func.untyped_key_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.keys_to_func.typed_key_contract",
+          "downstream_resolution_step": 1,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": 0,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "integrator",
+          "dependency_id": "cachetools.keys_to_cachedmethod.typed_method_key_contract",
+          "downstream_resolution_step": 1,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": 0,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.core_to_func.wrapper_metadata_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "integrator",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.core_to_func.maxsize_and_lock_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "integrator",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        }
+      ],
+      "scope_accepted": 0,
+      "scope_total": 2,
+      "native_merged_artifacts": 0,
+      "native_reviewed_artifacts": 0,
+      "merge_details": [],
+      "reported_native_wall_s": 1092.5,
+      "actual_api_tokens": 2884871,
+      "actual_api_calls": 111,
+      "roles": [
+        {
+          "role": "decorator_factories",
+          "api_tokens": 1555587,
+          "input_tokens": 1538086,
+          "output_tokens": 17501,
+          "api_calls": 55,
+          "accepted_reservation_tokens_sum": 1988646,
+          "denied_calls": 0,
+          "uncertain_calls": 0,
+          "accounting_valid": true,
+          "max_prompt_tokens": 47226,
+          "tool_calls": 54,
+          "pytest_commands": 16,
+          "trace_file": "paid161/native-baseline-021/run/osa-ac0b1fe0a3505d427150/trace.jsonl"
+        },
+        {
+          "role": "key_construction",
+          "api_tokens": 1329284,
+          "input_tokens": 1315819,
+          "output_tokens": 13465,
+          "api_calls": 56,
+          "accepted_reservation_tokens_sum": 1774571,
+          "denied_calls": 0,
+          "uncertain_calls": 0,
+          "accounting_valid": true,
+          "max_prompt_tokens": 40591,
+          "tool_calls": 55,
+          "pytest_commands": 13,
+          "trace_file": "paid161/native-baseline-021/run/osa-e655a32e62416ebfad98/trace.jsonl"
+        }
+      ],
+      "model_context": 262144,
+      "max_output_tokens": 8192,
+      "roles_normal_completion_no_budget_denials": true
+    },
+    {
+      "condition": "source025",
+      "frozen_tree": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "native_bundle_status": "valid",
+      "native_instrumentation_valid": true,
+      "profile": "asyncodebench-v0.3-standard-100",
+      "profile_deviations": [],
+      "native_final_test": {
+        "collected": 215,
+        "errors": 0,
+        "evaluation_failure_kind": null,
+        "exit_code": 1,
+        "failed": 49,
+        "outcome": "failed",
+        "passed": 166,
+        "success": false,
+        "synthetic_summary": false,
+        "timed_out": false
+      },
+      "FSR_numerator": 0,
+      "FSR_denominator": 1,
+      "dependency_pass": {
+        "resolved": 0,
+        "total": 5,
+        "value": 0.0
+      },
+      "DRS": {
+        "max": null,
+        "min": null,
+        "observed_count": 0,
+        "unresolved_count": 5
+      },
+      "dependency_details": [
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.keys_to_func.untyped_key_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.keys_to_func.typed_key_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "integrator",
+          "dependency_id": "cachetools.keys_to_cachedmethod.typed_method_key_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "key_agent",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": null
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.core_to_func.wrapper_metadata_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "integrator",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        },
+        {
+          "consumer_agent": "decorator_agent",
+          "dependency_id": "cachetools.core_to_func.maxsize_and_lock_contract",
+          "downstream_resolution_step": null,
+          "final_integrated_pass": false,
+          "producer_agent": "integrator",
+          "status": "unresolved_final_integrated",
+          "strict_CAIL": null,
+          "strict_DRS": null,
+          "upstream_resolution_step": 1
+        }
+      ],
+      "scope_accepted": 2,
+      "scope_total": 2,
+      "native_merged_artifacts": 1,
+      "native_reviewed_artifacts": 2,
+      "merge_details": [
+        {
+          "task_id": "key_construction",
+          "merged": true,
+          "review_reason": "Merged successfully",
+          "commit_hash": "90b0b449",
+          "files_modified": [
+            "src/cachetools/keys.py"
+          ]
+        },
+        {
+          "task_id": "decorator_factories",
+          "merged": false,
+          "review_reason": "No changes found (no commit and no uncommitted changes)",
+          "commit_hash": null,
+          "files_modified": []
+        }
+      ],
+      "reported_native_wall_s": 1268.6,
+      "actual_api_tokens": 2481764,
+      "actual_api_calls": 94,
+      "roles": [
+        {
+          "role": "decorator_factories",
+          "api_tokens": 1785602,
+          "input_tokens": 1764796,
+          "output_tokens": 20806,
+          "api_calls": 54,
+          "accepted_reservation_tokens_sum": 2207164,
+          "denied_calls": 0,
+          "uncertain_calls": 0,
+          "accounting_valid": true,
+          "max_prompt_tokens": 56360,
+          "tool_calls": 53,
+          "pytest_commands": 9,
+          "trace_file": "paid161/native-candidate-022/run/osa-f82a19155a5efcd06996/trace.jsonl"
+        },
+        {
+          "role": "key_construction",
+          "api_tokens": 696162,
+          "input_tokens": 682207,
+          "output_tokens": 13955,
+          "api_calls": 40,
+          "accepted_reservation_tokens_sum": 1009887,
+          "denied_calls": 0,
+          "uncertain_calls": 0,
+          "accounting_valid": true,
+          "max_prompt_tokens": 37062,
+          "tool_calls": 39,
+          "pytest_commands": 11,
+          "trace_file": "paid161/native-candidate-022/run/osa-be2ee4a13d302d935ad3/trace.jsonl"
+        }
+      ],
+      "model_context": 262144,
+      "max_output_tokens": 8192,
+      "roles_normal_completion_no_budget_denials": true
+    }
+  ],
+  "provider_admission": {
+    "passed": true,
+    "calls": 2,
+    "actual_api_tokens": 1400,
+    "requests": [
+      {
+        "max_output": 16,
+        "finish_reason": "length",
+        "prompt_tokens": 1064,
+        "total_tokens": 1080,
+        "completion_tokens": 16,
+        "prompt_tokens_details": null
+      },
+      {
+        "max_output": 256,
+        "finish_reason": "tool_calls",
+        "prompt_tokens": 294,
+        "total_tokens": 320,
+        "completion_tokens": 26,
+        "prompt_tokens_details": null
+      }
+    ]
+  },
+  "all_real_api_calls": 207,
+  "all_real_api_tokens": 5368035,
+  "provider_and_worker_ledger_reconciled": true,
+  "uncertain_api_calls": 0,
+  "residence": {
+    "complete": true,
+    "started_observed_epoch": 1793962475.9486926,
+    "guard_launched_epoch": 1793961320.7498047,
+    "model_first_absent_observed_epoch": 1793963855.5716321,
+    "max_shutdown_observation_uncertainty_s": 1.2,
+    "service_seconds_including_startup_upper_bound": 2534.8218274116516,
+    "GPU_hours_service_upper_bound": 2.8164686971240576,
+    "GPU_count": 4,
+    "final_status": "completed_original_reservations_restored",
+    "guard_restore_errors": {},
+    "convention": "Conservative service residence from guard launch through observed model exit; includes loading and control-only time; excludes original reservation load; hardware price unknown"
+  },
+  "predeclared_api_token_cap": 8020000,
+  "cap_met": true,
+  "worker_qualification_passed": false,
+  "formal_architecture_comparison_resumed": false,
+  "M3_B_C": "frozen",
+  "scope_constraint_outcome": "2/2 accepted, each modified only original authorized file",
+  "real_candidate_integration_issue": "Missing repository committer identity prevents non-fast-forward second merge; candidate raw score166 includes only key artifact",
+  "repaired_environment_model_effect_claimed": false,
+  "zero_model_native_replay_pending": false,
+  "finalized": 1793965471.8453577,
+  "zero_model_fixed_merge_replay": {
+    "passed": true,
+    "diagnostic_only": true,
+    "official_model_benchmark_result": false,
+    "native_instrumentation_status": "valid",
+    "expected_model_evidence_failures": [],
+    "model_calls": 0,
+    "existing_paid_model_role_artifacts_replayed_unchanged": true,
+    "native_scope": "2/2",
+    "native_merges": "2/2",
+    "original_model_file_hashes": {
+      "src/cachetools/keys.py": "be654a8429d74d6a010d0571a44d102f4eb2067b5b552ae093a5ded83dbd78fb",
+      "src/cachetools/func.py": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+    },
+    "integrated_file_hashes": {
+      "src/cachetools/keys.py": "be654a8429d74d6a010d0571a44d102f4eb2067b5b552ae093a5ded83dbd78fb",
+      "src/cachetools/func.py": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+    },
+    "test_summary": {
+      "passed": 172,
+      "failed": 43,
+      "total": 215,
+      "collected": 215
+    },
+    "dependency_pass": {
+      "resolved": 0,
+      "total": 5,
+      "value": 0.0
+    },
+    "controller_receipt": {
+      "run_exit": 0,
+      "validation_exit": 0,
+      "mode": "diagnostic",
+      "protocol": "async_private",
+      "finished_epoch": 1793965122.1916745
+    },
+    "frozen_worker_source025_changed": false,
+    "benchmark_or_sdk_source_changed": false,
+    "repair": "Common repository-local Git identity preflight, same original merge algorithm",
+    "time": 1793965132.9285312
+  },
+  "independent_original_score_agreement": {
+    "passed": true,
+    "results": [
+      {
+        "mode": "baseline",
+        "test_outcomes_identical": true,
+        "tests": {
+          "passed": 153,
+          "failed": 62,
+          "total": 215,
+          "collected": 215
+        },
+        "dependency_pass": {
+          "resolved": 0,
+          "total": 5,
+          "value": 0.0
+        }
+      },
+      {
+        "mode": "candidate",
+        "test_outcomes_identical": true,
+        "tests": {
+          "passed": 166,
+          "failed": 49,
+          "total": 215,
+          "collected": 215
+        },
+        "dependency_pass": {
+          "resolved": 0,
+          "total": 5,
+          "value": 0.0
+        }
+      }
+    ],
+    "model_calls": 0,
+    "completed_SQLite_never_opened": true,
+    "time": 1793963951.826897
+  },
+  "merge_identity_counterfactual": {
+    "unfixed_merge_exit": 128,
+    "unfixed_merge_error": "Committer identity unknown\n\n*** Please tell me who you are.\n\nRun\n\n  git config --global user.email \"you@example.com\"\n  git config --global user.name \"Your Name\"\n\nto set your account's default identity.\nOmit --global to set the identity only in this repository.\n\nfatal: unable to auto-detect email address (got 'openhands@52eca51963a7.(none)')\n",
+    "fixed_merge_exit": 0,
+    "fixed_merge_output": "Merge made by the 'ort' strategy.\n src/cachetools/func.py | 126 ++++++++++++++++++++++++++++++++++++++++++++++---\n 1 file changed, 120 insertions(+), 6 deletions(-)\n",
+    "before_func_sha256": "e5df1ee7f2fe0f4b1ad15ca22802ee686dd6c906ef77c01a2c2b7c527e19387d",
+    "after_func_sha256": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f",
+    "expected_model_func_sha256": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f",
+    "original_model_commit": "e97c8e7de1db01bb66576b5bde01bdbcf8692e1c",
+    "model_artifact_bytes_preserved": true,
+    "source_code_repaired": false,
+    "minimal_actual_failure_examples": {
+      "methodkey0": [],
+      "methodkey1": [],
+      "typedmethodkey_dict": [],
+      "cache_parameters_present": false
+    },
+    "new_api_calls": 0,
+    "test_summary": {
+      "passed": 172,
+      "failed": 43,
+      "total": 215,
+      "collected": 215
+    }
+  },
+  "worker_freeze_acceptance": "not passed: Dependency Pass0/5 even after two exact model artifacts merged",
+  "all_model_work_stopped_and_original_reservations_restored": true,
+  "source025_paid_comparison_limit": "Missing merger identity affected source025 paid integration; source025Scope results valid, model ability and timing interpretation require this environment confound. Corrected environment tested with exact artifact replay only, no new paid comparison."
+}

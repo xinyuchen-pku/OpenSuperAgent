@@ -1,0 +1,347 @@
+diff --git a/openlibrary/plugins/upstream/table_of_contents.py b/openlibrary/plugins/upstream/table_of_contents.py
+index 3c730f710..44d2e78de 100644
+--- a/openlibrary/plugins/upstream/table_of_contents.py
++++ b/openlibrary/plugins/upstream/table_of_contents.py
+@@ -1,10 +1,9 @@
+ from dataclasses import dataclass
+ from typing import Required, TypeVar, TypedDict
++import json
+ 
+ from openlibrary.core.models import ThingReferenceDict
+ 
+-import web
+-
+ 
+ @dataclass
+ class TableOfContents:
+@@ -51,6 +50,21 @@ class AuthorRecord(TypedDict, total=False):
+     author: ThingReferenceDict | None
+ 
+ 
++class InfogamiThingEncoder(json.JSONEncoder):
++    """Custom JSON encoder used when serializing TOC extra fields so that 
++    non-JSON-native values encountered there can be serialized."""
++    
++    def default(self, obj):
++        # Handle cases where objects might not be JSON serializable
++        # This is a basic implementation that will convert common types
++        # that might be problematic to their string representations
++        if hasattr(obj, '__dict__'):
++            return obj.__dict__
++        elif hasattr(obj, '__slots__'):
++            return {slot: getattr(obj, slot) for slot in obj.__slots__}
++        return super().default(obj)
++
++
+ @dataclass
+ class TocEntry:
+     level: int
+@@ -97,25 +111,131 @@ class TocEntry:
+         >>> f("1.1 | Apple")
+         (0, '1.1', 'Apple', None)
+         """
+-        RE_LEVEL = web.re_compile(r"(\**)(.*)")
+-        level, text = RE_LEVEL.match(line.strip()).groups()
+-
+-        if "|" in text:
+-            tokens = text.split("|", 2)
+-            label, title, page = pad(tokens, 3, '')
++        line = line.strip()
++        
++        # Handle lines without pipes - treat as plain title at level 0
++        if "|" not in line:
++            return TocEntry(level=0, title=line)
++            
++        # Split by pipe, max 3 splits to get 4 parts (level+label, title, page, metadata)
++        parts = line.split("|", 3)
++        
++        # Pad with empty strings if needed
++        while len(parts) < 4:
++            parts.append("")
++            
++        level_part, title_part, page_part, metadata_part = parts
++        
++        # Parse level and label from the first part
++        level = 0
++        label = None
++        
++        # Extract level from asterisks
++        if level_part.startswith("*"):
++            # Count the asterisks to determine level
++            level = 0
++            i = 0
++            while i < len(level_part) and level_part[i] == "*":
++                level += 1
++                i += 1
++            
++            # Get the remaining part after asterisks
++            remaining = level_part[i:].strip()
++            if remaining:
++                label = remaining
+         else:
+-            title = text
+-            label = page = ""
+-
++            # No asterisks means level 0
++            level = 0
++            # Check if there's a label (non-empty) after stripping spaces
++            if level_part.strip():
++                label = level_part.strip()
++        
++        # Process title and page
++        title = title_part.strip() if title_part.strip() else None
++        pagenum = page_part.strip() if page_part.strip() else None
++        
++        # Handle metadata (JSON object in fourth column)
++        authors = None
++        subtitle = None
++        description = None
++        
++        if metadata_part.strip():
++            try:
++                metadata = json.loads(metadata_part.strip())
++                authors = metadata.get('authors')
++                subtitle = metadata.get('subtitle')
++                description = metadata.get('description')
++            except (json.JSONDecodeError, TypeError):
++                pass  # Ignore malformed JSON
++        
+         return TocEntry(
+-            level=len(level),
+-            label=label.strip() or None,
+-            title=title.strip() or None,
+-            pagenum=page.strip() or None,
++            level=level,
++            label=label,
++            title=title,
++            pagenum=pagenum,
++            authors=authors,
++            subtitle=subtitle,
++            description=description,
+         )
+ 
+     def to_markdown(self) -> str:
+-        return f"{'*' * self.level} {self.label or ''} | {self.title or ''} | {self.pagenum or ''}"
++        # Build the level-and-label segment
++        if self.level == 0 and self.label is None:
++            # Special case: level 0 with no label should start with exactly one space
++            level_label_segment = ""
++        else:
++            level_label_segment = "*" * self.level
++            if self.label:
++                level_label_segment += f" {self.label}"
++        
++        # Build base fields with exactly " | " separators
++        base_fields = [
++            level_label_segment,
++            self.title or "",
++            self.pagenum or ""
++        ]
++        
++        # Join base fields with exactly " | "
++        result = " | ".join(base_fields)
++        
++        # Add optional metadata if present
++        extra_fields = self.extra_fields
++        if extra_fields:
++            # Serialize extra fields to JSON using compact format
++            metadata_json = json.dumps(extra_fields, separators=(',', ': '), cls=InfogamiThingEncoder)
++            result += f" | {metadata_json}"
++        
++        # Special handling for level 0 entries - ensure exactly one leading space before first |
++        # But if there's no level_label_segment, we don't want double spaces
++        # The requirement is that for level=0 entries, there should be exactly one leading space
++        # before the first | delimiter - which happens when we have an empty level_label_segment
++        # but still have a space before the first |
++        # Actually, looking at the example: " | Chapter 1 | 1" - this means the first field is empty
++        # but there's still one space before the first |, which means we should have exactly one space
++        # So the logic is: when level=0 and label=None, we want " | " to start the string
++        
++        # Let's restructure to match the exact requirements
++        # We need to ensure proper spacing
++        if self.level == 0 and self.label is None:
++            # For level 0 with no label, we want exactly one space before the first |
++            # The base_fields would be ["", "title", "pagenum"]
++            # Joining with " | " gives us " | title | pagenum"
++            # But that's correct already based on our implementation
++            pass  # Already handled correctly
++        
++        return result
++    
++    @property
++    def extra_fields(self):
++        """Returns the non-base metadata fields whose values are not None."""
++        fields = {}
++        if self.authors is not None:
++            fields['authors'] = self.authors
++        if self.subtitle is not None:
++            fields['subtitle'] = self.subtitle
++        if self.description is not None:
++            fields['description'] = self.description
++        return fields
+ 
+     def is_empty(self) -> bool:
+         return all(
+diff --git a/openlibrary/plugins/upstream/table_of_contents.py.bak b/openlibrary/plugins/upstream/table_of_contents.py.bak
+new file mode 100644
+index 000000000..3c730f710
+--- /dev/null
++++ b/openlibrary/plugins/upstream/table_of_contents.py.bak
+@@ -0,0 +1,139 @@
++from dataclasses import dataclass
++from typing import Required, TypeVar, TypedDict
++
++from openlibrary.core.models import ThingReferenceDict
++
++import web
++
++
++@dataclass
++class TableOfContents:
++    entries: list['TocEntry']
++
++    @staticmethod
++    def from_db(
++        db_table_of_contents: list[dict] | list[str] | list[str | dict],
++    ) -> 'TableOfContents':
++        def row(r: dict | str) -> 'TocEntry':
++            if isinstance(r, str):
++                # Legacy, can be just a plain string
++                return TocEntry(level=0, title=r)
++            else:
++                return TocEntry.from_dict(r)
++
++        return TableOfContents(
++            [
++                toc_entry
++                for r in db_table_of_contents
++                if not (toc_entry := row(r)).is_empty()
++            ]
++        )
++
++    def to_db(self) -> list[dict]:
++        return [r.to_dict() for r in self.entries]
++
++    @staticmethod
++    def from_markdown(text: str) -> 'TableOfContents':
++        return TableOfContents(
++            [
++                TocEntry.from_markdown(line)
++                for line in text.splitlines()
++                if line.strip(" |")
++            ]
++        )
++
++    def to_markdown(self) -> str:
++        return "\n".join(r.to_markdown() for r in self.entries)
++
++
++class AuthorRecord(TypedDict, total=False):
++    name: Required[str]
++    author: ThingReferenceDict | None
++
++
++@dataclass
++class TocEntry:
++    level: int
++    label: str | None = None
++    title: str | None = None
++    pagenum: str | None = None
++
++    authors: list[AuthorRecord] | None = None
++    subtitle: str | None = None
++    description: str | None = None
++
++    @staticmethod
++    def from_dict(d: dict) -> 'TocEntry':
++        return TocEntry(
++            level=d.get('level', 0),
++            label=d.get('label'),
++            title=d.get('title'),
++            pagenum=d.get('pagenum'),
++            authors=d.get('authors'),
++            subtitle=d.get('subtitle'),
++            description=d.get('description'),
++        )
++
++    def to_dict(self) -> dict:
++        return {key: value for key, value in self.__dict__.items() if value is not None}
++
++    @staticmethod
++    def from_markdown(line: str) -> 'TocEntry':
++        """
++        Parse one row of table of contents.
++
++        >>> def f(text):
++        ...     d = TocEntry.from_markdown(text)
++        ...     return (d.level, d.label, d.title, d.pagenum)
++        ...
++        >>> f("* chapter 1 | Welcome to the real world! | 2")
++        (1, 'chapter 1', 'Welcome to the real world!', '2')
++        >>> f("Welcome to the real world!")
++        (0, None, 'Welcome to the real world!', None)
++        >>> f("** | Welcome to the real world! | 2")
++        (2, None, 'Welcome to the real world!', '2')
++        >>> f("|Preface | 1")
++        (0, None, 'Preface', '1')
++        >>> f("1.1 | Apple")
++        (0, '1.1', 'Apple', None)
++        """
++        RE_LEVEL = web.re_compile(r"(\**)(.*)")
++        level, text = RE_LEVEL.match(line.strip()).groups()
++
++        if "|" in text:
++            tokens = text.split("|", 2)
++            label, title, page = pad(tokens, 3, '')
++        else:
++            title = text
++            label = page = ""
++
++        return TocEntry(
++            level=len(level),
++            label=label.strip() or None,
++            title=title.strip() or None,
++            pagenum=page.strip() or None,
++        )
++
++    def to_markdown(self) -> str:
++        return f"{'*' * self.level} {self.label or ''} | {self.title or ''} | {self.pagenum or ''}"
++
++    def is_empty(self) -> bool:
++        return all(
++            getattr(self, field) is None
++            for field in self.__annotations__
++            if field != 'level'
++        )
++
++
++T = TypeVar('T')
++
++
++def pad(seq: list[T], size: int, e: T) -> list[T]:
++    """
++    >>> pad([1, 2], 4, 0)
++    [1, 2, 0, 0]
++    """
++    seq = seq[:]
++    while len(seq) < size:
++        seq.append(e)
++    return seq
+diff --git a/openlibrary/plugins/upstream/tests/test_table_of_contents.py b/openlibrary/plugins/upstream/tests/test_table_of_contents.py
+index 18f39de62..3b616dd59 100644
+--- a/openlibrary/plugins/upstream/tests/test_table_of_contents.py
++++ b/openlibrary/plugins/upstream/tests/test_table_of_contents.py
+@@ -164,10 +164,10 @@ class TestTocEntry:
+ 
+     def test_to_markdown(self):
+         entry = TocEntry(level=0, title="Chapter 1", pagenum="1")
+-        assert entry.to_markdown() == "  | Chapter 1 | 1"
++        assert entry.to_markdown() == " | Chapter 1 | 1"
+ 
+         entry = TocEntry(level=2, title="Chapter 1", pagenum="1")
+-        assert entry.to_markdown() == "**  | Chapter 1 | 1"
++        assert entry.to_markdown() == "** | Chapter 1 | 1"
+ 
+         entry = TocEntry(level=0, title="Just title")
+-        assert entry.to_markdown() == "  | Just title | "
++        assert entry.to_markdown() == " | Just title | "

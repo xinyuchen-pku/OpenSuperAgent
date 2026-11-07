@@ -1,0 +1,20 @@
+{
+  "created": 1793823122.5855708,
+  "repo": "C:\\Users\\chenx\\Documents\\Codex\\2026-11-02\\wo-z\\work\\OpenSuperAgent",
+  "before": {
+    "branch": "stage1/reproducible-evaluation",
+    "HEAD": "e4b0677bafa177d6083f0d1a577018b7df432ba7",
+    "origin_main": "e4b0677bafa177d6083f0d1a577018b7df432ba7",
+    "status": "M README.md\n M README.zh-CN.md\n?? research/"
+  },
+  "after": {
+    "HEAD": "e4b0677bafa177d6083f0d1a577018b7df432ba7",
+    "origin_main": "e4b0677bafa177d6083f0d1a577018b7df432ba7",
+    "staged_names": ""
+  },
+  "fetch_exit": 0,
+  "fetch_output_sanitized": "",
+  "frozen40_mismatches": [],
+  "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+  "GitHub_writes": false
+}

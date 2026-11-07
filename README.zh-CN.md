@@ -1,5 +1,13 @@
 # OpenSuperAgent
 
+Stage 1 research release: [开始复现 / Start here](research/START-HERE.md). Current core: source025 (0.1.4); historical M2 comparisons retain source022.
+独立的 Stage 1 复现与评测工具位于 [research/](research/README.md)，
+评测范围和公平性要求见[研究协议](research/PROTOCOL.md)。该模块提供五种任务级调度器、
+公共执行内核及原始 DeepSeek 核心适配器。固定四任务、三个种子的 M2 对照与
+原生任务验收结果见 [M2 报告](research/M2-REPORT-003.md)，
+运行方法见[复现说明](research/reproduction/INSTALL.txt)。完整 DSH 宿主集成与任务内递归委派仍是已披露缺口。
+下文介绍的本地工作台属于另一个实现。
+
 **在本地管理代码任务：明确授权、独立工作区、可检查的修改结果。**
 
 [在线演示](https://xinyuchen-pku.github.io/OpenSuperAgent/) · [English](README.md) · [配置指南](docs/getting-started.md)

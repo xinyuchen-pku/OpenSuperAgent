@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "official_regrade.py",
+      "actual_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c",
+      "published_sha256": "af30bdf09e951cec4af177c9277b090fddbc649a5f8da591c16abbbcd9cbfa9c",
+      "byte_equal": true,
+      "text_equal_after_newline_normalization": true
+    },
+    {
+      "file": "coding_failure_adjudication.py",
+      "actual_sha256": "d96a05b369feaa19aa03cc6849abed5fd8624e9005e873358c11699f6fdb83c1",
+      "published_sha256": "d96a05b369feaa19aa03cc6849abed5fd8624e9005e873358c11699f6fdb83c1",
+      "byte_equal": true,
+      "text_equal_after_newline_normalization": true
+    },
+    {
+      "file": "official_timeout_adjudication.py",
+      "actual_sha256": "b8ee9a62858e223f58e1c828f51b95826795888298e9009f1205670866ac4f11",
+      "published_sha256": "b8ee9a62858e223f58e1c828f51b95826795888298e9009f1205670866ac4f11",
+      "byte_equal": true,
+      "text_equal_after_newline_normalization": true
+    },
+    {
+      "file": "m2_syntax_adjudication042.py",
+      "actual_sha256": "d6114ddae2b8449fd8ddf6f9456cf965ef1fb423d64dab5ffb8fdab969480722",
+      "published_sha256": "d6114ddae2b8449fd8ddf6f9456cf965ef1fb423d64dab5ffb8fdab969480722",
+      "byte_equal": true,
+      "text_equal_after_newline_normalization": true
+    },
+    {
+      "file": "m2_patch_replay001.py",
+      "actual_sha256": "34cd7370b2c055017a443d1f4eb0ac9a360a3fa2f598cb145c793b4987063f5f",
+      "published_sha256": "34cd7370b2c055017a443d1f4eb0ac9a360a3fa2f598cb145c793b4987063f5f",
+      "byte_equal": true,
+      "text_equal_after_newline_normalization": true
+    }
+  ]
+}

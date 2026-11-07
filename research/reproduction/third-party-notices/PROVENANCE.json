@@ -1,0 +1,62 @@
+{
+  "created": 1793824077.232018,
+  "projects": [
+    {
+      "project": "teleport-task1",
+      "upstream": "https://github.com/gravitational/teleport",
+      "immutable_image_id": "sha256:7da28fae50afe49aea12f24b9cf8e653877586e83234e5fe27432d3710e382af",
+      "original_license_files": [
+        {
+          "file": "teleport-task1/LICENSE",
+          "original_path": "/app/LICENSE",
+          "sha256": "42d50d27bfa0c5ac482d9828b5b2e556f4148b57fb59d30293304088a49bcb5a",
+          "bytes": 11315
+        }
+      ],
+      "container_never_started": true
+    },
+    {
+      "project": "teleport-task2",
+      "upstream": "https://github.com/gravitational/teleport",
+      "immutable_image_id": "sha256:93a52caf65fdaa77281538b01e5d9bd7ab9572defde120dddc15efac4b195d14",
+      "original_license_files": [
+        {
+          "file": "teleport-task2/LICENSE",
+          "original_path": "/app/LICENSE",
+          "sha256": "42d50d27bfa0c5ac482d9828b5b2e556f4148b57fb59d30293304088a49bcb5a",
+          "bytes": 11315
+        }
+      ],
+      "container_never_started": true
+    },
+    {
+      "project": "qutebrowser",
+      "upstream": "https://github.com/qutebrowser/qutebrowser",
+      "immutable_image_id": "sha256:05b3d4a7269c96d50a4cf13d626e48e733e1e83a0b302c3258faca381d4a6291",
+      "original_license_files": [
+        {
+          "file": "qutebrowser/LICENSE",
+          "original_path": "/app/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147
+        }
+      ],
+      "container_never_started": true
+    },
+    {
+      "project": "openlibrary",
+      "upstream": "https://github.com/internetarchive/openlibrary",
+      "immutable_image_id": "sha256:b0581469160bf44f9ac6e949fd443427a4b84d8635c8ef0b49d52e022e74da45",
+      "original_license_files": [
+        {
+          "file": "openlibrary/LICENSE",
+          "original_path": "/app/LICENSE",
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "bytes": 34523
+        }
+      ],
+      "container_never_started": true
+    }
+  ],
+  "scope": "Exact original task-project license texts for attribution; project-authored toolkit code and upstream task materials retain separate license scopes. No model calls, no image modification, no platform jobs touched."
+}

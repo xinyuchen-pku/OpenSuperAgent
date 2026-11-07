@@ -1,0 +1,263 @@
+{
+  "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+  "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+  "source_model_run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study062/primary/seed20261102-eager_delegation",
+  "source_tree_sha256": "dd7b2b411b0084a763180a219e8c373797c3092e779498f008098143e1b5ab16",
+  "source_trace_sha256": "ed479842f296a8f876b6f118175a6b703b595397f204ea3ff74b894e58aa63bc",
+  "model_patch_sha256": "74e194fdec0d33204b20317a393be43e2e524c5c627201d988343d7fce9d3d20",
+  "rows": 201,
+  "original_line_bytes_preserved": true,
+  "actual_model_calls": 24,
+  "actual_api_tokens": 300747,
+  "input_tokens": 291655,
+  "output_tokens": 9092,
+  "shared_router_cost_included": false,
+  "whole_batch_actual_api_tokens": 3991197,
+  "scope": "Exact task worker subset; shared router and other workers excluded; historical source022 model success, no new model call",
+  "extraction_api_calls": 0,
+  "cost_usd": null,
+  "model_requests": 24,
+  "model_responses": 24,
+  "calls": [
+    {
+      "cost": null,
+      "id": "2d5064408e0941ccaa0e919878ebb2b2",
+      "input_tokens": 1417,
+      "output_tokens": 83,
+      "reserved": 9609,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "9c5017901cc3473a8cba9fc898a3e5c8",
+      "input_tokens": 1570,
+      "output_tokens": 49,
+      "reserved": 9762,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "f71bbbc3b82146bc92a02c45eba55ec5",
+      "input_tokens": 2802,
+      "output_tokens": 48,
+      "reserved": 10994,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "ea83848c34164809ae09c3bb43a9c213",
+      "input_tokens": 4559,
+      "output_tokens": 168,
+      "reserved": 12751,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "940a67c06e754a368977582c67b1fa8e",
+      "input_tokens": 4751,
+      "output_tokens": 1711,
+      "reserved": 12943,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "d77a371b3b3e4de4add1a1ea813fdf48",
+      "input_tokens": 6486,
+      "output_tokens": 56,
+      "reserved": 14678,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "3795582cb6094809b47a28aca218dce8",
+      "input_tokens": 8136,
+      "output_tokens": 2104,
+      "reserved": 16328,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "dfade09e29c84274abe8141c279b7248",
+      "input_tokens": 10264,
+      "output_tokens": 64,
+      "reserved": 18456,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "ebbff9d626644af386ffc528f3719e0b",
+      "input_tokens": 10780,
+      "output_tokens": 67,
+      "reserved": 18972,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "b542120aa3974c2ca0fbf4045e787809",
+      "input_tokens": 11607,
+      "output_tokens": 257,
+      "reserved": 19799,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "52051aaa6af64d7291225d4e8fbde0fb",
+      "input_tokens": 11923,
+      "output_tokens": 80,
+      "reserved": 20115,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "52769a49a89f4d97b3558eae3a2799ae",
+      "input_tokens": 13102,
+      "output_tokens": 261,
+      "reserved": 21294,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "11a75133367f4d21aee90a05ea45c86a",
+      "input_tokens": 13481,
+      "output_tokens": 327,
+      "reserved": 21673,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "a991d5a190514455a6f5b03bbeed2591",
+      "input_tokens": 13939,
+      "output_tokens": 306,
+      "reserved": 22131,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "a889d3d899f347c893d0ae2c4fe8a7e9",
+      "input_tokens": 14296,
+      "output_tokens": 678,
+      "reserved": 22488,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "a25bfdf7a2394c8fb14936da80a1817c",
+      "input_tokens": 15887,
+      "output_tokens": 709,
+      "reserved": 24079,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "82303c07b8ae42fca98d5bac753331db",
+      "input_tokens": 16908,
+      "output_tokens": 219,
+      "reserved": 25100,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "6fcede5c054a4f78b479abf8532b1bcb",
+      "input_tokens": 17151,
+      "output_tokens": 81,
+      "reserved": 25343,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "101591d02d59402297f1fe71491c9760",
+      "input_tokens": 17256,
+      "output_tokens": 71,
+      "reserved": 25448,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "42cfba9f5c8b40b88c96a1a5464d1660",
+      "input_tokens": 17351,
+      "output_tokens": 54,
+      "reserved": 25543,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "77f020edef9b4c7f994e7eb04c3a9ef0",
+      "input_tokens": 18193,
+      "output_tokens": 618,
+      "reserved": 26385,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "771b94b3413a4a068d9f7c0fa9695e16",
+      "input_tokens": 19157,
+      "output_tokens": 75,
+      "reserved": 27349,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "bc52baa6f2794c0782f1f3339d3b6372",
+      "input_tokens": 20036,
+      "output_tokens": 535,
+      "reserved": 28228,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    },
+    {
+      "cost": null,
+      "id": "ed090dc0977a4ab8a4ae2a5d31951447",
+      "input_tokens": 20603,
+      "output_tokens": 471,
+      "reserved": 28795,
+      "role": "worker",
+      "session": "worker:instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "state": "complete"
+    }
+  ]
+}

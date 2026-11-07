@@ -1,0 +1,34 @@
+{
+  "raw_cf243_patch_preserved": true,
+  "model_or_scored_source_files_modified": false,
+  "fix": "Git-generated no-newline markers; all output file hashes match actual scored artifacts",
+  "rows": [
+    {
+      "arm": "A_arguments_only",
+      "patch_sha256": "fd825fb1f389171be4cc59d0bb88c6b17b68119e0f71ab7f4fa12b48d06082f3",
+      "actual_scored_after_file_hashes_match": true,
+      "after_files": {
+        "src/cachetools/keys.py": "e33e386b5575e3093cb270770c6f7da25c27f2633334b518bb5722ce0f5d7a43",
+        "src/cachetools/func.py": "f1f9f1df3726dfaf73edda2db60075791dc69d1964d5bc8cce6f673b8924055f"
+      }
+    },
+    {
+      "arm": "B_wrapper_metadata_only",
+      "patch_sha256": "751856aaf961a508fc54852dcff4934497655f09cf3e41a20a9b74f863a7873e",
+      "actual_scored_after_file_hashes_match": true,
+      "after_files": {
+        "src/cachetools/keys.py": "be654a8429d74d6a010d0571a44d102f4eb2067b5b552ae093a5ded83dbd78fb",
+        "src/cachetools/func.py": "46798cb4d53df2ed07e84bbf3b94666610c6a609d7772419885c087b9294e5e8"
+      }
+    },
+    {
+      "arm": "AB_both",
+      "patch_sha256": "eb6df518b41a4e8dda17f86b9347a54eb0b0721f8e3b2ec8fd77452e0062c8d6",
+      "actual_scored_after_file_hashes_match": true,
+      "after_files": {
+        "src/cachetools/keys.py": "e33e386b5575e3093cb270770c6f7da25c27f2633334b518bb5722ce0f5d7a43",
+        "src/cachetools/func.py": "46798cb4d53df2ed07e84bbf3b94666610c6a609d7772419885c087b9294e5e8"
+      }
+    }
+  ]
+}

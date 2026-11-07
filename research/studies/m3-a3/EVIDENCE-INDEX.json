@@ -1,0 +1,42 @@
+[
+  {
+    "file": "evidence/clean-replay394.tar.gz",
+    "bytes": 9939,
+    "sha256": "9b17d734dce1391ccffbc70fd27b7fb6cb1128f730594b75bc70964830fee46b"
+  },
+  {
+    "file": "evidence/closed-capability355.tar.gz",
+    "bytes": 12531655,
+    "sha256": "1e3d926e769898344cdf4e3268a0b73659db6d1da47ae96fb198eee7071e0302"
+  },
+  {
+    "file": "evidence/final-capability377.tar.gz",
+    "bytes": 14594106,
+    "sha256": "1e38aad2fab2b64ce6648b89d6d2ab440ca891267a7d47d7bfc8f7908ea84ba7"
+  },
+  {
+    "file": "evidence/resource379.tar.gz",
+    "bytes": 60566,
+    "sha256": "b3ac4a7ae4b7849e53acc6a374dd0bcf988e1cc41dc9be6a4ff8c00bef24525f"
+  },
+  {
+    "file": "evidence/scoring-sources392.tar.gz",
+    "bytes": 16634,
+    "sha256": "a99ba871e512239f15e3307e074c9efd0da7316029ae2b851f8314fd5c01b1bd"
+  },
+  {
+    "file": "evidence/static-evidence337.tar.gz",
+    "bytes": 26123,
+    "sha256": "7445c33a1ea01171aaff9c10afc30d40636c79d40ec5bf9eb47ef0b9bad6006e"
+  },
+  {
+    "file": "evidence/system303.tar.gz",
+    "bytes": 3174473,
+    "sha256": "874ed274197fabd5d64a1020a7aa8b3f2e5fefed40841585d133de0aa7cdada2"
+  },
+  {
+    "file": "counterfactual/base-code.tar.gz",
+    "bytes": 766811,
+    "sha256": "4d7424b4e5b3b201377def128247adc01ef4198107eff7be9eb004802b5e5b97"
+  }
+]

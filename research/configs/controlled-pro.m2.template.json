@@ -1,0 +1,54 @@
+{
+  "architecture": "superagent",
+  "seed": 20261102,
+  "horizon_s": 12300,
+  "subscriptions": true,
+  "pro_checkout": "/path/to/SWE-bench_Pro-os",
+  "api_key_env": "LLM_API_KEY",
+  "model": {
+    "base_url": "https://model.example/v1",
+    "model": "osa-qwen3-coder-30b",
+    "temperature": 0.7,
+    "max_output_tokens": 8192,
+    "timeout_s": 600,
+    "seed": 20261102,
+    "tokenizer_preflight": true,
+    "context_policy": "shorten_old_tool_observations",
+    "artifact_identity": {
+      "status": "Replace with verified model/serving manifests before comparing runs"
+    }
+  },
+  "limits": {
+    "slots": 4,
+    "model_concurrency": 4,
+    "token_budget": 128000000,
+    "request_token_reservation": 262144,
+    "max_steps": 100,
+    "tool_timeout_s": 600,
+    "task_timeout_s": 3000,
+    "reservation_policy": "exact_prompt_plus_max_output"
+  },
+  "workspace_backend": {
+    "kind": "docker"
+  },
+  "study": {
+    "milestone": "M2",
+    "status": "Template; original empty/reference and native Harbor replay admission required",
+    "task_count": 4,
+    "arrival_s": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "comparison": "same capacity and total token ceiling",
+    "generation_server_defaults": {
+      "context_length": 262144,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repetition_penalty": 1.05,
+      "prefix_caching": false,
+      "tensor_parallel_size": 4
+    }
+  }
+}

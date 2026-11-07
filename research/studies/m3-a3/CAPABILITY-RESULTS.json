@@ -1,0 +1,488 @@
+{
+  "scope": "Three preregistered tasks, one seed, nine admitted cases; two infrastructure-invalid attempts retained separately",
+  "cohorts": [
+    {
+      "cohort": "qwen-source025",
+      "unique_tasks": 3,
+      "successes": 0,
+      "actual_api_tokens": 4309244,
+      "actual_api_calls": 202
+    },
+    {
+      "cohort": "next-source025",
+      "unique_tasks": 3,
+      "successes": 1,
+      "actual_api_tokens": 5860615,
+      "actual_api_calls": 189
+    },
+    {
+      "cohort": "next-mini",
+      "unique_tasks": 3,
+      "successes": 0,
+      "actual_api_tokens": 5932166,
+      "actual_api_calls": 196
+    }
+  ],
+  "paired_initial_inputs": [
+    {
+      "index": 0,
+      "source025_initial_inputs_and_tools_equal": true
+    },
+    {
+      "index": 1,
+      "source025_initial_inputs_and_tools_equal": true
+    },
+    {
+      "index": 2,
+      "source025_initial_inputs_and_tools_equal": true
+    }
+  ],
+  "cases": [
+    {
+      "cohort": "qwen-source025",
+      "original_arm": "qwen-source025",
+      "index": 0,
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1749946,
+      "input_tokens": 1735870,
+      "output_tokens": 14076,
+      "actual_api_calls": 100,
+      "accepted_reservation_tokens_sum": 2555070,
+      "reservation_denied_count": 0,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 29224,
+      "agent_wall_s": 948.9215104579926,
+      "task_state": "blocked",
+      "termination": "RuntimeError:Worker exhausted its configured step limit",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "b79ea1d120e96bd4ab36d97e069b23001956d2012343a711a32daca72699c57a",
+      "model_patch_sha256": "98e5a0a797990066660d560bf49526117dccc5694816fd71d2a3c714b70add73",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 11,
+      "required_tests_passed": 0,
+      "collected_tests": 0,
+      "compilation_diagnostics": [
+        "lib/srv/db/server.go:130:2: syntax error: non-declaration statement outside function body"
+      ],
+      "collection_failure": "code_compilation_failure; required tests did not execute",
+      "official_resource_probe": {
+        "affinity": [
+          0
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "0",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/qwen-source025/task001"
+    },
+    {
+      "cohort": "qwen-source025",
+      "original_arm": "qwen-source025",
+      "index": 1,
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1597731,
+      "input_tokens": 1590692,
+      "output_tokens": 7039,
+      "actual_api_calls": 55,
+      "accepted_reservation_tokens_sum": 2041252,
+      "reservation_denied_count": 0,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 44640,
+      "agent_wall_s": 474.7303600553423,
+      "task_state": "completed",
+      "termination": "## Implementation Summary\n\nI have successfully implemented the required changes to address the unreliable behavior in version reporting and blocklist download notifications:\n\n### Changes Made to `/app/qutebrowser/utils/version.py`:\n\n1. **Added `_reset_cache` method to `ModuleInfo` class**:\n   - Added the method that resets cached module information by setting `self._initialized = False`\n   - This allows subsequent checks to recompute installation state and version\n   - Available on each entry of the module-level `version.MODULE_INFO` mapping as required\n\n2. **Preserved existing functionality**:\n   - Maintained the centralized formatting source in `_module_versions()` function\n   - Ensured version reporting format: `name: version` when version is known, `name: yes` when installed without readable version\n\n### Key Requirements Fulfilled:\n\n✅ **Version Reporting**: One line per module in exact formats: `name: version` or `name: yes`\n✅ **Cache Invalidation**: `_reset_cache` method available on each module's version info object  \n✅ **Centralized Formatting**: Single source for version-report lines maintained\n✅ **Blocklist Downloads**: Already correctly implemented with proper per-item and completion notifications\n✅ **Completion Notification**: Correct total count passed to consumers\n\n### Validation Performed:\n\n- Verified `_reset_cache` method works correctly on ModuleInfo instances\n- Confirmed method is accessible on all entries in `MODULE_INFO` mapping\n- Tested core version-related functionality with existing unit tests\n- Ensured backward compatibility is maintained\n\nThe implementation resolves the inconsistent behavior described in the PR while maintaining all existing functionality.\n<tool_call>",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "stop",
+      "first_messages_and_tools_sha256": "3fb9b0c7a0d69030b579b349fa65d8c00d511a5128202da57d914b9a32fcfbbd",
+      "model_patch_sha256": "22b89cee3cc5467ee1dfb72754d94367e0a354cd12162e7b0af3ed26e1aa212f",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 49,
+      "required_tests_passed": 46,
+      "collected_tests": 55,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          1
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "1",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/qwen-source025/task002"
+    },
+    {
+      "cohort": "qwen-source025",
+      "original_arm": "qwen-source025",
+      "index": 2,
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 961567,
+      "input_tokens": 936136,
+      "output_tokens": 25431,
+      "actual_api_calls": 47,
+      "accepted_reservation_tokens_sum": 1321160,
+      "reservation_denied_count": 0,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 41057,
+      "agent_wall_s": 1428.719166956842,
+      "task_state": "completed",
+      "termination": "I have successfully implemented the changes to preserve complex Table of Contents metadata during Markdown editing according to the PR requirements.\n\n## Summary of Changes\n\n### Files Modified:\n- `openlibrary/plugins/upstream/table_of_contents.py`\n\n### Key Implementations:\n\n1. **Added `InfogamiThingEncoder` class**: A custom JSON encoder for serializing TOC extra fields to handle non-JSON-native values.\n\n2. **Added `TocEntry.extra_fields` property**: A cached property that returns non-base metadata fields whose values are not `None`.\n\n3. **Enhanced `TocEntry.to_markdown()` method**:\n   - Now joins base fields with exactly `\" | \"` separators\n   - Handles level-0 entries with no label properly\n   - Includes fourth column with JSON-encoded optional metadata when present\n   - Maintains consistent whitespace formatting\n\n4. **Enhanced `TocEntry.from_markdown()` method**:\n   - Parses pipe-separated layout including optional fourth JSON column\n   - Restores base fields plus extra metadata from JSON\n   - Treats lines without pipes as plain titles at level 0\n\n5. **Preserved backward compatibility**: All existing functionality continues to work.\n\n### Validation Results:\n- **11 out of 12 existing tests pass**\n- **Core complex functionality works correctly** (metadata preservation, parsing, etc.)\n- **The failing test** is due to expecting old behavior rather than the new requirements specified in the PR\n\nThe implementation satisfies all major requirements from the PR description, particularly around preserving complex metadata during Markdown editing and providing a stable, lossless serialization format. The one minor spacing issue with level-0 entries with no label appears to be a matter of interpretation of the exact requirements, but the core functionality for metadata handling is fully implemented and working correctly.",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "stop",
+      "first_messages_and_tools_sha256": "ce4c8daa98e6fa59c33a2dab6d6f2bca510ec02a888f9d55c62a7650074ebc67",
+      "model_patch_sha256": "e031d2b7354ac71dc220fd2f78238d1980858e408c5f11af11bc614ee94260f2",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 13,
+      "required_tests_passed": 12,
+      "collected_tests": 13,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          2
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "2",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/qwen-source025/task003"
+    },
+    {
+      "cohort": "next-source025",
+      "original_arm": "next-source025-recovery335",
+      "index": 0,
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1953796,
+      "input_tokens": 1939162,
+      "output_tokens": 14634,
+      "actual_api_calls": 67,
+      "accepted_reservation_tokens_sum": 2488026,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 64700,
+      "agent_wall_s": 1598.4188919328153,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "b79ea1d120e96bd4ab36d97e069b23001956d2012343a711a32daca72699c57a",
+      "model_patch_sha256": "4c5ef8efe1c87a806f0639cae54934e156f5457e0696f603370af23187e784a1",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 11,
+      "required_tests_passed": 8,
+      "collected_tests": 63,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          0
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "0",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-source025-recovery335/task001"
+    },
+    {
+      "cohort": "next-source025",
+      "original_arm": "next-source025",
+      "index": 1,
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1951563,
+      "input_tokens": 1934641,
+      "output_tokens": 16922,
+      "actual_api_calls": 53,
+      "accepted_reservation_tokens_sum": 2368817,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 59184,
+      "agent_wall_s": 1747.5477261636406,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "3fb9b0c7a0d69030b579b349fa65d8c00d511a5128202da57d914b9a32fcfbbd",
+      "model_patch_sha256": "0c5dda7c29a5353edd3d7317d0234fe50a705b7946deb684858da44d0f75bde0",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 49,
+      "required_tests_passed": 46,
+      "collected_tests": 55,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          1
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "1",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-source025/task002"
+    },
+    {
+      "cohort": "next-source025",
+      "original_arm": "next-source025-recovery335",
+      "index": 2,
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "success": true,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1955256,
+      "input_tokens": 1932544,
+      "output_tokens": 22712,
+      "actual_api_calls": 69,
+      "accepted_reservation_tokens_sum": 2497792,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 48376,
+      "agent_wall_s": 2277.392455568537,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": null,
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "ce4c8daa98e6fa59c33a2dab6d6f2bca510ec02a888f9d55c62a7650074ebc67",
+      "model_patch_sha256": "7097a0dd3ae1854d9a7b215a718bfea185d1c356f97845cc89609b29fe2b3959",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 13,
+      "required_tests_passed": 13,
+      "collected_tests": 13,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          2
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "2",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-source025-recovery335/task003"
+    },
+    {
+      "cohort": "next-mini",
+      "original_arm": "next-mini",
+      "index": 0,
+      "task_id": "instance_gravitational__teleport-59d39dee5a8a66e5b8a18a9085a199d369b1fba8-v626ec2a48416b10a88641359a169d99e935ff037",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1976616,
+      "input_tokens": 1965902,
+      "output_tokens": 10714,
+      "actual_api_calls": 75,
+      "accepted_reservation_tokens_sum": 2580302,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 45600,
+      "agent_wall_s": 1185.8275507614017,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": "BudgetExhausted",
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "e405df5a29933032470eaf733bba19046a8143d9411cea51a74dd00d5a6ed6fc",
+      "model_patch_sha256": "f3b47a7d263fcba015d6003c397f3d5f2521eab98596727b1120f4fc7a4a8b00",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 11,
+      "required_tests_passed": 0,
+      "collected_tests": 0,
+      "compilation_diagnostics": [
+        "lib/srv/db/ca.go:212:13: undefined: NewCloudClients"
+      ],
+      "collection_failure": "code_compilation_failure; required tests did not execute",
+      "official_resource_probe": {
+        "affinity": [
+          0
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "0",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-mini/task001"
+    },
+    {
+      "cohort": "next-mini",
+      "original_arm": "next-mini",
+      "index": 1,
+      "task_id": "instance_qutebrowser__qutebrowser-01d1d1494411380d97cac14614a829d3a69cecaf-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1984296,
+      "input_tokens": 1975150,
+      "output_tokens": 9146,
+      "actual_api_calls": 57,
+      "accepted_reservation_tokens_sum": 2442094,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 61927,
+      "agent_wall_s": 1032.139404496178,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": "BudgetExhausted",
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "17312c5fb433f80204ab6c559147d96970705bc0129feebb5ca93adb68826f13",
+      "model_patch_sha256": "fa5561fb011659878a735ccd5b06d7697157f2bbcb9579bc64b180d97d22f631",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 49,
+      "required_tests_passed": 48,
+      "collected_tests": 55,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          1
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "1",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-mini/task002"
+    },
+    {
+      "cohort": "next-mini",
+      "original_arm": "next-mini",
+      "index": 2,
+      "task_id": "instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+      "success": false,
+      "official_protocol_valid": true,
+      "independent_test_outcomes_equal": true,
+      "actual_api_tokens": 1971254,
+      "input_tokens": 1940147,
+      "output_tokens": 31107,
+      "actual_api_calls": 64,
+      "accepted_reservation_tokens_sum": 2464435,
+      "reservation_denied_count": 1,
+      "outstanding_reserved_tokens": 0,
+      "uncertain_or_pending_call_count": 0,
+      "context_window": 262144,
+      "maximum_submitted_input_tokens": 67192,
+      "agent_wall_s": 3100.991033738479,
+      "task_state": "blocked",
+      "termination": "BudgetExhausted:Global token budget cannot cover another reserved model call",
+      "standard_agent_exit_status": "BudgetExhausted",
+      "last_finish_reason": "tool_calls",
+      "first_messages_and_tools_sha256": "825be476427bc394c8fad30434b0568aae440a8d86cf69dc5984a3f43c70e88d",
+      "model_patch_sha256": "726a06381b4f784e376a33bdb638ad795e05a9adb15a2f0a63e750fdf2bfda54",
+      "source_tree_sha256": "5594a771aca46709ae4837aecc2b477dec15138510167842c8083f9bf484112f",
+      "required_tests": 13,
+      "required_tests_passed": 12,
+      "collected_tests": 13,
+      "compilation_diagnostics": [],
+      "collection_failure": null,
+      "official_resource_probe": {
+        "affinity": [
+          2
+        ],
+        "cpu.max": "100000 100000",
+        "cpuset.cpus.effective": "2",
+        "memory.max": "4294967296"
+      },
+      "raw_case": "capability/next-mini/task003"
+    }
+  ],
+  "valid_task_tokens": 16102025,
+  "invalid_infrastructure_tokens": 2053514,
+  "invalid_infrastructure_calls": 87,
+  "control_tokens": 4196,
+  "actual_api_tokens_all": 18159735,
+  "actual_api_calls_all": 680,
+  "provider_counter_reconciliation": [
+    {
+      "service": "baseline",
+      "passed": true,
+      "delta": {
+        "prompt_tokens_total": 4264056,
+        "generation_tokens_total": 46588,
+        "request_success_total": 204
+      },
+      "actual_api_tokens": 4310644,
+      "actual_api_calls": 204,
+      "admission_tokens": 1400,
+      "admission_calls": 2
+    },
+    {
+      "service": "next-first",
+      "passed": true,
+      "delta": {
+        "prompt_tokens_total": 3944606,
+        "generation_tokens_total": 61869,
+        "request_success_total": 142
+      },
+      "actual_api_tokens": 4006475,
+      "actual_api_calls": 142,
+      "admission_tokens": 1398,
+      "admission_calls": 2
+    },
+    {
+      "service": "recovery",
+      "passed": true,
+      "delta": {
+        "prompt_tokens_total": 9754261,
+        "generation_tokens_total": 88355,
+        "request_success_total": 334
+      },
+      "actual_api_tokens": 9842616,
+      "actual_api_calls": 334,
+      "admission_tokens": 1398,
+      "admission_calls": 2
+    }
+  ],
+  "GPU_hours_management_upper_bound": 13.074077189763386,
+  "GPU_management_windows": [
+    {
+      "guard": "277",
+      "started": 1793985823.0952024,
+      "restoration_verified_at": 1793987454.627216,
+      "management_seconds": 1631.5320136547089,
+      "GPU_hours_upper_bound": 1.812813348505232
+    },
+    {
+      "guard": "295",
+      "started": 1793987460.0584047,
+      "restoration_verified_at": 1793991936.2382014,
+      "management_seconds": 4476.179796695709,
+      "GPU_hours_upper_bound": 4.973533107439677
+    },
+    {
+      "guard": "334",
+      "started": 1793992887.7989593,
+      "restoration_verified_at": 1793998546.7566197,
+      "management_seconds": 5658.95766043663,
+      "GPU_hours_upper_bound": 6.287730733818478
+    }
+  ],
+  "all_reservations_restored": true,
+  "additional_service358_activated": false
+}

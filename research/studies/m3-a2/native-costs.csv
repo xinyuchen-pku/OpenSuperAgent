@@ -1,0 +1,5 @@
+﻿condition,role,api_calls,api_tokens,input_tokens,output_tokens,accepted_reservation_tokens_sum,denied_calls,uncertain_calls,max_prompt_tokens,pytest_commands
+source022,decorator_factories,55,1555587,1538086,17501,1988646,0,0,47226,16
+source022,key_construction,56,1329284,1315819,13465,1774571,0,0,40591,13
+source025,decorator_factories,54,1785602,1764796,20806,2207164,0,0,56360,9
+source025,key_construction,40,696162,682207,13955,1009887,0,0,37062,11

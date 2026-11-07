@@ -1,0 +1,19 @@
+{
+  "stage": "M3-A3 bounded infrastructure recovery",
+  "created": 1793992882.8635845,
+  "source025_worker_and_prompt_unchanged": true,
+  "same_model_weights_and_sampling": true,
+  "original_valid_nine_trial_token_cap": 18020000,
+  "invalid_source_next_tokens": 2053514,
+  "total_cap_including_exact_invalid_overhead": 20073514,
+  "all_model_service_GPU_hours_cap": 14,
+  "new_service_max_seconds": 6300,
+  "retries": [
+    0,
+    2
+  ],
+  "valid_qutebrowser_failure_reused_unchanged": true,
+  "no_retry_if_transport_fails_again": true,
+  "reason": "Two admitted model runs have complete usage but tool and final patch transport timed out. 0model short,10k,50k command probes pass; scoped Windows system-awake request enabled. Trigger not fully established. Only invalid runs retried once; no outcome-based task replacement.",
+  "weight_loading_only_change": "prefetch exact verified weights on GPFS; generation dtype,tensor parallel,model context,seed,temperature,top_p,top_k,penalty and disabled prefix caching unchanged"
+}

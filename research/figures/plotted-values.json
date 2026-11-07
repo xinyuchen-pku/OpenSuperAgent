@@ -1,0 +1,327 @@
+{
+  "paired_seed20261102": [
+    {
+      "architecture": "single",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2264.8510985653847,
+      "actual_api_tokens": 4057283,
+      "tokens_per_task_millions": 1.01432075,
+      "submitted_patches_per_hour": 6.35803387212578,
+      "successful_tasks_per_hour": 1.589508468031445,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "single",
+      "concurrency": 4,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2859.0138911120594,
+      "actual_api_tokens": 8032530,
+      "tokens_per_task_millions": 2.0081325,
+      "submitted_patches_per_hour": 5.036701656038085,
+      "successful_tasks_per_hour": 1.2591754140095213,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "single_subagent",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2113.177416788414,
+      "actual_api_tokens": 2994149,
+      "tokens_per_task_millions": 0.74853725,
+      "submitted_patches_per_hour": 6.814382874621562,
+      "successful_tasks_per_hour": 1.7035957186553905,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "single_subagent",
+      "concurrency": 4,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 718.3566938266158,
+      "actual_api_tokens": 4516355,
+      "tokens_per_task_millions": 1.12908875,
+      "submitted_patches_per_hour": 20.045751816263603,
+      "successful_tasks_per_hour": 5.011437954065901,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "eager_delegation",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2347.097934005782,
+      "actual_api_tokens": 5101412,
+      "tokens_per_task_millions": 1.275353,
+      "submitted_patches_per_hour": 6.1352361106737385,
+      "successful_tasks_per_hour": 1.5338090276684346,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "eager_delegation",
+      "concurrency": 4,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 1197.4256406761706,
+      "actual_api_tokens": 3991197,
+      "tokens_per_task_millions": 0.99779925,
+      "submitted_patches_per_hour": 12.025798939689071,
+      "successful_tasks_per_hour": 3.006449734922268,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "router_worker",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2475.704353827983,
+      "actual_api_tokens": 5217623,
+      "tokens_per_task_millions": 1.30440575,
+      "submitted_patches_per_hour": 5.8165265079953645,
+      "successful_tasks_per_hour": 1.4541316269988411,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "router_worker",
+      "concurrency": 4,
+      "tasks": 4,
+      "successes": 0,
+      "success_rate": 0.0,
+      "agent_wall_s": 1567.2106494382024,
+      "actual_api_tokens": 3322406,
+      "tokens_per_task_millions": 0.8306015,
+      "submitted_patches_per_hour": 9.188298972548434,
+      "successful_tasks_per_hour": 0.0,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "superagent",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2276.3338016420603,
+      "actual_api_tokens": 4006867,
+      "tokens_per_task_millions": 1.00171675,
+      "submitted_patches_per_hour": 6.325961504245287,
+      "successful_tasks_per_hour": 1.5814903760613217,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "superagent",
+      "concurrency": 4,
+      "tasks": 4,
+      "successes": 0,
+      "success_rate": 0.0,
+      "agent_wall_s": 1371.1275826338679,
+      "actual_api_tokens": 6519058,
+      "tokens_per_task_millions": 1.6297645,
+      "submitted_patches_per_hour": 10.502304951329414,
+      "successful_tasks_per_hour": 0.0,
+      "seeds": [
+        20261102
+      ]
+    }
+  ],
+  "pooled": [
+    {
+      "architecture": "single",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2264.8510985653847,
+      "actual_api_tokens": 4057283,
+      "tokens_per_task_millions": 1.01432075,
+      "submitted_patches_per_hour": 6.35803387212578,
+      "successful_tasks_per_hour": 1.589508468031445,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "single",
+      "concurrency": 4,
+      "tasks": 12,
+      "successes": 3,
+      "success_rate": 0.25,
+      "agent_wall_s": 6946.121030185372,
+      "actual_api_tokens": 20203080,
+      "tokens_per_task_millions": 1.68359,
+      "submitted_patches_per_hour": 6.219298485049161,
+      "successful_tasks_per_hour": 1.5548246212622903,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ]
+    },
+    {
+      "architecture": "single_subagent",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2113.177416788414,
+      "actual_api_tokens": 2994149,
+      "tokens_per_task_millions": 0.74853725,
+      "submitted_patches_per_hour": 6.814382874621562,
+      "successful_tasks_per_hour": 1.7035957186553905,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "single_subagent",
+      "concurrency": 4,
+      "tasks": 12,
+      "successes": 3,
+      "success_rate": 0.25,
+      "agent_wall_s": 3010.486028544605,
+      "actual_api_tokens": 14466477,
+      "tokens_per_task_millions": 1.20553975,
+      "submitted_patches_per_hour": 14.34984238106054,
+      "successful_tasks_per_hour": 3.587460595265135,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ]
+    },
+    {
+      "architecture": "eager_delegation",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2347.097934005782,
+      "actual_api_tokens": 5101412,
+      "tokens_per_task_millions": 1.275353,
+      "submitted_patches_per_hour": 6.1352361106737385,
+      "successful_tasks_per_hour": 1.5338090276684346,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "eager_delegation",
+      "concurrency": 4,
+      "tasks": 12,
+      "successes": 3,
+      "success_rate": 0.25,
+      "agent_wall_s": 3934.8697594646364,
+      "actual_api_tokens": 17160734,
+      "tokens_per_task_millions": 1.4300611666666667,
+      "submitted_patches_per_hour": 10.978762358294071,
+      "successful_tasks_per_hour": 2.744690589573518,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ]
+    },
+    {
+      "architecture": "router_worker",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2475.704353827983,
+      "actual_api_tokens": 5217623,
+      "tokens_per_task_millions": 1.30440575,
+      "submitted_patches_per_hour": 5.8165265079953645,
+      "successful_tasks_per_hour": 1.4541316269988411,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "router_worker",
+      "concurrency": 4,
+      "tasks": 12,
+      "successes": 2,
+      "success_rate": 0.16666666666666666,
+      "agent_wall_s": 3838.293919313699,
+      "actual_api_tokens": 12945570,
+      "tokens_per_task_millions": 1.0787975,
+      "submitted_patches_per_hour": 11.255000504944217,
+      "successful_tasks_per_hour": 1.8758334174907028,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ]
+    },
+    {
+      "architecture": "superagent",
+      "concurrency": 1,
+      "tasks": 4,
+      "successes": 1,
+      "success_rate": 0.25,
+      "agent_wall_s": 2276.3338016420603,
+      "actual_api_tokens": 4006867,
+      "tokens_per_task_millions": 1.00171675,
+      "submitted_patches_per_hour": 6.325961504245287,
+      "successful_tasks_per_hour": 1.5814903760613217,
+      "seeds": [
+        20261102
+      ]
+    },
+    {
+      "architecture": "superagent",
+      "concurrency": 4,
+      "tasks": 12,
+      "successes": 2,
+      "success_rate": 0.16666666666666666,
+      "agent_wall_s": 3511.796047111973,
+      "actual_api_tokens": 18626321,
+      "tokens_per_task_millions": 1.5521934166666667,
+      "submitted_patches_per_hour": 12.301397752163531,
+      "successful_tasks_per_hour": 2.050232958693922,
+      "seeds": [
+        20261102,
+        20261103,
+        20261104
+      ]
+    }
+  ],
+  "infrastructure_exclusions": [
+    {
+      "run": "/physis/users/chenxinyu/operations/opensuperagent-stage1-20261102/m2/valid-study074/secondary/seed20261102-eager_delegation-task004",
+      "reason": "Measured backend transport outage during one predefined secondary reference; first readonly command spent311.295806650s thenreturnedDockerconnectionfailure. Research logic/model source and primary60 unchanged.",
+      "outcome_not_consulted_for_decision": true,
+      "raw_and_cost_retained": true
+    }
+  ],
+  "wall_time_definition": "Agent batch clock; sum separate one-task clocks for concurrency1; official grading excluded",
+  "single_task_reference_protocol": "Four fresh independent runs per architecture; session state resets between tasks. The four-task point shares one architecture instance. Load and session boundary change together; descriptive reference, not an isolated causal estimate of concurrency.",
+  "token_cost_definition": "Actual API input plus output tokens, including coordinator calls; no monetary price assumed"
+}

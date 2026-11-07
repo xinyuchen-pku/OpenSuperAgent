@@ -1,0 +1,10 @@
+{
+  "matplotlib": "3.9.2",
+  "source": "system303/RESULTS.json",
+  "source_sha256": "3c994db3e214b25280987ee55d0df6ec1106d6de8dd955cdb3dec9b76e6cd85a",
+  "all_y_axes_start_at_zero": true,
+  "replicates": 3,
+  "p95_curve": "mean of each repetition P95; not a pooled percentile",
+  "actual_API_tokens": 0,
+  "context_characters_are_not_tokens": true
+}

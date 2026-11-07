@@ -1,0 +1,190 @@
+{
+  "repo": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "complete": true,
+  "passed": true,
+  "source_manifest_sha256": "953dbd6e73944101fc6b15acde59399743f4e58031fba041072df8f0d7c123cc",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 11343,
+      "mtime_ns": 1792519877144382000,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "passed": true
+    },
+    {
+      "path": "config.json",
+      "size": 963,
+      "mtime_ns": 1792519877080556700,
+      "sha256": "e2c8d8eea39471785cd93379d8b48241ad7dcda299013155dd02526e34a0de62",
+      "passed": true
+    },
+    {
+      "path": "configuration.json",
+      "size": 48,
+      "mtime_ns": 1792519877104508643,
+      "sha256": "a78221ae93dd8977b26fcd1d106fa5ad7e7f1fd3a7d93bfd9d6fba5ed00ec4d2",
+      "passed": true
+    },
+    {
+      "path": "generation_config.json",
+      "size": 180,
+      "mtime_ns": 1792519876922759187,
+      "sha256": "c99723ab3ba28630d26ae23def77603b540a46924895af5cf234740d3b27b51d",
+      "passed": true
+    },
+    {
+      "path": "merges.txt",
+      "size": 1671839,
+      "mtime_ns": 1792519877717665835,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "passed": true
+    },
+    {
+      "path": "model-00001-of-00016.safetensors",
+      "size": 3998893112,
+      "mtime_ns": 1792520044917633566,
+      "sha256": "c8f4ee157c2bdb00521d0f422c08ef16f0f3f5f7e234786d829401d627d2e167",
+      "passed": true
+    },
+    {
+      "path": "model-00002-of-00016.safetensors",
+      "size": 3999974192,
+      "mtime_ns": 1792520056941192423,
+      "sha256": "8cf85f0e5a0ea8d8cd3fd1f411175d811ca735571210873fd42bb5eec0b35406",
+      "passed": true
+    },
+    {
+      "path": "model-00003-of-00016.safetensors",
+      "size": 3997360832,
+      "mtime_ns": 1792520083515747074,
+      "sha256": "4fa5cc233e965c8671d32a335045697fc4317c8d2939d8ca5fb9ef62d0233207",
+      "passed": true
+    },
+    {
+      "path": "model-00004-of-00016.safetensors",
+      "size": 3999975056,
+      "mtime_ns": 1792520069409983177,
+      "sha256": "c10ff15f08abea0ff60b2fc345dcc34191bc8049d05d3bece6b081a99cbfc4c8",
+      "passed": true
+    },
+    {
+      "path": "model-00005-of-00016.safetensors",
+      "size": 3999975400,
+      "mtime_ns": 1792520211247079801,
+      "sha256": "65d3701e2354a8cf6e5afa3f84520bf81effcdc29b0c481dbbeb089f80349100",
+      "passed": true
+    },
+    {
+      "path": "model-00006-of-00016.safetensors",
+      "size": 3999975400,
+      "mtime_ns": 1792520313735122223,
+      "sha256": "7c832bf9e527b7b6f3184b561de05f30981bdcfdffe9c69e69064cdaa97071b5",
+      "passed": true
+    },
+    {
+      "path": "model-00007-of-00016.safetensors",
+      "size": 3999975472,
+      "mtime_ns": 1792520252983702842,
+      "sha256": "71a710c3ff52e85d22ae3f5b10b9a4dd49821c9533460fb1d4bb21593f71b585",
+      "passed": true
+    },
+    {
+      "path": "model-00008-of-00016.safetensors",
+      "size": 3997362064,
+      "mtime_ns": 1792520345364102424,
+      "sha256": "cd2861625e1bd8a212151445072b9d826c9754fd4618f8b83c2857fc0854b778",
+      "passed": true
+    },
+    {
+      "path": "model-00009-of-00016.safetensors",
+      "size": 3999975408,
+      "mtime_ns": 1792520424641057509,
+      "sha256": "8335225fd61c0fe283a83463a8d9c5c19e211ea8048925b031a088f274eb9c4e",
+      "passed": true
+    },
+    {
+      "path": "model-00010-of-00016.safetensors",
+      "size": 3999975400,
+      "mtime_ns": 1792520542345892269,
+      "sha256": "421481c42e8d85891c9d88492d7530d6b6d8b15c23a6db6a9b7438e0b6161330",
+      "passed": true
+    },
+    {
+      "path": "model-00011-of-00016.safetensors",
+      "size": 3999975408,
+      "mtime_ns": 1792520520455518769,
+      "sha256": "d7dd447928ddec67a3ec06d5bc4fd99dde9ac5bdf0b6ab500faca5dfdfb963b4",
+      "passed": true
+    },
+    {
+      "path": "model-00012-of-00016.safetensors",
+      "size": 3987924896,
+      "mtime_ns": 1792520606890398445,
+      "sha256": "349a0b0247d244ffef34bc23b403ce756f515242323f024a5f8028c109a798af",
+      "passed": true
+    },
+    {
+      "path": "model-00013-of-00016.safetensors",
+      "size": 3999975088,
+      "mtime_ns": 1792520613791668719,
+      "sha256": "52e7f570649b27bc35b8cd27ac643d2158c02a5c76078c80a8afc449377b508e",
+      "passed": true
+    },
+    {
+      "path": "model-00014-of-00016.safetensors",
+      "size": 3999975400,
+      "mtime_ns": 1792520797326206163,
+      "sha256": "0b30aed1b55b3f25fbf2c5e81784438d0a08461c9518e26e11987eb10d80ebd7",
+      "passed": true
+    },
+    {
+      "path": "model-00015-of-00016.safetensors",
+      "size": 3999975400,
+      "mtime_ns": 1792520767642921972,
+      "sha256": "cb8b3b13c0519874ed0cbe6832ab57e51476e3821c83f0ffe4ec83a8d23fc5f4",
+      "passed": true
+    },
+    {
+      "path": "model-00016-of-00016.safetensors",
+      "size": 1085307128,
+      "mtime_ns": 1792520681816189547,
+      "sha256": "778479fa2b8b766ba1c7bfc56a71ed9b060081e0fbc5eb4edafd19a1d6b4c116",
+      "passed": true
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "size": 1699758,
+      "mtime_ns": 1792520616612445937,
+      "sha256": "8dde190b862c7c80ec7403c6495de00c60bbaf246ed479cee4506284989c584c",
+      "passed": true
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 7032399,
+      "mtime_ns": 1792520617541463811,
+      "sha256": "19564a48c4f71a2a1b937cce34c737a1e662b171c5f5d7edf641a15cd896f07d",
+      "passed": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 13055,
+      "mtime_ns": 1792520617765756000,
+      "sha256": "60f6e8cb15c98dd07300a3cc465ea662de245d2095e4245616af21b2324db3fc",
+      "passed": true
+    },
+    {
+      "path": "vocab.json",
+      "size": 2776833,
+      "mtime_ns": 1792520619110474518,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "passed": true
+    },
+    {
+      "path": "chat_template.jinja",
+      "size": 6211,
+      "mtime_ns": 1792520316453623000,
+      "sha256": "5a38bfa05833266240066aedc497decc9b00cc0d3e3b8cceea98cf530196ab06",
+      "passed": true
+    }
+  ]
+}

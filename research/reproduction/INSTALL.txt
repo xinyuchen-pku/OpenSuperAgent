@@ -1,0 +1,40 @@
+Stage1 research release: source025 / opensuperagent-eval0.1.4
+
+Read ../START-HERE.md first. The installed research core is frozen source025.
+M2 captured scores, traces and the original five-architecture matrix retain source022.
+No historical result is relabeled as a source025 result.
+
+1. Current core, from the repository root:
+   python3.12 -m venv .venv-research
+   .venv-research/bin/python -m pip install --no-deps ./research
+   .venv-research/bin/python -m unittest discover -s research/tests -v
+   .venv-research/bin/python research/reproduction/system_track.py results/system-001
+
+   The deterministic System Track needs no model, credentials or Docker.
+   Its delayed work units measure scheduling mechanisms, not coding success.
+
+2. Original M2 model experiment or captured public-task regrading:
+   Use a separate environment with the exact source022 wheel:
+   python -m pip install --no-deps research/frozen/source022/opensuperagent_eval-0.1.1-py3-none-any.whl
+   Follow INSTALL-M2-source022.txt for pinned inputs, Docker resources, the original
+   Harbor grader, run_public_task.py and run_five_architectures.py.
+   Those commands can generate new inference and consume the declared budgets.
+   --prepare-only prepares configurations without inference.
+
+3. Native AsynCodeBench:
+   Keep the pinned original task decomposition, writable_paths and protocol.
+   Read ../studies/m3-a2/M3-A2-报告.md and NATIVE-LOCAL.md.
+   osa_native_preflight206.py configures task-local Git identity for merge callbacks.
+   Scoped editing also requires the documented SDK-control network isolation admission;
+   the scoped workspace class alone does not establish that network boundary.
+
+4. Capability pilot:
+   See ../studies/m3-a3/README.md for frozen tasks, parameters, model/agent identities,
+   exact run status and scoring. Full commands are in RUN-CAPABILITY.md.
+   The standard-agent adapter is capability_adapter.py.
+   Download the upstream mini-swe-agent at the recorded commit; its agent core and
+   prompts are external pinned dependencies, not bundled altered implementations.
+
+Credentials are loaded only from host environment variables. Model weights and images
+are fetched separately under their original licenses. Actual CPU/RAM limits and
+network/history gates must pass before a real benchmark is admitted.

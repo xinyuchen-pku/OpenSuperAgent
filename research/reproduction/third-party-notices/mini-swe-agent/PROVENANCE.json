@@ -1,0 +1,6 @@
+{
+  "upstream": "https://github.com/SWE-agent/mini-swe-agent",
+  "commit": "04d809ceab9df28f9adaed044884180159172930",
+  "license_sha256": "f633987ba29af08042ab86d52835099d79b88ee2a36e3062db03f166c1994473",
+  "bundled_agent_core": false
+}

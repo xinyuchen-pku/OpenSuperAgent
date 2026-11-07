@@ -1,0 +1,24 @@
+{
+  "created": 1793984444.8373992,
+  "zero_model": true,
+  "arms": [
+    "original",
+    "A_arguments_only",
+    "B_wrapper_metadata_only",
+    "AB_both"
+  ],
+  "baseline_expected_pass": 172,
+  "only_changed_paths": [
+    "src/cachetools/keys.py",
+    "src/cachetools/func.py"
+  ],
+  "A": "Keep every real arg after Python has already bound self, methodkey and typedmethodkey only",
+  "B": "Move existing cache_parameters function onto final cached wrapper for six decorator factories; retain all other model logic",
+  "unchanged": [
+    "model generated hashkey/typedkey format",
+    "maxsize handling and direct/configured decorator behavior",
+    "all original tests and dependency selectors",
+    "source025 Worker and prompts"
+  ],
+  "model_success_rate_credit": false
+}

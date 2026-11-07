@@ -1,0 +1,76 @@
+{
+  "integrated_dependencies_passed": 4,
+  "total_dependencies": 5,
+  "dependencies": [
+    {
+      "index": 0,
+      "passed": true,
+      "tests": [
+        "tests/test_keys.py::CacheKeysTest::test_hashkey",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator",
+        "tests/test_func.py::RRDecoratorTest::test_decorator",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator"
+      ]
+    },
+    {
+      "index": 1,
+      "passed": true,
+      "tests": [
+        "tests/test_keys.py::CacheKeysTest::test_typedkey",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_typed",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_typed",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_typed"
+      ]
+    },
+    {
+      "index": 2,
+      "passed": true,
+      "tests": [
+        "tests/test_keys.py::CacheKeysTest::test_typedmethodkey",
+        "tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_dict",
+        "tests/test_cachedmethod.py::CachedMethodTest::test_typedmethod_lru"
+      ]
+    },
+    {
+      "index": 3,
+      "passed": true,
+      "tests": [
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_clear",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::MRUDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_clear",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_clear"
+      ]
+    },
+    {
+      "index": 4,
+      "passed": false,
+      "tests": [
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_nocache",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_unbound",
+        "tests/test_func.py::FIFODecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::LFUDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::LRUDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::RRDecoratorTest::test_decorator_needs_rlock",
+        "tests/test_func.py::TTLDecoratorTest::test_decorator_needs_rlock"
+      ]
+    }
+  ],
+  "model_calls": 0,
+  "scope": "Native final integrated assertions; no rerun of two-worker protocol"
+}
