@@ -50,6 +50,7 @@ async def run_batch(*, task_ids, arm, seed, output, model_config, cfg, site, led
     journal = SharedBudgetJournal(output / 'run.sqlite3', token_budget=limits.token_budget,
                   identity=identity, ledger=ledger,
                   task_key=lambda: '|'.join([CURRENT_TASK.get() or '', arm, str(seed)]))
+    kernel = RoutingChargedKernel(model, journal, limits)
     workspaces, captures, results = {}, {}, []
     started = time.monotonic()
 
@@ -77,12 +78,15 @@ async def run_batch(*, task_ids, arm, seed, output, model_config, cfg, site, led
             await tasks[tid].prepare_agent(workspaces[tid])
         clock_start = time.monotonic()
         events = [Event(tid, tid, task.instruction, task_id=tid) for tid, task in tasks.items()]
-        runtime = ArchitectureRuntime(arm, RoutingChargedKernel(model, journal, limits), on_task_update=capture)
+        runtime = ArchitectureRuntime(arm, kernel, on_task_update=capture)
         await asyncio.wait_for(runtime.run(events, workspaces), cfg['batch_horizon_s'])
         for tid in tasks:
             if tid not in captures:
                 await capture(tid)
         agent_wall = time.monotonic() - clock_start
+        receipt_drain_started = time.monotonic()
+        await kernel.settle_model_receipts()
+        result['model_receipt_drain_wall_s'] = time.monotonic() - receipt_drain_started
         if not journal.usage()['accounting_valid'] or not ledger.summary()['accounting_valid']:
             raise RuntimeError('Unknown provider usage; preserve artifacts and stop campaign')
         for workspace in workspaces.values():
@@ -119,6 +123,7 @@ async def run_batch(*, task_ids, arm, seed, output, model_config, cfg, site, led
         result.update(status='failed', error=type(exc).__name__ + ': ' + str(exc))
         raise
     finally:
+        await kernel.settle_model_receipts()
         for workspace in workspaces.values():
             workspace.stop()
         result['usage'] = journal.usage()

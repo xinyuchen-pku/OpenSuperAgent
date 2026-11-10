@@ -14,7 +14,7 @@ from osa_eval.contracts import canonical, model_event
 from osa_eval.runtime import Runtime, ROUTE, ROUTER_PROMPT
 from osa_eval.kernel import WORKER_PROMPT, Kernel
 
-from .budget import CURRENT_TASK
+from .budget import CURRENT_TASK, REQUEST_ADMITTED
 
 
 CELLS = {'C0': (False, False), 'C1': (True, False), 'C2': (False, True), 'C3': (True, True)}
@@ -29,15 +29,42 @@ class RoutingChargedKernel(Kernel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.routing_s = {}
+        self._pending_model_receipts = set()
 
     async def ask(self, session, role, messages, tools):
         started = time.monotonic()
+        admitted = asyncio.Event()
+        token = REQUEST_ADMITTED.set(admitted)
         try:
-            return await super().ask(session, role, messages, tools)
+            request = asyncio.create_task(super().ask(session, role, messages, tools))
+        finally:
+            REQUEST_ADMITTED.reset(token)
+        try:
+            return await asyncio.shield(request)
+        except asyncio.CancelledError:
+            if admitted.is_set():
+                # The Worker stops here. The admitted request still holds its
+                # model slot and records usage, without returning a late reply.
+                self._pending_model_receipts.add(request)
+                self.journal.trace('model_receipt_deferred', role=role, session=session,
+                                   task_id=CURRENT_TASK.get())
+            else:
+                request.cancel()
+                await asyncio.gather(request, return_exceptions=True)
+            raise
         finally:
             if role == 'router':
                 task = CURRENT_TASK.get()
                 self.routing_s[task] = self.routing_s.get(task, 0) + time.monotonic() - started
+
+    async def settle_model_receipts(self):
+        """Wait for admitted calls whose task stopped before the response."""
+        receipts = tuple(self._pending_model_receipts)
+        if receipts:
+            # Kernel.ask records either the actual receipt or unknown usage.
+            # Batch accounting checks both journals before accepting any grade.
+            await asyncio.gather(*(asyncio.shield(request) for request in receipts), return_exceptions=True)
+            self._pending_model_receipts.difference_update(receipts)
 
     async def work(self, task_id, instruction, workspace, **kwargs):
         if kwargs.get('execution_timeout_s') is not None:

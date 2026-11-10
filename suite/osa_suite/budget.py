@@ -18,6 +18,7 @@ from osa_eval.contracts import canonical
 from osa_eval.journal import BudgetExhausted, Journal
 
 CURRENT_TASK = ContextVar('osa_suite_task', default=None)
+REQUEST_ADMITTED = ContextVar('osa_suite_request_admitted', default=None)
 
 
 class BudgetLedger:
@@ -157,6 +158,9 @@ class SharedBudgetJournal(Journal):
             raise
         with self.db() as db:
             db.execute("INSERT INTO suite_calls VALUES(?,?)", (local, shared))
+        admitted = REQUEST_ADMITTED.get()
+        if admitted is not None:
+            admitted.set()
         return local
 
     def shared_id(self, key):

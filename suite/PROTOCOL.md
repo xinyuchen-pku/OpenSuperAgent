@@ -83,6 +83,13 @@ allowance. External task queue time contributes to completion latency. The same
 four CPU indices and inference capacity are available in every architecture;
 Single's unused parallel capacity is reported, not silently reassigned.
 
+At the Pro task deadline the Worker stops and the runner captures the patch.
+An already admitted request keeps its model slot until its actual usage arrives.
+The runner discards its late response and charges its actual tokens to the
+original task before accepting the batch. Cancellation before admission stops
+the pending request. A missing usage receipt still invalidates accounting.
+The batch reports receipt drain time separately within post-execution overhead.
+
 Native AsynCodeBench keeps released scenario decomposition, writable paths,
 communication, integration order, Dependency Checkers and final evaluator.
 The assignment layer preserves exact-path editing and isolates each role's
