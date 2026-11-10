@@ -18,6 +18,7 @@ from osa_eval.model import ChatModel
 
 from .budget import BudgetLedger
 from .manifest import read, file_hash, verify_lock, verify_installed_suite, write
+from .native_workspace import PR_HARD_CPU_LIMIT
 
 
 def environment(site):
@@ -57,6 +58,13 @@ def admit(args, manifest, cfg, tasks, source):
     if Path(args.output).exists():
         raise FileExistsError('Preserve prior admission; use a new versioned site')
     identity = campaign_identity(args, site, source)
+    prefix = site['docker_prefix']
+    info = json.loads(subprocess.check_output([*prefix, 'info', '--format', '{{json .}}'], text=True, timeout=30))
+    if info['NCPU'] < 4 or info['MemTotal'] < 15 * 1024**3 or info.get('CgroupVersion') != '2':
+        raise ValueError('Four CPU / 16GiB VM with cgroup v2 required; account for guest kernel memory')
+    if (args.benchmark == 'asyncodebench_native' and info['NCPU'] < PR_HARD_CPU_LIMIT
+            and any(t['task_id'].startswith('asyncodebench:apache-tvm-') for t in tasks['tasks'])):
+        raise ValueError('Native PR-hard tasks require Docker with the original 28-CPU quota')
     guard = read(site['resource_guard_receipt'])
     pid_identity(guard['process'])
     if (guard['campaign_id'] != site['campaign_id'] or guard['gpu_count'] != 4 or
@@ -70,10 +78,6 @@ def admit(args, manifest, cfg, tasks, source):
         raise ValueError('Guard serving identity differs from frozen model configuration')
     if serving.get('weights_verified') is not True or serving.get('provider_contract_verified') is not True:
         raise ValueError('Actual weight hashes and provider parser contract require verification')
-    prefix = site['docker_prefix']
-    info = json.loads(subprocess.check_output([*prefix, 'info', '--format', '{{json .}}'], text=True, timeout=30))
-    if info['NCPU'] < 4 or info['MemTotal'] < 15 * 1024**3 or info.get('CgroupVersion') != '2':
-        raise ValueError('Four CPU / 16GiB VM with cgroup v2 required; account for guest kernel memory')
     image_receipts = []
     if args.benchmark == 'asyncodebench_native':
         root = Path(site['native_runner_root']).parent.parent

@@ -53,7 +53,7 @@ def prepare(args):
 def native_config(manifest, cfg, site, task, seed, ledger_path, identity):
     model = dict(manifest['model']['transport'], base_url=site['model_base_url'], seed=seed)
     model['model'] = manifest['model']['served_name']
-    return dict(architecture='native', seed=seed, api_key_env=site.get('api_key_env', 'LLM_API_KEY'), model=model,
+    return dict(architecture='native', task_id=task, seed=seed, api_key_env=site.get('api_key_env', 'LLM_API_KEY'), model=model,
         extra_sampling=manifest['model']['extra_sampling'],
         limits=dict(slots=1, model_concurrency=1, max_steps=100, token_budget=cfg['task_tokens'],
                     request_token_reservation=262144, reservation_policy='exact_prompt_plus_max_output',

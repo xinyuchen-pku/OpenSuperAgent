@@ -145,6 +145,12 @@ v4, distinct from the older v3 online profile; both are retained as source data.
 
 This version admits `async_private` only for the full19 campaign. It refuses
 manager protocols while manager/condenser API usage lacks common admission.
+The four TVM PR-hard tasks retain the official 28-CPU workspace quota and
+offline command policy. The specialist shell can write build outputs in its
+own prebuilt cache directory. Its source tree and shallow Git snapshot are
+read-only, and other specialists' caches and worktrees are hidden. The
+`pr-hard:` request identifier maps to the released `asyncodebench:` task key
+in the shared token ledger.
 A same-protocol architecture comparison requires a verified orchestration hook
 that preserves all released information/authority/checkpoint rules. If a harness
 extension is necessary, version it and label it separately from native official
