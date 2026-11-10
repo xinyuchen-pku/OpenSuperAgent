@@ -1,5 +1,6 @@
 import asyncio
 import concurrent.futures
+import hashlib
 import json
 import tempfile
 import unittest
@@ -15,7 +16,7 @@ from osa_suite.manifest import schedule, freeze, verify_lock
 from osa_suite.report import validate
 from osa_suite.runtime import ArchitectureRuntime, MechanismRuntime, RoutingChargedKernel
 from osa_suite.selection import select
-from osa_suite.native_workspace import role_path
+from osa_suite.native_workspace import native_task_id, pr_hard_cache_source, role_build_cache, role_path
 
 
 class ScriptedModel:
@@ -181,6 +182,27 @@ class ProtocolTests(unittest.TestCase):
         for value in ('/workspace', '/workspace/../peer', '/workspace/x,readonly', '/other/task'):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 role_path(value)
+
+    def test_pr_hard_uses_the_manifest_budget_key_and_private_cache(self):
+        self.assertEqual(native_task_id('pr-hard:apache-tvm-20018'), 'asyncodebench:apache-tvm-20018')
+        self.assertEqual(native_task_id('asyncodebench:cachetools'), 'asyncodebench:cachetools')
+        parent = '/workspace/.asyncodebench-pr-hard-build-cache'
+        mount = dict(Type='bind', Source='/bench/tvm/run', Destination=parent, RW=True)
+        info = dict(Mounts=[mount], HostConfig={'NanoCpus': 28000000000})
+        role = '/workspace/tvm_role_1'
+        expected_hash = hashlib.sha256(role.encode()).hexdigest()[:12]
+        target = role_build_cache(role)
+        self.assertEqual(target, f'{parent}/tvm_role_1-{expected_hash}')
+        self.assertNotEqual(target, role_build_cache('/workspace/tvm_role_2'))
+        self.assertEqual(pr_hard_cache_source(info, target), f'/bench/tvm/run/tvm_role_1-{expected_hash}')
+        for changed in (mount | {'Destination': '/workspace'},
+                        mount | {'Source': '/bench/../private'},
+                        mount | {'Source': '/bench/a,readonly'},
+                        mount | {'RW': False}):
+            with self.subTest(changed=changed), self.assertRaises(ValueError):
+                pr_hard_cache_source(info | {'Mounts': [changed]}, target)
+        with self.assertRaises(ValueError):
+            pr_hard_cache_source(info | {'HostConfig': {'NanoCpus': 4000000000}}, target)
 
     def test_throughput_uses_complete_batch_wall_once(self):
         rows = [result('t1', 'repo', 'arm', 1, True), result('t2', 'repo', 'arm', 1, True)]

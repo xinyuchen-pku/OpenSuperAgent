@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+import shlex
 from pathlib import Path
 
 from agents import AgentAdapter, AgentRunResponse
@@ -18,7 +19,7 @@ from osa_eval.workspace import AsynWorkspace
 
 from .budget import BudgetLedger, SharedBudgetJournal
 from .environment import prepare_native_identity
-from .native_workspace import PrivateReadWorkspace
+from .native_workspace import PrivateReadWorkspace, native_task_id
 
 
 class NativeWorker(AgentAdapter):
@@ -30,11 +31,18 @@ class NativeWorker(AgentAdapter):
             raise ValueError('This adapter admits scoped specialists only; manager calls need aggregate admission first')
         if config['architecture'] != 'native':
             raise ValueError('Official assignment API preserves harness orchestration')
+        task_id = native_task_id(request.benchmark_task_id)
+        if task_id != config['task_id']:
+            raise ValueError('Native assignment differs from the selected campaign task')
+        offline_guard = None
+        if task_id.startswith('asyncodebench:apache-tvm-'):
+            from core.network_guard import network_guard_command
+            offline_guard = shlex.split(network_guard_command())
         proof = prepare_native_identity(request)
         budget = config['budget']
         ledger = BudgetLedger(budget['path'], campaign_limit=budget['campaign_tokens'],
                               task_limit=budget['task_tokens'], identity=budget['identity'])
-        task = '|'.join([request.benchmark_task_id, request.protocol, str(config['seed'])])
+        task = '|'.join([task_id, request.protocol, str(config['seed'])])
         identity = dict(request=request.public_metadata(), worker_prompt_sha256=digest(WORKER_PROMPT),
                         model=config['model'], limits=config['limits'], worker_policy=config['worker_policy'],
                         budget_identity=budget['identity'], seed=config['seed'])
@@ -52,7 +60,8 @@ class NativeWorker(AgentAdapter):
         scope = config['worker_policy']['native_scope']
         workspace = PrivateReadWorkspace(inner, container_id=request.workspace._container_id,
                     allowed_paths=request.writable_paths, docker_prefix=scope['docker_prefix'],
-                    output=output / 'scope', assignment=request.assignment_id, expected_image=scope['expected_image'])
+                    output=output / 'scope', assignment=request.assignment_id, expected_image=scope['expected_image'],
+                    offline_guard=offline_guard)
         error, termination = None, 'completed_claim'
 
         async def run():
